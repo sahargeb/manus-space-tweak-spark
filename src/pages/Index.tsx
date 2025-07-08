@@ -773,118 +773,111 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Collapsible 
-              open={tilesExpanded} 
-              onOpenChange={setTilesExpanded}
-              className="space-y-2"
-            >
-              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-                <CollapsibleTrigger className="w-full">
-                  <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
-                    <img 
-                      src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
-                      alt="Surfaces BAGNODESIGN 2025"
-                      className="w-full h-full object-cover hover-scale"
-                    />
-                  </div>
-                  <div className="flex items-center justify-center gap-2 mb-3">
-                    <h3 className="text-2xl font-bold text-foreground uppercase">Surface By BAGNODESIGN</h3>
-                    {tilesExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-                  </div>
-                  <p className="text-muted-foreground mb-6 text-sm">
-                    {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
-                  </p>
-                  <Button className="w-full mb-3" size="sm">
-                    <Download className="w-4 h-4 mr-2" />
-                    {t.downloadCatalog}
-                  </Button>
-                </CollapsibleTrigger>
-                
-                <CollapsibleContent className="mt-4 space-y-3 animate-accordion-down">
-                  <div className="grid grid-cols-1 gap-3">
-                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                        <img 
-                          src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
-                          alt="Tiles Small Format SANIPEXGROUP"
-                          className="w-full h-full object-cover hover-scale"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Download className="w-3 h-3 mr-1" />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                    
-                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                        <img 
-                          src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
-                          alt="SLABS 2024 SANIPEXGROUP"
-                          className="w-full h-full object-cover hover-scale"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Download className="w-3 h-3 mr-1" />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                    
-                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                        <img 
-                          src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
-                          alt="HOKKAIDO Surfaces BAGNODESIGN"
-                          className="w-full h-full object-cover hover-scale"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-foreground mb-2">Hokkaido</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Download className="w-3 h-3 mr-1" />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                    
-                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                        <img 
-                          src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
-                          alt="Outdoor Tiles & Landscape Lighting 2024"
-                          className="w-full h-full object-cover hover-scale"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-foreground mb-2">Outdoor Tiles & Landscape Lighting</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Download className="w-3 h-3 mr-1" />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                  </div>
-                </CollapsibleContent>
-              </Card>
-            </Collapsible>
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                <img 
+                  src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
+                  alt="Surfaces BAGNODESIGN 2025"
+                  className="w-full h-full object-cover hover-scale"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Surface By BAGNODESIGN</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full mb-6" size="sm">
+                {t.viewCatalog}
+              </Button>
+              
+              {/* Sub-catalogs always visible */}
+              <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
+                        alt="Tiles Small Format SANIPEXGROUP"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
+                        alt="SLABS 2024 SANIPEXGROUP"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
+                        alt="HOKKAIDO Surfaces BAGNODESIGN"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Hokkaido</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
+                        alt="Outdoor Tiles & Landscape Lighting 2024"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Outdoor Tiles & Landscape Lighting</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+            </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
