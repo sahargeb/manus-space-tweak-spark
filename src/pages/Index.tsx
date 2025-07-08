@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
@@ -528,6 +528,15 @@ const Index = () => {
             </nav>
 
             <div className="flex items-center gap-4">
+              <a 
+                href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:scale-110 transition-transform duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-white" />
+              </a>
               <Button variant="outline" size="sm" onClick={toggleLanguage}>
                 <span className="mr-2">{language === 'ar' ? 'English' : 'العربية'}</span>
               </Button>
