@@ -372,6 +372,76 @@ const Index = () => {
       category: t.sanitaryTools,
       image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
       description: language === 'ar' ? "مغسلة دائرية من الخشب الطبيعي مع صنبور أسود أنيق" : "Round natural wood sink with elegant black faucet"
+    },
+    {
+      id: 31,
+      title: language === 'ar' ? "حمام رخامي فاخر بإضاءة دائرية مميزة" : "Luxury Marble Bathroom with Distinctive Circular Lighting",
+      category: t.bathrooms,
+      image: "/lovable-uploads/eeab58b6-6da9-4042-ada0-6c5bbe7fb15b.png",
+      description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة دائرية مبتكرة مع تشطيبات ذهبية" : "Luxury bathroom with marble walls and innovative circular lighting with golden finishes"
+    },
+    {
+      id: 32,
+      title: language === 'ar' ? "معرض أحواض المطابخ الحديثة" : "Modern Kitchen Sinks Gallery",
+      category: t.kitchens,
+      image: "/lovable-uploads/8aa8d6f3-5d60-48ba-ab5d-8de49bd466d1.png",
+      description: language === 'ar' ? "معرض شامل لأحواض المطابخ الحديثة مع تصاميم متنوعة وأنيقة" : "Comprehensive gallery of modern kitchen sinks with diverse and elegant designs"
+    },
+    {
+      id: 33,
+      title: language === 'ar' ? "مطبخ عصري متكامل بخامات فاخرة" : "Complete Modern Kitchen with Luxury Materials",
+      category: t.kitchens,
+      image: "/lovable-uploads/4f9aff47-86ee-4f7f-b99f-be11d60a7550.png",
+      description: language === 'ar' ? "مطبخ عصري مع رخام طبيعي وأجهزة متطورة وإضاءة مدمجة" : "Modern kitchen with natural marble, advanced appliances and integrated lighting"
+    },
+    {
+      id: 34,
+      title: language === 'ar' ? "معرض BAGNODESIGN الشامل" : "BAGNODESIGN Comprehensive Gallery",
+      category: t.accessories,
+      image: "/lovable-uploads/e0efc3d9-9b1d-444c-a750-559276b390d4.png",
+      description: language === 'ar' ? "معرض شامل يضم مختلف المنتجات والإكسسوارات من BAGNODESIGN" : "Comprehensive gallery featuring various products and accessories from BAGNODESIGN"
+    },
+    {
+      id: 35,
+      title: language === 'ar' ? "مرآة دائرية مع مغسلة رخامية أنيقة" : "Circular Mirror with Elegant Marble Sink",
+      category: t.bathrooms,
+      image: "/lovable-uploads/8cabac5c-f7d5-4125-94a5-a4231c15f166.png",
+      description: language === 'ar' ? "تصميم أنيق مع مرآة دائرية ومغسلة رخامية مع إضاءة دافئة" : "Elegant design with circular mirror and marble sink with warm lighting"
+    },
+    {
+      id: 36,
+      title: language === 'ar' ? "عرض أنظمة الدش المتطورة" : "Advanced Shower Systems Display",
+      category: t.sanitaryTools,
+      image: "/lovable-uploads/7b5dcc58-4387-4d05-8aeb-aa8c23d6ee14.png",
+      description: language === 'ar' ? "مجموعة متنوعة من أنظمة الدش بتشطيبات ذهبية وسوداء حديثة" : "Diverse collection of shower systems with modern golden and black finishes"
+    },
+    {
+      id: 37,
+      title: language === 'ar' ? "حمام رخامي فاخر بتشطيبات ذهبية" : "Luxury Marble Bathroom with Golden Finishes",
+      category: t.bathrooms,
+      image: "/lovable-uploads/afb1fa5f-d6cb-4987-a8cc-215960297b0b.png",
+      description: language === 'ar' ? "حمام فاخر بجدران رخامية طبيعية ومغسلة مع تشطيبات ذهبية مميزة" : "Luxury bathroom with natural marble walls and sink with distinctive golden finishes"
+    },
+    {
+      id: 38,
+      title: language === 'ar' ? "حمام مفتوح بحوض أسود أنيق" : "Open Bathroom with Elegant Black Bathtub",
+      category: t.bathrooms,
+      image: "/lovable-uploads/5d61b391-100f-4211-9905-c3587296fbd4.png",
+      description: language === 'ar' ? "تصميم حمام مفتوح مع حوض استحمام أسود وجدران رخامية وإضاءة معلقة" : "Open bathroom design with black bathtub, marble walls and pendant lighting"
+    },
+    {
+      id: 39,
+      title: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة" : "Luxury Open Living Space",
+      category: t.accessories,
+      image: "/lovable-uploads/f40e6481-7976-49a1-9622-51df5c3dae7d.png",
+      description: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة مع أثاث عصري وإضاءة مبتكرة" : "Luxury open living space with modern furniture and innovative lighting"
+    },
+    {
+      id: 40,
+      title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
+      category: t.bathrooms,
+      image: "/lovable-uploads/592b7bfd-7221-42d6-ba1f-f1a613c16f11.png",
+      description: language === 'ar' ? "حمام فاخر يجمع بين الرخام الطبيعي والخشب مع حوض استحمام أبيض أنيق" : "Luxury bathroom combining natural marble and wood with elegant white bathtub"
     }
   ];
 
