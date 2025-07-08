@@ -1,14 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Search, Heart, Share2, ShoppingCart, Eye } from "lucide-react";
+import { SearchBar } from "@/components/SearchBar";
+import { FloatingActionButton } from "@/components/FloatingActionButton";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
   const [tilesExpanded, setTilesExpanded] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const [scrollY, setScrollY] = useState(0);
+
+  // Smooth scroll effect
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Interactive functions
+  const toggleFavorite = (productId: string) => {
+    setFavorites(prev => 
+      prev.includes(productId) 
+        ? prev.filter(id => id !== productId)
+        : [...prev, productId]
+    );
+  };
+
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(elementId);
+    }
+  };
+
+  const handleCatalogDownload = (catalogName: string) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      // Simulate download
+      console.log(`Downloading ${catalogName}`);
+    }, 1500);
+  };
   
   const translations = {
     ar: {
@@ -676,11 +716,16 @@ const Index = () => {
       {/* Products Section */}
       <section id="products" className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 fade-in">
             <h2 className="text-4xl font-bold text-foreground mb-4">{t.productsTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               {t.productsDescription}
             </p>
+            <SearchBar 
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              placeholder="ابحث في المنتجات..."
+            />
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -731,7 +776,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-8 card-hover fade-in">
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
@@ -739,22 +784,28 @@ const Index = () => {
                   className="w-full h-full object-contain hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Bathroom sanitaryware & brassware</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase gradient-text">Bathroom sanitaryware & brassware</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
-              <Button className="w-full mb-3" size="sm">
+              <Button 
+                className="w-full mb-3 button-pulse glow" 
+                size="sm"
+                onClick={() => handleCatalogDownload('Bathroom sanitaryware & brassware')}
+                disabled={isLoading}
+              >
                 <Download className="w-4 h-4 mr-2" />
-                {t.downloadCatalog}
+                {isLoading ? 'جاري التحميل...' : t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full mb-6" size="sm">
+              <Button variant="outline" className="w-full mb-6 button-pulse glass-effect" size="sm">
+                <Eye className="w-4 h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
               
               {/* Sub-catalogs always visible */}
               <div className="space-y-3">
                 <div className="grid grid-cols-1 gap-3">
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
                         src="/lovable-uploads/bathroom-brands-catalog.png" 
@@ -764,17 +815,23 @@ const Index = () => {
                     </div>
                     <h4 className="text-lg font-semibold text-foreground mb-2">Bathroom Brands</h4>
                     <div className="flex gap-2">
-                      <Button size="sm" className="flex-1">
+                      <Button 
+                        size="sm" 
+                        className="flex-1 button-pulse"
+                        onClick={() => handleCatalogDownload('Bathroom Brands')}
+                        disabled={isLoading}
+                      >
                         <Download className="w-3 h-3 mr-1" />
-                        {t.downloadCatalog}
+                        {isLoading ? 'جاري...' : t.downloadCatalog}
                       </Button>
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
+                        <Eye className="w-3 h-3 mr-1" />
                         {t.viewCatalog}
                       </Button>
                     </div>
                   </Card>
                   
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
                         src="/lovable-uploads/steam-spa-wellness-catalog.png" 
@@ -784,11 +841,17 @@ const Index = () => {
                     </div>
                     <h4 className="text-lg font-semibold text-foreground mb-2">Steam & Spa & Wellness</h4>
                     <div className="flex gap-2">
-                      <Button size="sm" className="flex-1">
+                      <Button 
+                        size="sm" 
+                        className="flex-1 button-pulse"
+                        onClick={() => handleCatalogDownload('Steam & Spa & Wellness')}
+                        disabled={isLoading}
+                      >
                         <Download className="w-3 h-3 mr-1" />
-                        {t.downloadCatalog}
+                        {isLoading ? 'جاري...' : t.downloadCatalog}
                       </Button>
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
+                        <Eye className="w-3 h-3 mr-1" />
                         {t.viewCatalog}
                       </Button>
                     </div>
@@ -1182,6 +1245,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      {/* Floating Action Button */}
+      <FloatingActionButton />
     </div>
   );
 };
