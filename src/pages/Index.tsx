@@ -958,9 +958,74 @@ const Index = () => {
                 <Download className="w-4 h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full" size="sm">
+              <Button variant="outline" className="w-full mb-6" size="sm">
                 {t.viewCatalog}
               </Button>
+              
+              {/* Sub-catalogs always visible */}
+              <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/c99e3c4c-0c5f-4f9a-bd03-adf99a5e6fd0.png" 
+                        alt="Sanaura"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Sanaura</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/c8c73652-7179-4e39-94f2-6b99a83152aa.png" 
+                        alt="Lighting Brochure 2022 Edition II"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Lighting Brochure 2022 Edition II</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/31c8d164-ea97-4259-8a83-38d583dae816.png" 
+                        alt="Knightsbridge Brochure Edition III"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">Knightsbridge Brochure Edition III</h4>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
