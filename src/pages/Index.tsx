@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
+  const [tilesExpanded, setTilesExpanded] = useState(false);
   
   const translations = {
     ar: {
@@ -81,6 +83,11 @@ const Index = () => {
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "Kitchen LifeStyle",
       tilesCatalog: "TILES & SLABS",
+      // Tiles sub-catalogs
+      ceramicTiles: "البلاط السيراميك",
+      porcelainTiles: "بلاط البورسلين",
+      naturalStone: "الحجر الطبيعي",
+      marbleSlabs: "ألواح الرخام",
       materialsCatalog: "كاتلوج الخامات",
       accessoriesCatalog: "كاتلوج الإكسسوارات",
       lightingCatalog: "كاتلوج الإضاءة",
@@ -166,6 +173,11 @@ const Index = () => {
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "Kitchen LifeStyle",
       tilesCatalog: "TILES & SLABS",
+      // Tiles sub-catalogs
+      ceramicTiles: "Ceramic Tiles",
+      porcelainTiles: "Porcelain Tiles",
+      naturalStone: "Natural Stone",
+      marbleSlabs: "Marble Slabs",
       materialsCatalog: "Materials Catalog",
       accessoriesCatalog: "Accessories Catalog",
       lightingCatalog: "Lighting Catalog",
@@ -761,22 +773,86 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.tilesCatalog}</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
-              </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
-            </Card>
+            <Collapsible 
+              open={tilesExpanded} 
+              onOpenChange={setTilesExpanded}
+              className="space-y-2"
+            >
+              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+                <CollapsibleTrigger className="w-full">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <FileText className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <h3 className="text-xl font-bold text-foreground">{t.tilesCatalog}</h3>
+                    {tilesExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </div>
+                  <p className="text-muted-foreground mb-6 text-sm">
+                    {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
+                  </p>
+                  <Button className="w-full mb-3" size="sm">
+                    <Download className="w-4 h-4 mr-2" />
+                    {t.downloadCatalog}
+                  </Button>
+                </CollapsibleTrigger>
+                
+                <CollapsibleContent className="mt-4 space-y-3 animate-accordion-down">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <h4 className="font-semibold text-foreground mb-2">{t.ceramicTiles}</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className="w-3 h-3 mr-1" />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                    
+                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <h4 className="font-semibold text-foreground mb-2">{t.porcelainTiles}</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className="w-3 h-3 mr-1" />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                    
+                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <h4 className="font-semibold text-foreground mb-2">{t.naturalStone}</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className="w-3 h-3 mr-1" />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                    
+                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <h4 className="font-semibold text-foreground mb-2">{t.marbleSlabs}</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className="w-3 h-3 mr-1" />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                  </div>
+                </CollapsibleContent>
+              </Card>
+            </Collapsible>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
