@@ -442,6 +442,34 @@ const Index = () => {
       category: t.bathrooms,
       image: "/lovable-uploads/592b7bfd-7221-42d6-ba1f-f1a613c16f11.png",
       description: language === 'ar' ? "حمام فاخر يجمع بين الرخام الطبيعي والخشب مع حوض استحمام أبيض أنيق" : "Luxury bathroom combining natural marble and wood with elegant white bathtub"
+    },
+    {
+      id: 41,
+      title: language === 'ar' ? "معرض الإضاءة والإكسسوارات المنزلية" : "Lighting & Home Accessories Gallery",
+      category: t.accessories,
+      image: "/lovable-uploads/1c906387-d21f-48cc-b8e1-a3f258918253.png",
+      description: language === 'ar' ? "معرض أنيق للإضاءة والإكسسوارات المنزلية مع تصاميم عصرية ومتنوعة" : "Elegant gallery of lighting and home accessories with modern and diverse designs"
+    },
+    {
+      id: 42,
+      title: language === 'ar' ? "معرض خلاطات المطابخ الحديثة" : "Modern Kitchen Mixers Gallery",
+      category: t.kitchens,
+      image: "/lovable-uploads/d04a5d33-5de0-4431-84c9-e6ca26caaac0.png",
+      description: language === 'ar' ? "معرض شامل لخلاطات المطابخ الحديثة مع مطبخ عرض متكامل" : "Comprehensive gallery of modern kitchen mixers with complete display kitchen"
+    },
+    {
+      id: 43,
+      title: language === 'ar' ? "عرض منتجات BAGNODESIGN و TOKO" : "BAGNODESIGN & TOKO Products Display",
+      category: t.sanitaryTools,
+      image: "/lovable-uploads/335c4e5f-0ccd-4f50-b186-3cc1eaf81e94.png",
+      description: language === 'ar' ? "عرض متخصص لمنتجات BAGNODESIGN و TOKO من الأدوات الصحية والإكسسوارات" : "Specialized display of BAGNODESIGN and TOKO sanitary products and accessories"
+    },
+    {
+      id: 44,
+      title: language === 'ar' ? "معرض الحمامات الفاخرة المتكامل" : "Complete Luxury Bathrooms Gallery",
+      category: t.bathrooms,
+      image: "/lovable-uploads/5fe0b360-3cdb-409d-9b71-5bd4d4270f11.png",
+      description: language === 'ar' ? "معرض متكامل للحمامات الفاخرة بجدران رخامية وتصاميم عصرية مبتكرة" : "Complete gallery of luxury bathrooms with marble walls and innovative modern designs"
     }
   ];
 
