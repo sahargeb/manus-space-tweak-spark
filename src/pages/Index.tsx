@@ -776,14 +776,14 @@ const Index = () => {
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
-                  alt="Outdoor Living 2024"
+                  src="/lovable-uploads/ced9aa99-e86c-4437-b359-f22d1d0a74fa.png" 
+                  alt="Surfaces BAGNODESIGN 2025"
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">TILES & SLABS</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
+                Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
