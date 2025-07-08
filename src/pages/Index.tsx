@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
@@ -301,6 +302,76 @@ const Index = () => {
       category: t.bathrooms,
       image: "/lovable-uploads/6b99bf90-d463-41b5-bc65-e39c7bd80812.png",
       description: language === 'ar' ? "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة" : "Luxury bathroom with marble walls and elegant black finishes"
+    },
+    {
+      id: 21,
+      title: language === 'ar' ? "عرض إكسسوارات TOKO المتنوعة" : "TOKO Diverse Accessories Display",
+      category: t.accessories,
+      image: "/lovable-uploads/a3e639b1-ed82-419c-addb-c6d957cc408f.png",
+      description: language === 'ar' ? "معرض شامل لإكسسوارات TOKO الحديثة والأنيقة" : "Comprehensive display of modern and elegant TOKO accessories"
+    },
+    {
+      id: 22,
+      title: language === 'ar' ? "حوض استحمام أسود مع صنبور ذهبي" : "Black Bathtub with Golden Faucet",
+      category: t.bathrooms,
+      image: "/lovable-uploads/9d48a0e5-4174-4bef-827a-fbb82ed4ed2b.png",
+      description: language === 'ar' ? "حوض استحمام أسود أنيق مع صنبور ذهبي وخلفية رخامية" : "Elegant black bathtub with golden faucet and marble background"
+    },
+    {
+      id: 23,
+      title: language === 'ar' ? "ركن جلوس مريح بتصميم عصري" : "Comfortable Seating Corner with Modern Design",
+      category: t.accessories,
+      image: "/lovable-uploads/1d5c0213-0e34-4497-8267-0cc62b87fa36.png",
+      description: language === 'ar' ? "ركن جلوس مريح مع أرفف عرض وإكسسوارات متنوعة" : "Comfortable seating corner with display shelves and diverse accessories"
+    },
+    {
+      id: 24,
+      title: language === 'ar' ? "حمام فاخر بإضاءة فنية مميزة" : "Luxury Bathroom with Artistic Lighting",
+      category: t.bathrooms,
+      image: "/lovable-uploads/4c3a6ea7-15b2-44d5-950f-3fb76416d621.png",
+      description: language === 'ar' ? "حمام فاخر بحوض أسود وإضاءة فنية مع مرآة مستديرة" : "Luxury bathroom with black tub and artistic lighting with round mirror"
+    },
+    {
+      id: 25,
+      title: language === 'ar' ? "مساحة عرض الأثاث والإكسسوارات" : "Furniture & Accessories Display Area",
+      category: t.accessories,
+      image: "/lovable-uploads/51d6f3ef-681b-4454-a28e-01550d21ed53.png",
+      description: language === 'ar' ? "مساحة أنيقة لعرض الأثاث والإكسسوارات المنزلية الحديثة" : "Elegant space for displaying modern furniture and home accessories"
+    },
+    {
+      id: 26,
+      title: language === 'ar' ? "حمام رخامي بمغسلة ذهبية" : "Marble Bathroom with Golden Sink",
+      category: t.bathrooms,
+      image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
+      description: language === 'ar' ? "حمام فاخر بجدران رخامية ومغسلة ذهبية مع إضاءة دافئة" : "Luxury bathroom with marble walls and golden sink with warm lighting"
+    },
+    {
+      id: 27,
+      title: language === 'ar' ? "حمام متكامل بتصميم عصري" : "Complete Modern Bathroom Design",
+      category: t.bathrooms,
+      image: "/lovable-uploads/166730c7-f1de-4786-bcbb-9d1fec86135f.png",
+      description: language === 'ar' ? "حمام متكامل بجدران رخامية ومغسلة حديثة مع مرآة مضاءة" : "Complete bathroom with marble walls and modern sink with illuminated mirror"
+    },
+    {
+      id: 28,
+      title: language === 'ar' ? "حمام أنيق بمغسلة خشبية" : "Elegant Bathroom with Wooden Sink",
+      category: t.bathrooms,
+      image: "/lovable-uploads/7e2f3003-1c14-426c-860b-052db8fbe8e9.png",
+      description: language === 'ar' ? "حمام أنيق بمغسلة خشبية وجدران رخامية مع إضاءة معلقة" : "Elegant bathroom with wooden sink and marble walls with pendant lighting"
+    },
+    {
+      id: 29,
+      title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
+      category: t.bathrooms,
+      image: "/lovable-uploads/88ba6ea8-56e8-4735-b149-6f8b131a54c7.png",
+      description: language === 'ar' ? "حمام فاخر يجمع بين الخامات الطبيعية المتنوعة والتصميم المعاصر" : "Luxury bathroom combining diverse natural materials with contemporary design"
+    },
+    {
+      id: 30,
+      title: language === 'ar' ? "مغسلة خشبية دائرية مع صنبور أسود" : "Round Wooden Sink with Black Faucet",
+      category: t.sanitaryTools,
+      image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
+      description: language === 'ar' ? "مغسلة دائرية من الخشب الطبيعي مع صنبور أسود أنيق" : "Round natural wood sink with elegant black faucet"
     }
   ];
 
@@ -481,11 +552,24 @@ const Index = () => {
             {products.map((product) => (
               <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <img 
+                        src={product.image} 
+                        alt={product.title}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+                      <div className="relative">
+                        <img 
+                          src={product.image} 
+                          alt={product.title}
+                          className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+                        />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                   <div className="absolute top-4 right-4">
                     <Badge variant="secondary">{product.category}</Badge>
                   </div>
