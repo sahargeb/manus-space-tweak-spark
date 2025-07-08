@@ -74,6 +74,76 @@ const Index = () => {
       category: "إكسسوارات",
       image: "/lovable-uploads/7fce98d9-2801-42b0-a8e6-a1f6c0d1ce3d.png",
       description: "مجموعة من الإكسسوارات والإضاءة المنزلية"
+    },
+    {
+      id: 11,
+      title: "وحدات الفنادق والمرافق",
+      category: "أجهزة",
+      image: "/lovable-uploads/a6d3fab7-0404-4cf7-8cba-b0710166f428.png",
+      description: "مجموعة شاملة من الأجهزة والمرافق الفندقية الحديثة"
+    },
+    {
+      id: 12,
+      title: "مطبخ خارجي تحت الدرج",
+      category: "مطابخ",
+      image: "/lovable-uploads/7114e5a3-0255-4299-b8ef-5d3f1516cf8d.png",
+      description: "تصميم مطبخ خارجي أنيق مع شواية تحت الدرج"
+    },
+    {
+      id: 13,
+      title: "حمام رخامي فاخر بالإضاءة المعلقة",
+      category: "حمامات",
+      image: "/lovable-uploads/9c2848bb-6c0e-4d87-a7fe-e6f1aa1f8382.png",
+      description: "حمام فاخر بجدران رخامية وإضاءة معلقة مميزة"
+    },
+    {
+      id: 14,
+      title: "عرض الصنابير والخامات",
+      category: "أدوات صحية",
+      image: "/lovable-uploads/886c01f4-7f8b-4e63-b86f-b8a13bea7e86.png",
+      description: "معرض شامل للصنابير والخامات الحديثة"
+    },
+    {
+      id: 15,
+      title: "معرض إكسسوارات BAGNODESIGN",
+      category: "إكسسوارات",
+      image: "/lovable-uploads/49a0f7ae-a195-41e7-806d-686296c1c4e0.png",
+      description: "عرض مجموعة إكسسوارات BAGNODESIGN الحصرية"
+    },
+    {
+      id: 16,
+      title: "حمام فاخر بالإضاءة المعلقة",
+      category: "حمامات",
+      image: "/lovable-uploads/eb4032d8-d075-45e8-91cf-43a1856ab4b0.png",
+      description: "تصميم حمام فاخر مع إضاءة معلقة وخامات طبيعية"
+    },
+    {
+      id: 17,
+      title: "مساحة معيشة ومطبخ مفتوح",
+      category: "مطابخ",
+      image: "/lovable-uploads/d2fc2469-c1ca-47b2-ad16-0112cf49ba97.png",
+      description: "تصميم مفتوح يجمع بين المطبخ ومساحة المعيشة"
+    },
+    {
+      id: 18,
+      title: "حمام مدمج عصري",
+      category: "حمامات",
+      image: "/lovable-uploads/eb1b5131-a9d5-47f7-83dc-57d577c1402b.png",
+      description: "حمام مدمج بتصميم عصري وخامات فاخرة"
+    },
+    {
+      id: 19,
+      title: "حمام فاخر بالخشب والرخام",
+      category: "حمامات",
+      image: "/lovable-uploads/97f91dbc-cab8-4dfb-8c22-fb8ffd5de9e4.png",
+      description: "حمام فاخر يجمع بين جمال الخشب وأناقة الرخام"
+    },
+    {
+      id: 20,
+      title: "حمام رخامي بالتشطيبات السوداء",
+      category: "حمامات",
+      image: "/lovable-uploads/6b99bf90-d463-41b5-bc65-e39c7bd80812.png",
+      description: "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة"
     }
   ];
 
@@ -118,7 +188,7 @@ const Index = () => {
                 <span className="text-primary-foreground font-bold text-xl">B</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-foreground">BAGNO DESIGN</h1>
+                <h1 className="text-xl font-bold text-foreground">BAGNODESIGN</h1>
                 <p className="text-sm text-muted-foreground">معرض الحمامات والمطابخ الفاخرة</p>
               </div>
             </div>
@@ -132,10 +202,10 @@ const Index = () => {
             </nav>
 
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm">
-                <span className="mr-2">العربية</span>
+              <Button variant="outline" size="sm" onClick={() => window.open('https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh', '_blank')}>
+                <span className="mr-2">English</span>
               </Button>
-              <Button>اتصل بنا</Button>
+              <Button onClick={() => window.location.href = 'tel:0226134401'}>اتصل بنا</Button>
             </div>
           </div>
         </div>
@@ -182,9 +252,9 @@ const Index = () => {
       <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-8">عن BAGNO DESIGN</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-8">عن BAGNODESIGN</h2>
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              نحن في BAGNO DESIGN نتخصص في تقديم أحدث التصاميم للحمامات والمطابخ الفاخرة. مع سنوات من الخبرة في هذا المجال، نقدم لعملائنا حلولاً متكاملة تجمع بين الأناقة والوظائف العملية.
+              نحن في BAGNODESIGN نتخصص في تقديم أحدث التصاميم للحمامات والمطابخ الفاخرة. مع سنوات من الخبرة في هذا المجال، نقدم لعملائنا حلولاً متكاملة تجمع بين الأناقة والوظائف العملية.
             </p>
             
             <div className="grid md:grid-cols-4 gap-8">
@@ -288,19 +358,19 @@ const Index = () => {
             <div className="text-center p-6">
               <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-bold text-foreground mb-2">اتصل بنا</h3>
-              <p className="text-muted-foreground">+966 50 123 4567</p>
+              <a href="tel:0226134401" className="text-muted-foreground hover:text-primary transition-colors">0226134401</a>
             </div>
             
             <div className="text-center p-6">
               <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-bold text-foreground mb-2">راسلنا</h3>
-              <p className="text-muted-foreground">info@bagnodesign.sa</p>
+              <a href="mailto:Info@bagnodesignmisr.com" className="text-muted-foreground hover:text-primary transition-colors">Info@bagnodesignmisr.com</a>
             </div>
             
             <div className="text-center p-6">
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-bold text-foreground mb-2">زورنا</h3>
-              <p className="text-muted-foreground">الرياض، المملكة العربية السعودية</p>
+              <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">القاهرة، جمهورية مصر العربية</a>
             </div>
           </div>
         </div>
@@ -315,11 +385,22 @@ const Index = () => {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <span className="text-primary-foreground font-bold">B</span>
                 </div>
-                <span className="font-bold text-lg">BAGNO DESIGN</span>
+                <span className="font-bold text-lg">BAGNODESIGN</span>
               </div>
               <p className="text-background/70">
                 معرض الحمامات والمطابخ الفاخرة - نحو تصميم أفضل لمنزلك
               </p>
+              <div className="flex gap-4 mt-4">
+                <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
+                  Instagram
+                </a>
+                <a href="mailto:Info@bagnodesignmisr.com" className="text-background/70 hover:text-primary transition-colors">
+                  Email
+                </a>
+                <a href="tel:0226134401" className="text-background/70 hover:text-primary transition-colors">
+                  Phone
+                </a>
+              </div>
             </div>
             
             <div>
@@ -345,15 +426,15 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">معلومات التواصل</h4>
               <ul className="space-y-2 text-background/70">
-                <li>+966 50 123 4567</li>
-                <li>info@bagnodesign.sa</li>
-                <li>الرياض، السعودية</li>
+                <li><a href="tel:0226134401" className="hover:text-primary transition-colors">0226134401</a></li>
+                <li><a href="mailto:Info@bagnodesignmisr.com" className="hover:text-primary transition-colors">Info@bagnodesignmisr.com</a></li>
+                <li><a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">القاهرة، مصر</a></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-            <p>&copy; 2024 BAGNO DESIGN. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2024 BAGNODESIGN. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
