@@ -78,7 +78,7 @@ const Index = () => {
       // Catalogs
       catalogsTitle: "كاتلوجات المنتجات",
       catalogsDescription: "تصفح واستعرض كاتلوجاتنا الحصرية للحصول على معلومات تفصيلية عن منتجاتنا وخدماتنا",
-      bathroomsCatalog: "كاتلوج الحمامات",
+      bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "كاتلوج المطابخ",
       materialsCatalog: "كاتلوج الخامات",
       accessoriesCatalog: "كاتلوج الإكسسوارات",
@@ -162,7 +162,7 @@ const Index = () => {
       // Catalogs
       catalogsTitle: "Product Catalogs",
       catalogsDescription: "Browse and explore our exclusive catalogs to get detailed information about our products and services",
-      bathroomsCatalog: "Bathrooms Catalog",
+      bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "Kitchens Catalog",
       materialsCatalog: "Materials Catalog",
       accessoriesCatalog: "Accessories Catalog",
@@ -718,12 +718,16 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
+              <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/aef52cee-4906-49b1-a5f0-cded1ff084f2.png" 
+                  alt="Bathroom sanitaryware & brassware"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'استكشف مجموعتنا الكاملة من تصاميم الحمامات الفاخرة' : 'Explore our complete collection of luxury bathroom designs'}
+                {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
