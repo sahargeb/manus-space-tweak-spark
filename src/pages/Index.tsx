@@ -816,6 +816,13 @@ const Index = () => {
                     </Card>
                     
                     <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
+                          alt="SLABS 2024 SANIPEXGROUP"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
                       <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" className="flex-1">
