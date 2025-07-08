@@ -718,11 +718,11 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <div className="w-full h-64 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
                   alt="Bathroom sanitaryware & brassware"
-                  className="w-full h-full object-contain bg-gray-50"
+                  className="w-full h-full object-contain hover-scale"
                 />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
