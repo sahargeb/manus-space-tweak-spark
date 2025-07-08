@@ -80,6 +80,7 @@ const Index = () => {
       catalogsDescription: "تصفح واستعرض كاتلوجاتنا الحصرية للحصول على معلومات تفصيلية عن منتجاتنا وخدماتنا",
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "Kitchen LifeStyle",
+      tilesCatalog: "TILES & SLABS",
       materialsCatalog: "كاتلوج الخامات",
       accessoriesCatalog: "كاتلوج الإكسسوارات",
       lightingCatalog: "كاتلوج الإضاءة",
@@ -164,6 +165,7 @@ const Index = () => {
       catalogsDescription: "Browse and explore our exclusive catalogs to get detailed information about our products and services",
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
       kitchensCatalog: "Kitchen LifeStyle",
+      tilesCatalog: "TILES & SLABS",
       materialsCatalog: "Materials Catalog",
       accessoriesCatalog: "Accessories Catalog",
       lightingCatalog: "Lighting Catalog",
@@ -716,7 +718,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
@@ -749,6 +751,23 @@ const Index = () => {
               <h3 className="text-xl font-bold text-foreground mb-3">{t.kitchensCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.tilesCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
