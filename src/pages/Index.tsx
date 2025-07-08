@@ -730,7 +730,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-7 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
@@ -1026,6 +1026,27 @@ const Index = () => {
                   </Card>
                 </div>
               </div>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                <img 
+                  src="/lovable-uploads/2df7e144-0799-4045-b642-06f3d6a5c912.png" 
+                  alt="Hotel Amenities"
+                  className="w-full h-full object-cover hover-scale"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Hotel Amenities</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                We offer all you need for your hotel specification with bathroom, washroom, outdoor living and lighting products alongside the finer details of deluxe amenities. From safes to mini bars and luggage racks to a host of accessories
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
             </Card>
           </div>
         </div>
