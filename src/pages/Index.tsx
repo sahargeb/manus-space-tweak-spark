@@ -720,9 +720,9 @@ const Index = () => {
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/aef52cee-4906-49b1-a5f0-cded1ff084f2.png" 
+                  src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
                   alt="Bathroom sanitaryware & brassware"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-gray-50"
                 />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
