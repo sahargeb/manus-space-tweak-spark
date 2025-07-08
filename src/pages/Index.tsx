@@ -747,9 +747,54 @@ const Index = () => {
                 <Download className="w-4 h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full" size="sm">
+              <Button variant="outline" className="w-full mb-6" size="sm">
                 {t.viewCatalog}
               </Button>
+              
+              {/* Sub-catalogs always visible */}
+              <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/df52d80b-a074-4034-935e-e8abfaa216a5.png" 
+                        alt="Bathroom Brands"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Bathroom Brands</h4>
+                    <div className="flex gap-2">
+                      <Button size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                  
+                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/e98a07e4-290e-4433-bc06-fe81e3f0345d.png" 
+                        alt="Steam & Spa & Wellness"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Steam & Spa & Wellness</h4>
+                    <div className="flex gap-2">
+                      <Button size="sm" className="flex-1">
+                        <Download className="w-3 h-3 mr-1" />
+                        {t.downloadCatalog}
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1">
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              </div>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
