@@ -803,7 +803,7 @@ const Index = () => {
                 <CollapsibleContent className="mt-4 space-y-3 animate-accordion-down">
                   <div className="grid grid-cols-1 gap-3">
                     <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <h4 className="font-semibold text-foreground mb-2">{t.ceramicTiles}</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" className="flex-1">
                           <Download className="w-3 h-3 mr-1" />
@@ -816,7 +816,7 @@ const Index = () => {
                     </Card>
                     
                     <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <h4 className="font-semibold text-foreground mb-2">{t.porcelainTiles}</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" className="flex-1">
                           <Download className="w-3 h-3 mr-1" />
@@ -829,20 +829,7 @@ const Index = () => {
                     </Card>
                     
                     <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <h4 className="font-semibold text-foreground mb-2">{t.naturalStone}</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Download className="w-3 h-3 mr-1" />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                    
-                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                      <h4 className="font-semibold text-foreground mb-2">{t.marbleSlabs}</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Hokkaido</h4>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" className="flex-1">
                           <Download className="w-3 h-3 mr-1" />
