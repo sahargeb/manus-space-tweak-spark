@@ -82,6 +82,7 @@ const Index = () => {
       kitchensCatalog: "كاتلوج المطابخ",
       materialsCatalog: "كاتلوج الخامات",
       accessoriesCatalog: "كاتلوج الإكسسوارات",
+      lightingCatalog: "كاتلوج الإضاءة",
       downloadCatalog: "تحميل الكاتلوج",
       viewCatalog: "عرض الكاتلوج",
       // Categories
@@ -165,6 +166,7 @@ const Index = () => {
       kitchensCatalog: "Kitchens Catalog",
       materialsCatalog: "Materials Catalog",
       accessoriesCatalog: "Accessories Catalog",
+      lightingCatalog: "Lighting Catalog",
       downloadCatalog: "Download Catalog",
       viewCatalog: "View Catalog",
       // Categories
@@ -714,7 +716,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-primary" />
@@ -773,6 +775,23 @@ const Index = () => {
               <h3 className="text-xl font-bold text-foreground mb-3">{t.accessoriesCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.lightingCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'استكشف مجموعة حلول الإضاءة الحديثة والمبتكرة' : 'Explore our collection of modern and innovative lighting solutions'}
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
