@@ -739,7 +739,7 @@ const Index = () => {
                   className="w-full h-full object-contain hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Tiles Small Format</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Bathroom sanitaryware & brassware</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
