@@ -780,8 +780,12 @@ const Index = () => {
             >
               <Card className="text-center p-8 hover:shadow-lg transition-shadow">
                 <CollapsibleTrigger className="w-full">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FileText className="w-8 h-8 text-primary" />
+                  <div className="w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                    <img 
+                      src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
+                      alt="Surfaces BAGNODESIGN 2025"
+                      className="w-full h-full object-cover hover-scale"
+                    />
                   </div>
                   <div className="flex items-center justify-center gap-2 mb-3">
                     <h3 className="text-xl font-bold text-foreground">{t.tilesCatalog}</h3>
