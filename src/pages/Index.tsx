@@ -16,6 +16,7 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrollY, setScrollY] = useState(0);
+  const [expandedCatalogs, setExpandedCatalogs] = useState<{[key: string]: boolean}>({});
 
   // Smooth scroll effect
   useEffect(() => {
@@ -48,6 +49,13 @@ const Index = () => {
       // Simulate download
       console.log(`Downloading ${catalogName}`);
     }, 1500);
+  };
+
+  const toggleCatalogExpansion = (catalogId: string) => {
+    setExpandedCatalogs(prev => ({
+      ...prev,
+      [catalogId]: !prev[catalogId]
+    }));
   };
   
   const translations = {
@@ -775,114 +783,135 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
-            <Card className="text-center p-8 card-hover fade-in">
-              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <Card className="text-center p-4 sm:p-6 lg:p-8 card-hover fade-in">
+              <div className="w-full h-48 sm:h-64 lg:h-80 mb-4 sm:mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
                   alt="Bathroom sanitaryware & brassware"
                   className="w-full h-full object-contain hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase gradient-text">Bathroom sanitaryware & brassware</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 sm:mb-3 uppercase gradient-text">Bathroom sanitaryware & brassware</h3>
+              <p className="text-muted-foreground mb-4 sm:mb-6 text-xs sm:text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
               <Button 
-                className="w-full mb-3 button-pulse glow" 
+                className="w-full mb-2 sm:mb-3 button-pulse glow" 
                 size="sm"
                 onClick={() => window.open('https://drive.google.com/uc?export=download&id=18blAiMcepGPAppsOMVMrwdtpPOp8riNI', '_blank')}
               >
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full mb-6 button-pulse glass-effect" size="sm" onClick={() => window.open('https://drive.google.com/file/d/18blAiMcepGPAppsOMVMrwdtpPOp8riNI/preview', '_blank')}>
-                <Eye className="w-4 h-4 mr-2" />
+              <Button variant="outline" className="w-full mb-3 sm:mb-4 button-pulse glass-effect" size="sm" onClick={() => window.open('https://drive.google.com/file/d/18blAiMcepGPAppsOMVMrwdtPOp8riNI/preview', '_blank')}>
+                <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
               
-              {/* Sub-catalogs always visible */}
-              <div className="space-y-3">
-                <div className="grid grid-cols-1 gap-3">
-                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/bathroom-brands-catalog.png" 
-                        alt="Bathroom Brands"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">Bathroom Brands</h4>
-                    <div className="flex gap-2">
-                      <Button 
-                        size="sm" 
-                        className="flex-1 button-pulse"
-                        onClick={() => handleCatalogDownload('Bathroom Brands')}
-                        disabled={isLoading}
-                      >
-                        <Download className="w-3 h-3 mr-1" />
-                        {isLoading ? 'جاري...' : t.downloadCatalog}
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
-                        <Eye className="w-3 h-3 mr-1" />
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
-                  
-                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/steam-spa-wellness-catalog.png" 
-                        alt="Steam & Spa & Wellness"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">Steam & Spa & Wellness</h4>
-                    <div className="flex gap-2">
-                      <Button 
-                        size="sm" 
-                        className="flex-1 button-pulse"
-                        onClick={() => handleCatalogDownload('Steam & Spa & Wellness')}
-                        disabled={isLoading}
-                      >
-                        <Download className="w-3 h-3 mr-1" />
-                        {isLoading ? 'جاري...' : t.downloadCatalog}
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
-                        <Eye className="w-3 h-3 mr-1" />
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
-                  
-                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/03d061ab-8f2d-4612-bb16-5dc5e6874ee7.png" 
-                        alt="Concealed-Cistern"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">Concealed-Cistern</h4>
-                    <div className="flex gap-2">
-                      <Button 
-                        size="sm" 
-                        className="flex-1 button-pulse"
-                        onClick={() => handleCatalogDownload('Concealed-Cistern')}
-                        disabled={isLoading}
-                      >
-                        <Download className="w-3 h-3 mr-1" />
-                        {isLoading ? 'جاري...' : t.downloadCatalog}
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
-                        <Eye className="w-3 h-3 mr-1" />
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
-                </div>
-              </div>
+              {/* Toggle Button for Sub-catalogs */}
+              <Collapsible 
+                open={expandedCatalogs['bathroom']} 
+                onOpenChange={() => toggleCatalogExpansion('bathroom')}
+              >
+                <CollapsibleTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
+                    size="sm"
+                  >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['bathroom'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
+                  </Button>
+                </CollapsibleTrigger>
+                
+                <CollapsibleContent className="space-y-3 animate-fade-in">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
+                      <div className="w-full h-24 sm:h-32 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/bathroom-brands-catalog.png" 
+                          alt="Bathroom Brands"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
+                      <h4 className="text-sm sm:text-lg font-semibold text-foreground mb-2">Bathroom Brands</h4>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          className="flex-1 button-pulse text-xs"
+                          onClick={() => handleCatalogDownload('Bathroom Brands')}
+                          disabled={isLoading}
+                        >
+                          <Download className="w-3 h-3 mr-1" />
+                          {isLoading ? 'جاري...' : t.downloadCatalog}
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
+                          <Eye className="w-3 h-3 mr-1" />
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                    
+                    <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
+                      <div className="w-full h-24 sm:h-32 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/steam-spa-wellness-catalog.png" 
+                          alt="Steam & Spa & Wellness"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
+                      <h4 className="text-sm sm:text-lg font-semibold text-foreground mb-2">Steam & Spa & Wellness</h4>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          className="flex-1 button-pulse text-xs"
+                          onClick={() => handleCatalogDownload('Steam & Spa & Wellness')}
+                          disabled={isLoading}
+                        >
+                          <Download className="w-3 h-3 mr-1" />
+                          {isLoading ? 'جاري...' : t.downloadCatalog}
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
+                          <Eye className="w-3 h-3 mr-1" />
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                    
+                    <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
+                      <div className="w-full h-24 sm:h-32 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/03d061ab-8f2d-4612-bb16-5dc5e6874ee7.png" 
+                          alt="Concealed-Cistern"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
+                      <h4 className="text-sm sm:text-lg font-semibold text-foreground mb-2">Concealed-Cistern</h4>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          className="flex-1 button-pulse text-xs"
+                          onClick={() => handleCatalogDownload('Concealed-Cistern')}
+                          disabled={isLoading}
+                        >
+                          <Download className="w-3 h-3 mr-1" />
+                          {isLoading ? 'جاري...' : t.downloadCatalog}
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
+                          <Eye className="w-3 h-3 mr-1" />
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
