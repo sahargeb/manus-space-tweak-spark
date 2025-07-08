@@ -880,12 +880,16 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
+              <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                <img 
+                  src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" 
+                  alt="Outdoor Living 2024"
+                  className="w-full h-full object-cover hover-scale"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">SLABS</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف أفضل الخامات والمواد عالية الجودة' : 'Discover the finest high-quality materials and finishes'}
+                Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
