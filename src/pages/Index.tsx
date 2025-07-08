@@ -861,6 +861,26 @@ const Index = () => {
                         </Button>
                       </div>
                     </Card>
+                    
+                    <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
+                          alt="Outdoor Tiles & Landscape Lighting 2024"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-2">Outdoor Tiles & Landscape Lighting</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className="w-3 h-3 mr-1" />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
                   </div>
                 </CollapsibleContent>
               </Card>
