@@ -855,6 +855,32 @@ const Index = () => {
                       </Button>
                     </div>
                   </Card>
+                  
+                  <Card className="p-4 card-hover bg-secondary/30 slide-up">
+                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <img 
+                        src="/lovable-uploads/03d061ab-8f2d-4612-bb16-5dc5e6874ee7.png" 
+                        alt="Concealed-Cistern"
+                        className="w-full h-full object-cover hover-scale"
+                      />
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Concealed-Cistern</h4>
+                    <div className="flex gap-2">
+                      <Button 
+                        size="sm" 
+                        className="flex-1 button-pulse"
+                        onClick={() => handleCatalogDownload('Concealed-Cistern')}
+                        disabled={isLoading}
+                      >
+                        <Download className="w-3 h-3 mr-1" />
+                        {isLoading ? 'جاري...' : t.downloadCatalog}
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect">
+                        <Eye className="w-3 h-3 mr-1" />
+                        {t.viewCatalog}
+                      </Button>
+                    </div>
+                  </Card>
                 </div>
               </div>
             </Card>
