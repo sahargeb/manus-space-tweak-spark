@@ -943,12 +943,16 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
+              <div className="w-full h-40 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                <img 
+                  src="/lovable-uploads/74da35d7-6a0c-4972-a4e5-e5cd74891a36.png" 
+                  alt="Lighting 2023"
+                  className="w-full h-full object-cover hover-scale"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.lightingCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Lighting</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'استكشف مجموعة حلول الإضاءة الحديثة والمبتكرة' : 'Explore our collection of modern and innovative lighting solutions'}
+                Discover our exquisite curation of lighting for all spaces—for indoors and outdoors. From illuminating the kitchen, dining, living room and bathroom
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
