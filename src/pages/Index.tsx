@@ -739,7 +739,7 @@ const Index = () => {
                   className="w-full h-full object-contain hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.bathroomsCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Tiles Small Format</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
@@ -760,7 +760,7 @@ const Index = () => {
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.kitchensCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Hokkaido</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
@@ -788,7 +788,7 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-2 mb-3">
-                    <h3 className="text-2xl font-bold text-foreground uppercase">{t.tilesCatalog}</h3>
+                    <h3 className="text-2xl font-bold text-foreground uppercase">Surface By BAGNODESIGN</h3>
                     {tilesExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </div>
                   <p className="text-muted-foreground mb-6 text-sm">
@@ -862,7 +862,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.materialsCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">SLABS</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أفضل الخامات والمواد عالية الجودة' : 'Discover the finest high-quality materials and finishes'}
               </p>
