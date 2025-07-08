@@ -780,7 +780,7 @@ const Index = () => {
             >
               <Card className="text-center p-8 hover:shadow-lg transition-shadow">
                 <CollapsibleTrigger className="w-full">
-                  <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                  <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
                     <img 
                       src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
                       alt="Surfaces BAGNODESIGN 2025"
