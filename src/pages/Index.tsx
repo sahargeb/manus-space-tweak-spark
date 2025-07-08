@@ -79,7 +79,7 @@ const Index = () => {
       catalogsTitle: "كاتلوجات المنتجات",
       catalogsDescription: "تصفح واستعرض كاتلوجاتنا الحصرية للحصول على معلومات تفصيلية عن منتجاتنا وخدماتنا",
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
-      kitchensCatalog: "كاتلوج المطابخ",
+      kitchensCatalog: "Kitchen LifeStyle",
       materialsCatalog: "كاتلوج الخامات",
       accessoriesCatalog: "كاتلوج الإكسسوارات",
       lightingCatalog: "كاتلوج الإضاءة",
@@ -163,7 +163,7 @@ const Index = () => {
       catalogsTitle: "Product Catalogs",
       catalogsDescription: "Browse and explore our exclusive catalogs to get detailed information about our products and services",
       bathroomsCatalog: "Bathroom sanitaryware & brassware",
-      kitchensCatalog: "Kitchens Catalog",
+      kitchensCatalog: "Kitchen LifeStyle",
       materialsCatalog: "Materials Catalog",
       accessoriesCatalog: "Accessories Catalog",
       lightingCatalog: "Lighting Catalog",
@@ -739,12 +739,16 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
+              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                <img 
+                  src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
+                  alt="Kitchen LifeStyle"
+                  className="w-full h-full object-cover hover-scale"
+                />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{t.kitchensCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'تصفح أحدث تصاميم المطابخ العصرية والعملية' : 'Browse the latest modern and functional kitchen designs'}
+                {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
