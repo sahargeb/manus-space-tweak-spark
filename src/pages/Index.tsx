@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
@@ -15,6 +15,7 @@ const Index = () => {
       about: "عن الشركة",
       services: "الخدمات",
       products: "المنتجات",
+      catalogs: "الكاتلوجات",
       contact: "تواصل معنا",
       callUs: "اتصل بنا",
       // Hero
@@ -74,6 +75,15 @@ const Index = () => {
       gallery: "المعرض",
       contactInfo: "معلومات التواصل",
       allRightsReserved: "جميع الحقوق محفوظة",
+      // Catalogs
+      catalogsTitle: "كاتلوجات المنتجات",
+      catalogsDescription: "تصفح واستعرض كاتلوجاتنا الحصرية للحصول على معلومات تفصيلية عن منتجاتنا وخدماتنا",
+      bathroomsCatalog: "كاتلوج الحمامات",
+      kitchensCatalog: "كاتلوج المطابخ",
+      materialsCatalog: "كاتلوج الخامات",
+      accessoriesCatalog: "كاتلوج الإكسسوارات",
+      downloadCatalog: "تحميل الكاتلوج",
+      viewCatalog: "عرض الكاتلوج",
       // Categories
       bathrooms: "حمامات",
       kitchens: "مطابخ",
@@ -88,6 +98,7 @@ const Index = () => {
       about: "About",
       services: "Services",
       products: "Products",
+      catalogs: "Catalogs",
       contact: "Contact",
       callUs: "Call Us",
       // Hero
@@ -147,6 +158,15 @@ const Index = () => {
       gallery: "Gallery",
       contactInfo: "Contact Information",
       allRightsReserved: "All Rights Reserved",
+      // Catalogs
+      catalogsTitle: "Product Catalogs",
+      catalogsDescription: "Browse and explore our exclusive catalogs to get detailed information about our products and services",
+      bathroomsCatalog: "Bathrooms Catalog",
+      kitchensCatalog: "Kitchens Catalog",
+      materialsCatalog: "Materials Catalog",
+      accessoriesCatalog: "Accessories Catalog",
+      downloadCatalog: "Download Catalog",
+      viewCatalog: "View Catalog",
       // Categories
       bathrooms: "Bathrooms",
       kitchens: "Kitchens",
@@ -524,6 +544,7 @@ const Index = () => {
               <a href="#about" className="text-foreground hover:text-primary transition-colors">{t.about}</a>
               <a href="#services" className="text-foreground hover:text-primary transition-colors">{t.services}</a>
               <a href="#products" className="text-foreground hover:text-primary transition-colors">{t.products}</a>
+              <a href="#catalogs" className="text-foreground hover:text-primary transition-colors">{t.catalogs}</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors">{t.contact}</a>
             </nav>
 
@@ -683,8 +704,90 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Catalogs Section */}
+      <section id="catalogs" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t.catalogsTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t.catalogsDescription}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'استكشف مجموعتنا الكاملة من تصاميم الحمامات الفاخرة' : 'Explore our complete collection of luxury bathroom designs'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.kitchensCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'تصفح أحدث تصاميم المطابخ العصرية والعملية' : 'Browse the latest modern and functional kitchen designs'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.materialsCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'اكتشف أفضل الخامات والمواد عالية الجودة' : 'Discover the finest high-quality materials and finishes'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t.accessoriesCatalog}</h3>
+              <p className="text-muted-foreground mb-6 text-sm">
+                {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
+              </p>
+              <Button className="w-full mb-3" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                {t.downloadCatalog}
+              </Button>
+              <Button variant="outline" className="w-full" size="sm">
+                {t.viewCatalog}
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-card">
+      <section id="contact" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">{t.contactTitle}</h2>
