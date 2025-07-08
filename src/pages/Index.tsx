@@ -484,9 +484,6 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
-                    <span className="text-xs sm:text-sm font-medium">
-                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
-                    </span>
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -606,9 +603,6 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
-                    <span className="text-xs sm:text-sm font-medium">
-                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
-                    </span>
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -669,9 +663,6 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
-                    <span className="text-xs sm:text-sm font-medium">
-                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
-                    </span>
                   </Button>
                 </CollapsibleTrigger>
                 
