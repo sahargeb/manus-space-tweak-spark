@@ -757,7 +757,7 @@ const Index = () => {
                   <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
-                        src="/lovable-uploads/df52d80b-a074-4034-935e-e8abfaa216a5.png" 
+                        src="/lovable-uploads/bathroom-brands-catalog.png" 
                         alt="Bathroom Brands"
                         className="w-full h-full object-cover hover-scale"
                       />
@@ -777,7 +777,7 @@ const Index = () => {
                   <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
-                        src="/lovable-uploads/e98a07e4-290e-4433-bc06-fe81e3f0345d.png" 
+                        src="/lovable-uploads/steam-spa-wellness-catalog.png" 
                         alt="Steam & Spa & Wellness"
                         className="w-full h-full object-cover hover-scale"
                       />
