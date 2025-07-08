@@ -484,6 +484,13 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['bathroom'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -492,7 +499,7 @@ const Index = () => {
                     <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
                       <div className="w-full h-24 sm:h-32 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
                         <img 
-                          src="/lovable-uploads/fb61e895-20db-4325-9bbf-767761e5f481.png" 
+                          src="/lovable-uploads/bathroom-brands-catalog.png" 
                           alt="Bathroom Brands"
                           className="w-full h-full object-cover hover-scale"
                         />
@@ -603,6 +610,13 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['kitchen'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -663,6 +677,13 @@ const Index = () => {
                     className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
                     size="sm"
                   >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['tiles'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
                   </Button>
                 </CollapsibleTrigger>
                 
