@@ -760,7 +760,7 @@ const Index = () => {
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Hokkaido</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Kitchen LifeStyle</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
