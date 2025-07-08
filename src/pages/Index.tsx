@@ -914,46 +914,137 @@ const Index = () => {
               </Collapsible>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
+            <Card className="text-center p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
+              <div className="w-full h-48 sm:h-64 lg:h-80 mb-4 sm:mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
                   alt="Kitchen LifeStyle"
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Kitchen LifeStyle</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 sm:mb-3 uppercase">Kitchen LifeStyle</h3>
+              <p className="text-muted-foreground mb-4 sm:mb-6 text-xs sm:text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+              <Button className="w-full mb-2 sm:mb-3" size="sm">
+                <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full" size="sm">
+              <Button variant="outline" className="w-full mb-3 sm:mb-4" size="sm">
+                <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
+              
+              <Collapsible 
+                open={expandedCatalogs['kitchen']} 
+                onOpenChange={() => toggleCatalogExpansion('kitchen')}
+              >
+                <CollapsibleTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
+                    size="sm"
+                  >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['kitchen'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
+                  </Button>
+                </CollapsibleTrigger>
+                
+                <CollapsibleContent className="space-y-3 animate-fade-in">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
+                      <h4 className="text-sm sm:text-lg font-semibold text-foreground mb-2">Kitchen Appliances</h4>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          className="flex-1 button-pulse text-xs"
+                          onClick={() => handleCatalogDownload('Kitchen Appliances')}
+                          disabled={isLoading}
+                        >
+                          <Download className="w-3 h-3 mr-1" />
+                          {isLoading ? 'جاري...' : t.downloadCatalog}
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
+                          <Eye className="w-3 h-3 mr-1" />
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
+            <Card className="text-center p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
+              <div className="w-full h-64 sm:h-80 lg:h-96 mb-4 sm:mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/ced9aa99-e86c-4437-b359-f22d1d0a74fa.png" 
                   alt="Surfaces BAGNODESIGN 2025"
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">TILES & SLABS</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 sm:mb-3 uppercase">TILES & SLABS</h3>
+              <p className="text-muted-foreground mb-4 sm:mb-6 text-xs sm:text-sm">
                 Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes
               </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+              <Button className="w-full mb-2 sm:mb-3" size="sm">
+                <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full mb-6" size="sm">
+              <Button variant="outline" className="w-full mb-3 sm:mb-4" size="sm">
+                <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
+              
+              <Collapsible 
+                open={expandedCatalogs['tiles']} 
+                onOpenChange={() => toggleCatalogExpansion('tiles')}
+              >
+                <CollapsibleTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    className="w-full mb-3 border border-primary/20 hover:bg-primary/10 transition-all duration-300"
+                    size="sm"
+                  >
+                    <span className="text-xs sm:text-sm font-medium">
+                      {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
+                    </span>
+                    {expandedCatalogs['tiles'] ? 
+                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
+                    }
+                  </Button>
+                </CollapsibleTrigger>
+                
+                <CollapsibleContent className="space-y-3 animate-fade-in">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
+                      <h4 className="text-sm sm:text-lg font-semibold text-foreground mb-2">Ceramic Tiles</h4>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          className="flex-1 button-pulse text-xs"
+                          onClick={() => handleCatalogDownload('Ceramic Tiles')}
+                          disabled={isLoading}
+                        >
+                          <Download className="w-3 h-3 mr-1" />
+                          {isLoading ? 'جاري...' : t.downloadCatalog}
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
+                          <Eye className="w-3 h-3 mr-1" />
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </Card>
               
               {/* Sub-catalogs always visible */}
               <div className="space-y-3">
