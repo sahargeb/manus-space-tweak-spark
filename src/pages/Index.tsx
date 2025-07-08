@@ -528,15 +528,6 @@ const Index = () => {
             </nav>
 
             <div className="flex items-center gap-4">
-              <a 
-                href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:scale-110 transition-transform duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
               <Button variant="outline" size="sm" onClick={toggleLanguage}>
                 <span className="mr-2">{language === 'ar' ? 'English' : 'العربية'}</span>
               </Button>
@@ -702,7 +693,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6">
               <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-bold text-foreground mb-2">{t.phone}</h3>
@@ -719,6 +710,14 @@ const Index = () => {
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-bold text-foreground mb-2">{t.location}</h3>
               <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{language === 'ar' ? 'القاهرة، جمهورية مصر العربية' : 'Cairo, Egypt'}</a>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300">
+                <Instagram className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-foreground mb-2">{language === 'ar' ? 'تابعنا' : 'Follow Us'}</h3>
+              <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@bagnodesignmisr</a>
             </div>
           </div>
         </div>
