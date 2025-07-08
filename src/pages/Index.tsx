@@ -490,7 +490,7 @@ const Index = () => {
                 <CollapsibleContent className="space-y-3 animate-fade-in">
                   <div className="grid grid-cols-1 gap-3">
                     <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
-                      <div className="w-full h-20 sm:h-24 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
+                      <div className="w-full h-16 sm:h-20 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
                         <img 
                           src="/lovable-uploads/fb61e895-20db-4325-9bbf-767761e5f481.png" 
                           alt="Bathroom Brands"
