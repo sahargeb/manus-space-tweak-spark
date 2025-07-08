@@ -492,7 +492,7 @@ const Index = () => {
                     <Card className="p-3 sm:p-4 card-hover bg-secondary/30 slide-up">
                       <div className="w-full h-16 sm:h-20 mb-2 sm:mb-3 rounded-lg overflow-hidden bg-gray-50">
                         <img 
-                          src="/lovable-uploads/98fcfbfb-7f47-4627-be4f-c3da8775e804.png" 
+                          src="/lovable-uploads/fb61e895-20db-4325-9bbf-767761e5f481.png" 
                           alt="Bathroom Brands"
                           className="w-full h-full object-contain hover-scale"
                         />
