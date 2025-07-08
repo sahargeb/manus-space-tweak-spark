@@ -1,184 +1,341 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield } from "lucide-react";
 
 const Index = () => {
+  const [language, setLanguage] = useState('ar');
+  
+  const translations = {
+    ar: {
+      // Header
+      home: "الرئيسية",
+      about: "عن الشركة",
+      services: "الخدمات",
+      products: "المنتجات",
+      contact: "تواصل معنا",
+      callUs: "اتصل بنا",
+      // Hero
+      heroTitle: "معرض الحمامات والمطابخ الفاخرة",
+      heroDescription: "نقدم لكم أحدث التصاميم العصرية للحمامات والمطابخ بأعلى معايير الجودة والأناقة",
+      exploreProducts: "استكشف منتجاتنا",
+      contactUs: "تواصل معنا",
+      // Stats
+      completedProjects: "مشروع مكتمل",
+      yearsExperience: "سنة خبرة",
+      customerSatisfaction: "رضا العملاء",
+      customerService: "خدمة عملاء",
+      // About
+      aboutTitle: "عن BAGNODESIGN",
+      aboutDescription: "نحن في BAGNODESIGN نتخصص في تقديم أحدث التصاميم للحمامات والمطابخ الفاخرة. مع سنوات من الخبرة في هذا المجال، نقدم لعملائنا حلولاً متكاملة تجمع بين الأناقة والوظائف العملية.",
+      highQuality: "جودة عالية",
+      highQualityDesc: "نستخدم أفضل المواد والخامات في جميع منتجاتنا",
+      professionalTeam: "فريق محترف",
+      professionalTeamDesc: "فريق من المصممين والفنيين ذوي الخبرة العالية",
+      fullService: "خدمة شاملة",
+      fullServiceDesc: "من التصميم إلى التركيب والصيانة",
+      qualityGuarantee: "ضمان الجودة",
+      qualityGuaranteeDesc: "ضمان شامل على جميع منتجاتنا وخدماتنا",
+      // Services
+      servicesTitle: "خدماتنا",
+      servicesDescription: "نقدم مجموعة شاملة من الخدمات المتخصصة في تصميم وتنفيذ الحمامات والمطابخ الفاخرة",
+      bathroomDesign: "تصميم وتنفيذ الحمامات الفاخرة",
+      bathroomDesc: "نقدم تصاميم حمامات فاخرة بأحدث المعايير العالمية",
+      kitchenDesign: "تصميم وتنفيذ المطابخ العصرية",
+      kitchenDesc: "مطابخ عملية وأنيقة تجمع بين الجمال والوظائف",
+      sanitarySupply: "توريد وتركيب الأدوات الصحية",
+      sanitaryDesc: "أفضل الأدوات الصحية من العلامات التجارية الرائدة",
+      lightingDesign: "تصميم أنظمة الإضاءة المتطورة",
+      lightingDesc: "إضاءة مبتكرة تبرز جمال التصميم الداخلي",
+      designConsultation: "استشارات التصميم الداخلي",
+      designConsultationDesc: "خدمات استشارية متخصصة لتحقيق رؤيتك",
+      learnMore: "اعرف المزيد",
+      // Products
+      productsTitle: "معرض المنتجات",
+      productsDescription: "استكشف مجموعتنا المتنوعة من التصاميم الفاخرة للحمامات والمطابخ",
+      viewDetails: "عرض التفاصيل",
+      // Contact
+      contactTitle: "تواصل معنا",
+      contactDescription: "نحن هنا لمساعدتك في تحقيق حلمك بالحصول على حمام أو مطبخ مثالي",
+      phone: "اتصل بنا",
+      email: "راسلنا",
+      location: "زورنا",
+      // Footer
+      footerDescription: "معرض الحمامات والمطابخ الفاخرة - نحو تصميم أفضل لمنزلك",
+      ourServices: "خدماتنا",
+      bathroomDesignShort: "تصميم الحمامات",
+      kitchenDesignShort: "تصميم المطابخ",
+      sanitaryEquipment: "الأدوات الصحية",
+      lighting: "الإضاءة",
+      quickLinks: "روابط سريعة",
+      aboutCompany: "عن الشركة",
+      gallery: "المعرض",
+      contactInfo: "معلومات التواصل",
+      allRightsReserved: "جميع الحقوق محفوظة",
+      // Categories
+      bathrooms: "حمامات",
+      kitchens: "مطابخ",
+      sanitaryTools: "أدوات صحية",
+      materials: "خامات",
+      accessories: "إكسسوارات",
+      equipment: "أجهزة"
+    },
+    en: {
+      // Header
+      home: "Home",
+      about: "About",
+      services: "Services",
+      products: "Products",
+      contact: "Contact",
+      callUs: "Call Us",
+      // Hero
+      heroTitle: "Luxury Bathrooms & Kitchens Gallery",
+      heroDescription: "We offer the latest modern designs for bathrooms and kitchens with the highest standards of quality and elegance",
+      exploreProducts: "Explore Our Products",
+      contactUs: "Contact Us",
+      // Stats
+      completedProjects: "Completed Projects",
+      yearsExperience: "Years Experience",
+      customerSatisfaction: "Customer Satisfaction",
+      customerService: "Customer Service",
+      // About
+      aboutTitle: "About BAGNODESIGN",
+      aboutDescription: "At BAGNODESIGN, we specialize in providing the latest designs for luxury bathrooms and kitchens. With years of experience in this field, we offer our clients integrated solutions that combine elegance and practical functions.",
+      highQuality: "High Quality",
+      highQualityDesc: "We use the best materials and finishes in all our products",
+      professionalTeam: "Professional Team",
+      professionalTeamDesc: "A team of highly experienced designers and technicians",
+      fullService: "Full Service",
+      fullServiceDesc: "From design to installation and maintenance",
+      qualityGuarantee: "Quality Guarantee",
+      qualityGuaranteeDesc: "Comprehensive warranty on all our products and services",
+      // Services
+      servicesTitle: "Our Services",
+      servicesDescription: "We provide a comprehensive range of specialized services in designing and implementing luxury bathrooms and kitchens",
+      bathroomDesign: "Luxury Bathroom Design & Implementation",
+      bathroomDesc: "We offer luxury bathroom designs with the latest international standards",
+      kitchenDesign: "Modern Kitchen Design & Implementation",
+      kitchenDesc: "Practical and elegant kitchens that combine beauty and functionality",
+      sanitarySupply: "Sanitary Equipment Supply & Installation",
+      sanitaryDesc: "The best sanitary equipment from leading brands",
+      lightingDesign: "Advanced Lighting System Design",
+      lightingDesc: "Innovative lighting that highlights the beauty of interior design",
+      designConsultation: "Interior Design Consultation",
+      designConsultationDesc: "Specialized consulting services to achieve your vision",
+      learnMore: "Learn More",
+      // Products
+      productsTitle: "Products Gallery",
+      productsDescription: "Explore our diverse collection of luxury bathroom and kitchen designs",
+      viewDetails: "View Details",
+      // Contact
+      contactTitle: "Contact Us",
+      contactDescription: "We are here to help you achieve your dream of having the perfect bathroom or kitchen",
+      phone: "Call Us",
+      email: "Email Us",
+      location: "Visit Us",
+      // Footer
+      footerDescription: "Luxury Bathrooms & Kitchens Gallery - Towards Better Home Design",
+      ourServices: "Our Services",
+      bathroomDesignShort: "Bathroom Design",
+      kitchenDesignShort: "Kitchen Design",
+      sanitaryEquipment: "Sanitary Equipment",
+      lighting: "Lighting",
+      quickLinks: "Quick Links",
+      aboutCompany: "About Company",
+      gallery: "Gallery",
+      contactInfo: "Contact Information",
+      allRightsReserved: "All Rights Reserved",
+      // Categories
+      bathrooms: "Bathrooms",
+      kitchens: "Kitchens",
+      sanitaryTools: "Sanitary Tools",
+      materials: "Materials",
+      accessories: "Accessories",
+      equipment: "Equipment"
+    }
+  };
+
+  const t = translations[language];
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'ar' ? 'en' : 'ar');
+  };
   const products = [
     {
       id: 1,
-      title: "حمام فاخر بالرخام الطبيعي",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom with Natural Marble",
+      category: t.bathrooms,
       image: "/lovable-uploads/d1095dc8-3451-47b4-9277-ff12bfd87ef7.png",
-      description: "تصميم حمام فاخر مع رخام طبيعي وإضاءة ذهبية مميزة"
+      description: language === 'ar' ? "تصميم حمام فاخر مع رخام طبيعي وإضاءة ذهبية مميزة" : "Luxury bathroom design with natural marble and distinctive golden lighting"
     },
     {
       id: 2,
-      title: "حمام عصري بتصميم أنيق",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام عصري بتصميم أنيق" : "Modern Bathroom with Elegant Design",
+      category: t.bathrooms,
       image: "/lovable-uploads/5be33a20-22b9-4b6a-aaf2-81f75f80886d.png",
-      description: "حمام عصري بمغسلة سوداء وخامات متميزة"
+      description: language === 'ar' ? "حمام عصري بمغسلة سوداء وخامات متميزة" : "Modern bathroom with black sink and premium materials"
     },
     {
       id: 3,
-      title: "مطبخ فاخر متكامل",
-      category: "مطابخ",
+      title: language === 'ar' ? "مطبخ فاخر متكامل" : "Complete Luxury Kitchen",
+      category: t.kitchens,
       image: "/lovable-uploads/a51864f6-9637-4034-9692-ec6a0bc3d9e5.png",
-      description: "مطبخ عصري مع جزيرة وإضاءة متطورة"
+      description: language === 'ar' ? "مطبخ عصري مع جزيرة وإضاءة متطورة" : "Modern kitchen with island and advanced lighting"
     },
     {
       id: 4,
-      title: "معرض الأدوات الصحية",
-      category: "أدوات صحية",
+      title: language === 'ar' ? "معرض الأدوات الصحية" : "Sanitary Equipment Gallery",
+      category: t.sanitaryTools,
       image: "/lovable-uploads/42d3c144-2a91-4e05-bc52-78e9260cbed9.png",
-      description: "مجموعة متنوعة من الأدوات الصحية الحديثة"
+      description: language === 'ar' ? "مجموعة متنوعة من الأدوات الصحية الحديثة" : "Diverse collection of modern sanitary equipment"
     },
     {
       id: 5,
-      title: "عينات الخامات الفاخرة",
-      category: "خامات",
+      title: language === 'ar' ? "عينات الخامات الفاخرة" : "Luxury Materials Samples",
+      category: t.materials,
       image: "/lovable-uploads/d5f6b3ae-a30b-44c2-94c6-dbdb34bd1de5.png",
-      description: "مجموعة متنوعة من الرخام والخامات الطبيعية"
+      description: language === 'ar' ? "مجموعة متنوعة من الرخام والخامات الطبيعية" : "Diverse collection of marble and natural materials"
     },
     {
       id: 6,
-      title: "حمام ذهبي فاخر",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام ذهبي فاخر" : "Luxury Golden Bathroom",
+      category: t.bathrooms,
       image: "/lovable-uploads/4aa1af44-00df-43a4-92f8-7b9cf8fabbd4.png",
-      description: "تصميم حمام فاخر بمغسلة ذهبية ورخام مميز"
+      description: language === 'ar' ? "تصميم حمام فاخر بمغسلة ذهبية ورخام مميز" : "Luxury bathroom design with golden sink and distinctive marble"
     },
     {
       id: 7,
-      title: "حمام بتصميم معاصر",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام بتصميم معاصر" : "Contemporary Design Bathroom",
+      category: t.bathrooms,
       image: "/lovable-uploads/8ca1f78e-9660-45af-b2b2-f94fc572a36b.png",
-      description: "حمام عصري مع إضاءة مدمجة وتصميم أنيق"
+      description: language === 'ar' ? "حمام عصري مع إضاءة مدمجة وتصميم أنيق" : "Modern bathroom with integrated lighting and elegant design"
     },
     {
       id: 8,
-      title: "حمام فاخر بالإضاءة الذهبية",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام فاخر بالإضاءة الذهبية" : "Luxury Bathroom with Golden Lighting",
+      category: t.bathrooms,
       image: "/lovable-uploads/4c2bacb3-43c7-441b-8188-489680b11a6e.png",
-      description: "تصميم حمام مع إضاءة ذهبية ورخام كلاسيكي"
+      description: language === 'ar' ? "تصميم حمام مع إضاءة ذهبية ورخام كلاسيكي" : "Bathroom design with golden lighting and classic marble"
     },
     {
       id: 9,
-      title: "حمام أسود أنيق",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام أسود أنيق" : "Elegant Black Bathroom",
+      category: t.bathrooms,
       image: "/lovable-uploads/92353d56-6084-49a5-a45a-0bc3636a2b27.png",
-      description: "حمام عصري بحوض أسود وتصميم درامي"
+      description: language === 'ar' ? "حمام عصري بحوض أسود وتصميم درامي" : "Modern bathroom with black basin and dramatic design"
     },
     {
       id: 10,
-      title: "معرض الإكسسوارات",
-      category: "إكسسوارات",
+      title: language === 'ar' ? "معرض الإكسسوارات" : "Accessories Gallery",
+      category: t.accessories,
       image: "/lovable-uploads/7fce98d9-2801-42b0-a8e6-a1f6c0d1ce3d.png",
-      description: "مجموعة من الإكسسوارات والإضاءة المنزلية"
+      description: language === 'ar' ? "مجموعة من الإكسسوارات والإضاءة المنزلية" : "Collection of accessories and home lighting"
     },
     {
       id: 11,
-      title: "وحدات الفنادق والمرافق",
-      category: "أجهزة",
+      title: language === 'ar' ? "وحدات الفنادق والمرافق" : "Hotel Amenities & Facilities",
+      category: t.equipment,
       image: "/lovable-uploads/a6d3fab7-0404-4cf7-8cba-b0710166f428.png",
-      description: "مجموعة شاملة من الأجهزة والمرافق الفندقية الحديثة"
+      description: language === 'ar' ? "مجموعة شاملة من الأجهزة والمرافق الفندقية الحديثة" : "Comprehensive collection of modern hotel equipment and facilities"
     },
     {
       id: 12,
-      title: "مطبخ خارجي تحت الدرج",
-      category: "مطابخ",
+      title: language === 'ar' ? "مطبخ خارجي تحت الدرج" : "Outdoor Kitchen Under Stairs",
+      category: t.kitchens,
       image: "/lovable-uploads/7114e5a3-0255-4299-b8ef-5d3f1516cf8d.png",
-      description: "تصميم مطبخ خارجي أنيق مع شواية تحت الدرج"
+      description: language === 'ar' ? "تصميم مطبخ خارجي أنيق مع شواية تحت الدرج" : "Elegant outdoor kitchen design with grill under stairs"
     },
     {
       id: 13,
-      title: "حمام رخامي فاخر بالإضاءة المعلقة",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام رخامي فاخر بالإضاءة المعلقة" : "Luxury Marble Bathroom with Pendant Lighting",
+      category: t.bathrooms,
       image: "/lovable-uploads/9c2848bb-6c0e-4d87-a7fe-e6f1aa1f8382.png",
-      description: "حمام فاخر بجدران رخامية وإضاءة معلقة مميزة"
+      description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة معلقة مميزة" : "Luxury bathroom with marble walls and distinctive pendant lighting"
     },
     {
       id: 14,
-      title: "عرض الصنابير والخامات",
-      category: "أدوات صحية",
+      title: language === 'ar' ? "عرض الصنابير والخامات" : "Faucets & Materials Display",
+      category: t.sanitaryTools,
       image: "/lovable-uploads/886c01f4-7f8b-4e63-b86f-b8a13bea7e86.png",
-      description: "معرض شامل للصنابير والخامات الحديثة"
+      description: language === 'ar' ? "معرض شامل للصنابير والخامات الحديثة" : "Comprehensive display of modern faucets and materials"
     },
     {
       id: 15,
-      title: "معرض إكسسوارات BAGNODESIGN",
-      category: "إكسسوارات",
+      title: language === 'ar' ? "معرض إكسسوارات BAGNODESIGN" : "BAGNODESIGN Accessories Gallery",
+      category: t.accessories,
       image: "/lovable-uploads/49a0f7ae-a195-41e7-806d-686296c1c4e0.png",
-      description: "عرض مجموعة إكسسوارات BAGNODESIGN الحصرية"
+      description: language === 'ar' ? "عرض مجموعة إكسسوارات BAGNODESIGN الحصرية" : "Display of exclusive BAGNODESIGN accessories collection"
     },
     {
       id: 16,
-      title: "حمام فاخر بالإضاءة المعلقة",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام فاخر بالإضاءة المعلقة" : "Luxury Bathroom with Pendant Lighting",
+      category: t.bathrooms,
       image: "/lovable-uploads/eb4032d8-d075-45e8-91cf-43a1856ab4b0.png",
-      description: "تصميم حمام فاخر مع إضاءة معلقة وخامات طبيعية"
+      description: language === 'ar' ? "تصميم حمام فاخر مع إضاءة معلقة وخامات طبيعية" : "Luxury bathroom design with pendant lighting and natural materials"
     },
     {
       id: 17,
-      title: "مساحة معيشة ومطبخ مفتوح",
-      category: "مطابخ",
+      title: language === 'ar' ? "مساحة معيشة ومطبخ مفتوح" : "Open Living Space & Kitchen",
+      category: t.kitchens,
       image: "/lovable-uploads/d2fc2469-c1ca-47b2-ad16-0112cf49ba97.png",
-      description: "تصميم مفتوح يجمع بين المطبخ ومساحة المعيشة"
+      description: language === 'ar' ? "تصميم مفتوح يجمع بين المطبخ ومساحة المعيشة" : "Open design combining kitchen and living space"
     },
     {
       id: 18,
-      title: "حمام مدمج عصري",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام مدمج عصري" : "Modern Integrated Bathroom",
+      category: t.bathrooms,
       image: "/lovable-uploads/eb1b5131-a9d5-47f7-83dc-57d577c1402b.png",
-      description: "حمام مدمج بتصميم عصري وخامات فاخرة"
+      description: language === 'ar' ? "حمام مدمج بتصميم عصري وخامات فاخرة" : "Integrated bathroom with modern design and luxury materials"
     },
     {
       id: 19,
-      title: "حمام فاخر بالخشب والرخام",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام فاخر بالخشب والرخام" : "Luxury Bathroom with Wood & Marble",
+      category: t.bathrooms,
       image: "/lovable-uploads/97f91dbc-cab8-4dfb-8c22-fb8ffd5de9e4.png",
-      description: "حمام فاخر يجمع بين جمال الخشب وأناقة الرخام"
+      description: language === 'ar' ? "حمام فاخر يجمع بين جمال الخشب وأناقة الرخام" : "Luxury bathroom combining the beauty of wood and elegance of marble"
     },
     {
       id: 20,
-      title: "حمام رخامي بالتشطيبات السوداء",
-      category: "حمامات",
+      title: language === 'ar' ? "حمام رخامي بالتشطيبات السوداء" : "Marble Bathroom with Black Finishes",
+      category: t.bathrooms,
       image: "/lovable-uploads/6b99bf90-d463-41b5-bc65-e39c7bd80812.png",
-      description: "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة"
+      description: language === 'ar' ? "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة" : "Luxury bathroom with marble walls and elegant black finishes"
     }
   ];
 
   const stats = [
-    { icon: Award, number: "500+", label: "مشروع مكتمل" },
-    { icon: Clock, number: "15+", label: "سنة خبرة" },
-    { icon: Users, number: "100%", label: "رضا العملاء" },
-    { icon: Shield, number: "24/7", label: "خدمة عملاء" }
+    { icon: Award, number: "500+", label: t.completedProjects },
+    { icon: Clock, number: "15+", label: t.yearsExperience },
+    { icon: Users, number: "100%", label: t.customerSatisfaction },
+    { icon: Shield, number: "24/7", label: t.customerService }
   ];
 
   const services = [
     {
-      title: "تصميم وتنفيذ الحمامات الفاخرة",
-      description: "نقدم تصاميم حمامات فاخرة بأحدث المعايير العالمية"
+      title: t.bathroomDesign,
+      description: t.bathroomDesc
     },
     {
-      title: "تصميم وتنفيذ المطابخ العصرية",
-      description: "مطابخ عملية وأنيقة تجمع بين الجمال والوظائف"
+      title: t.kitchenDesign,
+      description: t.kitchenDesc
     },
     {
-      title: "توريد وتركيب الأدوات الصحية",
-      description: "أفضل الأدوات الصحية من العلامات التجارية الرائدة"
+      title: t.sanitarySupply,
+      description: t.sanitaryDesc
     },
     {
-      title: "تصميم أنظمة الإضاءة المتطورة",
-      description: "إضاءة مبتكرة تبرز جمال التصميم الداخلي"
+      title: t.lightingDesign,
+      description: t.lightingDesc
     },
     {
-      title: "استشارات التصميم الداخلي",
-      description: "خدمات استشارية متخصصة لتحقيق رؤيتك"
+      title: t.designConsultation,
+      description: t.designConsultationDesc
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`}>
       {/* Header */}
       <header className="bg-card shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -194,18 +351,18 @@ const Index = () => {
             </div>
             
             <nav className="hidden md:flex gap-6">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">الرئيسية</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">عن الشركة</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">الخدمات</a>
-              <a href="#products" className="text-foreground hover:text-primary transition-colors">المنتجات</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">تواصل معنا</a>
+              <a href="#home" className="text-foreground hover:text-primary transition-colors">{t.home}</a>
+              <a href="#about" className="text-foreground hover:text-primary transition-colors">{t.about}</a>
+              <a href="#services" className="text-foreground hover:text-primary transition-colors">{t.services}</a>
+              <a href="#products" className="text-foreground hover:text-primary transition-colors">{t.products}</a>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors">{t.contact}</a>
             </nav>
 
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" onClick={() => window.open('https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh', '_blank')}>
-                <span className="mr-2">English</span>
+              <Button variant="outline" size="sm" onClick={toggleLanguage}>
+                <span className="mr-2">{language === 'ar' ? 'English' : 'العربية'}</span>
               </Button>
-              <Button onClick={() => window.location.href = 'tel:0226134401'}>اتصل بنا</Button>
+              <Button onClick={() => window.location.href = 'tel:0226134401'}>{t.callUs}</Button>
             </div>
           </div>
         </div>
@@ -215,17 +372,17 @@ const Index = () => {
       <section id="home" className="py-20 bg-gradient-to-br from-background to-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-foreground mb-6">
-            معرض الحمامات والمطابخ الفاخرة
+            {t.heroTitle}
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            نقدم لكم أحدث التصاميم العصرية للحمامات والمطابخ بأعلى معايير الجودة والأناقة
+            {t.heroDescription}
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-primary to-accent">
-              استكشف منتجاتنا
+              {t.exploreProducts}
             </Button>
             <Button variant="outline" size="lg">
-              تواصل معنا
+              {t.contactUs}
             </Button>
           </div>
         </div>
@@ -252,34 +409,34 @@ const Index = () => {
       <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-8">عن BAGNODESIGN</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-8">{t.aboutTitle}</h2>
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              نحن في BAGNODESIGN نتخصص في تقديم أحدث التصاميم للحمامات والمطابخ الفاخرة. مع سنوات من الخبرة في هذا المجال، نقدم لعملائنا حلولاً متكاملة تجمع بين الأناقة والوظائف العملية.
+              {t.aboutDescription}
             </p>
             
             <div className="grid md:grid-cols-4 gap-8">
               <div className="p-6 bg-card rounded-lg shadow-sm">
                 <Award className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">جودة عالية</h3>
-                <p className="text-sm text-muted-foreground">نستخدم أفضل المواد والخامات في جميع منتجاتنا</p>
+                <h3 className="font-bold text-foreground mb-2">{t.highQuality}</h3>
+                <p className="text-sm text-muted-foreground">{t.highQualityDesc}</p>
               </div>
               
               <div className="p-6 bg-card rounded-lg shadow-sm">
                 <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">فريق محترف</h3>
-                <p className="text-sm text-muted-foreground">فريق من المصممين والفنيين ذوي الخبرة العالية</p>
+                <h3 className="font-bold text-foreground mb-2">{t.professionalTeam}</h3>
+                <p className="text-sm text-muted-foreground">{t.professionalTeamDesc}</p>
               </div>
               
               <div className="p-6 bg-card rounded-lg shadow-sm">
                 <Shield className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">خدمة شاملة</h3>
-                <p className="text-sm text-muted-foreground">من التصميم إلى التركيب والصيانة</p>
+                <h3 className="font-bold text-foreground mb-2">{t.fullService}</h3>
+                <p className="text-sm text-muted-foreground">{t.fullServiceDesc}</p>
               </div>
               
               <div className="p-6 bg-card rounded-lg shadow-sm">
                 <Star className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">ضمان الجودة</h3>
-                <p className="text-sm text-muted-foreground">ضمان شامل على جميع منتجاتنا وخدماتنا</p>
+                <h3 className="font-bold text-foreground mb-2">{t.qualityGuarantee}</h3>
+                <p className="text-sm text-muted-foreground">{t.qualityGuaranteeDesc}</p>
               </div>
             </div>
           </div>
@@ -290,9 +447,9 @@ const Index = () => {
       <section id="services" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">خدماتنا</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t.servicesTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              نقدم مجموعة شاملة من الخدمات المتخصصة في تصميم وتنفيذ الحمامات والمطابخ الفاخرة
+              {t.servicesDescription}
             </p>
           </div>
           
@@ -302,7 +459,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" size="sm">اعرف المزيد</Button>
+                  <Button variant="outline" size="sm">{t.learnMore}</Button>
                 </CardContent>
               </Card>
             ))}
@@ -314,9 +471,9 @@ const Index = () => {
       <section id="products" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">معرض المنتجات</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t.productsTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              استكشف مجموعتنا المتنوعة من التصاميم الفاخرة للحمامات والمطابخ
+              {t.productsDescription}
             </p>
           </div>
           
@@ -336,7 +493,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
                   <p className="text-muted-foreground mb-4">{product.description}</p>
-                  <Button variant="outline" className="w-full">عرض التفاصيل</Button>
+                  <Button variant="outline" className="w-full">{t.viewDetails}</Button>
                 </CardContent>
               </Card>
             ))}
@@ -348,29 +505,29 @@ const Index = () => {
       <section id="contact" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">تواصل معنا</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t.contactTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              نحن هنا لمساعدتك في تحقيق حلمك بالحصول على حمام أو مطبخ مثالي
+              {t.contactDescription}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6">
               <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">اتصل بنا</h3>
+              <h3 className="font-bold text-foreground mb-2">{t.phone}</h3>
               <a href="tel:0226134401" className="text-muted-foreground hover:text-primary transition-colors">0226134401</a>
             </div>
             
             <div className="text-center p-6">
               <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">راسلنا</h3>
+              <h3 className="font-bold text-foreground mb-2">{t.email}</h3>
               <a href="mailto:Info@bagnodesignmisr.com" className="text-muted-foreground hover:text-primary transition-colors">Info@bagnodesignmisr.com</a>
             </div>
             
             <div className="text-center p-6">
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">زورنا</h3>
-              <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">القاهرة، جمهورية مصر العربية</a>
+              <h3 className="font-bold text-foreground mb-2">{t.location}</h3>
+              <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{language === 'ar' ? 'القاهرة، جمهورية مصر العربية' : 'Cairo, Egypt'}</a>
             </div>
           </div>
         </div>
@@ -388,7 +545,7 @@ const Index = () => {
                 <span className="font-bold text-lg">BAGNODESIGN</span>
               </div>
               <p className="text-background/70">
-                معرض الحمامات والمطابخ الفاخرة - نحو تصميم أفضل لمنزلك
+                {t.footerDescription}
               </p>
               <div className="flex gap-4 mt-4">
                 <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
@@ -404,37 +561,37 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">خدماتنا</h4>
+              <h4 className="font-bold mb-4">{t.ourServices}</h4>
               <ul className="space-y-2 text-background/70">
-                <li>تصميم الحمامات</li>
-                <li>تصميم المطابخ</li>
-                <li>الأدوات الصحية</li>
-                <li>الإضاءة</li>
+                <li>{t.bathroomDesignShort}</li>
+                <li>{t.kitchenDesignShort}</li>
+                <li>{t.sanitaryEquipment}</li>
+                <li>{t.lighting}</li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">روابط سريعة</h4>
+              <h4 className="font-bold mb-4">{t.quickLinks}</h4>
               <ul className="space-y-2 text-background/70">
-                <li>عن الشركة</li>
-                <li>المنتجات</li>
-                <li>المعرض</li>
-                <li>تواصل معنا</li>
+                <li>{t.aboutCompany}</li>
+                <li>{t.products}</li>
+                <li>{t.gallery}</li>
+                <li>{t.contact}</li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">معلومات التواصل</h4>
+              <h4 className="font-bold mb-4">{t.contactInfo}</h4>
               <ul className="space-y-2 text-background/70">
                 <li><a href="tel:0226134401" className="hover:text-primary transition-colors">0226134401</a></li>
                 <li><a href="mailto:Info@bagnodesignmisr.com" className="hover:text-primary transition-colors">Info@bagnodesignmisr.com</a></li>
-                <li><a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">القاهرة، مصر</a></li>
+                <li><a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">{language === 'ar' ? 'القاهرة، مصر' : 'Cairo, Egypt'}</a></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-            <p>&copy; 2024 BAGNODESIGN. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2024 BAGNODESIGN. {t.allRightsReserved}.</p>
           </div>
         </div>
       </footer>
