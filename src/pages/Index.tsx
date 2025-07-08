@@ -791,13 +791,12 @@ const Index = () => {
               <Button 
                 className="w-full mb-3 button-pulse glow" 
                 size="sm"
-                onClick={() => handleCatalogDownload('Bathroom sanitaryware & brassware')}
-                disabled={isLoading}
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=18blAiMcepGPAppsOMVMrwdtpPOp8riNI', '_blank')}
               >
                 <Download className="w-4 h-4 mr-2" />
-                {isLoading ? 'جاري التحميل...' : t.downloadCatalog}
+                {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full mb-6 button-pulse glass-effect" size="sm">
+              <Button variant="outline" className="w-full mb-6 button-pulse glass-effect" size="sm" onClick={() => window.open('https://drive.google.com/file/d/18blAiMcepGPAppsOMVMrwdtpPOp8riNI/preview', '_blank')}>
                 <Eye className="w-4 h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
