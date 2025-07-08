@@ -509,13 +509,13 @@ const Index = () => {
                         <Button 
                           size="sm" 
                           className="flex-1 button-pulse text-xs"
-                          onClick={() => window.open('https://drive.google.com/uc?export=download&id=18blAiMcepGPAppsOMVMrwdtpPOp8riNI', '_blank')}
+                          onClick={() => handleCatalogDownload('Bathroom Brands')}
                           disabled={isLoading}
                         >
                           <Download className="w-3 h-3 mr-1" />
                           {isLoading ? 'جاري...' : t.downloadCatalog}
                         </Button>
-                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs" onClick={() => window.open('https://drive.google.com/file/d/18blAiMcepGPAppsOMVMrwdtpPOp8riNI/preview', '_blank')}>
+                        <Button variant="outline" size="sm" className="flex-1 button-pulse glass-effect text-xs">
                           <Eye className="w-3 h-3 mr-1" />
                           {t.viewCatalog}
                         </Button>
