@@ -8,33 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 28 25% 97%;
+    --foreground: 32 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 32 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 32 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 180 85% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 38 40% 85%;
+    --secondary-foreground: 32 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 32 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 42 78% 60%;
+    --accent-foreground: 32 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 180 85% 45%;
+    
+    /* Luxury design tokens */
+    --luxury-marble: 30 15% 90%;
+    --luxury-gold: 42 78% 60%;
+    --luxury-dark: 32 15% 15%;
+    --luxury-bronze: 25 45% 40%;
+    
+    /* Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(42, 78%, 60%) 0%, hsl(25, 45%, 40%) 100%);
+    --gradient-marble: linear-gradient(180deg, hsl(30, 15%, 95%) 0%, hsl(30, 15%, 85%) 100%);
+    
+    /* Shadows */
+    --shadow-luxury: 0 20px 40px -10px hsl(42, 78%, 60%, 0.2);
+    --shadow-card: 0 10px 30px -5px hsl(32, 15%, 15%, 0.1);
 
     --radius: 0.5rem;
 
