@@ -739,7 +739,7 @@ const Index = () => {
                   className="w-full h-full object-contain hover-scale"
                 />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">{t.bathroomsCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
@@ -760,7 +760,7 @@ const Index = () => {
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.kitchensCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">{t.kitchensCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
@@ -780,7 +780,7 @@ const Index = () => {
             >
               <Card className="text-center p-8 hover:shadow-lg transition-shadow">
                 <CollapsibleTrigger className="w-full">
-                  <div className="w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-50">
+                  <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                     <img 
                       src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
                       alt="Surfaces BAGNODESIGN 2025"
@@ -788,7 +788,7 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-2 mb-3">
-                    <h3 className="text-xl font-bold text-foreground">{t.tilesCatalog}</h3>
+                    <h3 className="text-2xl font-bold text-foreground">{t.tilesCatalog}</h3>
                     {tilesExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </div>
                   <p className="text-muted-foreground mb-6 text-sm">
@@ -862,7 +862,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.materialsCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">{t.materialsCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أفضل الخامات والمواد عالية الجودة' : 'Discover the finest high-quality materials and finishes'}
               </p>
@@ -879,7 +879,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.accessoriesCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">{t.accessoriesCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
               </p>
@@ -896,7 +896,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{t.lightingCatalog}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">{t.lightingCatalog}</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعة حلول الإضاءة الحديثة والمبتكرة' : 'Explore our collection of modern and innovative lighting solutions'}
               </p>
