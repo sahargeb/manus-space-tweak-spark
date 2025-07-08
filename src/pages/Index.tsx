@@ -776,14 +776,14 @@ const Index = () => {
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/740f7f90-ba42-4f4f-a9ca-434e9bf4fb23.png" 
-                  alt="Surfaces BAGNODESIGN 2025"
+                  src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
+                  alt="Outdoor Living 2024"
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">TILES & SLABS</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
+                Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
               </p>
               <Button className="w-full mb-3" size="sm">
                 <Download className="w-4 h-4 mr-2" />
