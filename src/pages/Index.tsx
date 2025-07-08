@@ -781,7 +781,7 @@ const Index = () => {
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Surface By BAGNODESIGN</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">TILES & SLABS</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف مجموعة البلاط والألواح من العلامات التجارية الأوروبية الرائدة بمجموعة متنوعة من الأنماط والأحجام والتشطيبات' : 'Discover our tiles and slabs from leading European brands in an array of styles, sizes, and finishes'}
               </p>
