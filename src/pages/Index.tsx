@@ -464,12 +464,12 @@ const Index = () => {
               <Button 
                 className="w-full mb-2 sm:mb-3 button-pulse glow" 
                 size="sm"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=18blAiMcepGPAppsOMVMrwdtpPOp8riNI', '_blank')}
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1P8lXoFR_VpObvstordjLPxLqabZVpUgl', '_blank')}
               >
                 <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.downloadCatalog}
               </Button>
-              <Button variant="outline" className="w-full mb-3 sm:mb-4 button-pulse glass-effect" size="sm" onClick={() => window.open('https://drive.google.com/file/d/18blAiMcepGPAppsOMVMrwdtpPOp8riNI/preview', '_blank')}>
+              <Button variant="outline" className="w-full mb-3 sm:mb-4 button-pulse glass-effect" size="sm" onClick={() => window.open('https://drive.google.com/file/d/1P8lXoFR_VpObvstordjLPxLqabZVpUgl/preview', '_blank')}>
                 <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t.viewCatalog}
               </Button>
