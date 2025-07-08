@@ -487,10 +487,6 @@ const Index = () => {
                     <span className="text-xs sm:text-sm font-medium">
                       {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
                     </span>
-                    {expandedCatalogs['bathroom'] ? 
-                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
-                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
-                    }
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -613,10 +609,6 @@ const Index = () => {
                     <span className="text-xs sm:text-sm font-medium">
                       {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
                     </span>
-                    {expandedCatalogs['kitchen'] ? 
-                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
-                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
-                    }
                   </Button>
                 </CollapsibleTrigger>
                 
@@ -680,10 +672,6 @@ const Index = () => {
                     <span className="text-xs sm:text-sm font-medium">
                       {language === 'ar' ? 'عرض الكاتلوجات الفرعية' : 'View Sub-catalogs'}
                     </span>
-                    {expandedCatalogs['tiles'] ? 
-                      <ChevronUp className="w-4 h-4 ml-2 transition-transform" /> : 
-                      <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
-                    }
                   </Button>
                 </CollapsibleTrigger>
                 
