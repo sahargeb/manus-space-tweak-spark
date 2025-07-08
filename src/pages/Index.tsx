@@ -730,7 +730,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-7 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
@@ -923,23 +923,6 @@ const Index = () => {
                   </Card>
                 </div>
               </div>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.accessoriesCatalog}</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
-              </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-lg transition-shadow">
