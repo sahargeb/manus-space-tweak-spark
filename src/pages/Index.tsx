@@ -803,6 +803,13 @@ const Index = () => {
                 <CollapsibleContent className="mt-4 space-y-3 animate-accordion-down">
                   <div className="grid grid-cols-1 gap-3">
                     <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
+                          alt="Tiles Small Format SANIPEXGROUP"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
                       <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" className="flex-1">
