@@ -731,7 +731,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
@@ -744,7 +744,7 @@ const Index = () => {
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full" size="sm">
@@ -752,7 +752,7 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
@@ -765,7 +765,7 @@ const Index = () => {
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full" size="sm">
@@ -773,7 +773,7 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
@@ -786,7 +786,7 @@ const Index = () => {
                 Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full mb-6" size="sm">
@@ -796,27 +796,27 @@ const Index = () => {
               {/* Sub-catalogs always visible */}
               <div className="space-y-3">
                 <div className="grid grid-cols-1 gap-3">
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
-                        alt="Tiles Small Format SANIPEXGROUP"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1">
-                        <Download className="w-3 h-3 mr-1" />
-                        {t.downloadCatalog}
-                      </Button>
-                      <Button size="sm" className="flex-1">
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
+                    <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
+                        <img 
+                          src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
+                          alt="Tiles Small Format SANIPEXGROUP"
+                          className="w-full h-full object-cover hover-scale"
+                        />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                          {t.downloadCatalog}
+                        </Button>
+                        <Button size="sm" className="flex-1">
+                          {t.viewCatalog}
+                        </Button>
+                      </div>
+                    </Card>
                   
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
                         src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
@@ -827,7 +827,7 @@ const Index = () => {
                     <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm" className="flex-1">
-                        <Download className="w-3 h-3 mr-1" />
+                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
                       <Button size="sm" className="flex-1">
@@ -836,7 +836,7 @@ const Index = () => {
                     </div>
                   </Card>
                   
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
                         src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
@@ -847,7 +847,7 @@ const Index = () => {
                     <h4 className="font-semibold text-foreground mb-2">Hokkaido</h4>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm" className="flex-1">
-                        <Download className="w-3 h-3 mr-1" />
+                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
                       <Button size="sm" className="flex-1">
@@ -856,7 +856,7 @@ const Index = () => {
                     </div>
                   </Card>
                   
-                  <Card className="p-4 hover:shadow-md transition-shadow bg-secondary/30">
+                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                     <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
                       <img 
                         src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
@@ -867,7 +867,7 @@ const Index = () => {
                     <h4 className="font-semibold text-foreground mb-2">Outdoor Tiles & Landscape Lighting</h4>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm" className="flex-1">
-                        <Download className="w-3 h-3 mr-1" />
+                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
                       <Button size="sm" className="flex-1">
@@ -879,7 +879,7 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
                   src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" 
@@ -892,7 +892,7 @@ const Index = () => {
                 Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full" size="sm">
@@ -900,8 +900,8 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className={`w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 ${language === 'ar' ? 'mr-auto' : 'mx-auto'}`}>
                 <FileText className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.accessoriesCatalog}</h3>
@@ -909,7 +909,7 @@ const Index = () => {
                 {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full" size="sm">
@@ -917,8 +917,8 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className={`w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 ${language === 'ar' ? 'mr-auto' : 'mx-auto'}`}>
                 <FileText className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.lightingCatalog}</h3>
@@ -926,7 +926,7 @@ const Index = () => {
                 {language === 'ar' ? 'استكشف مجموعة حلول الإضاءة الحديثة والمبتكرة' : 'Explore our collection of modern and innovative lighting solutions'}
               </p>
               <Button className="w-full mb-3" size="sm">
-                <Download className="w-4 h-4 mr-2" />
+                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
               <Button variant="outline" className="w-full" size="sm">
