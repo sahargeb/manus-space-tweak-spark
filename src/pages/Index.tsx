@@ -723,7 +723,7 @@ const Index = () => {
       {/* Catalogs Section */}
       <section id="catalogs" className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className={`mb-16 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
             <h2 className="text-4xl font-bold text-foreground mb-4">{t.catalogsTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.catalogsDescription}
@@ -743,7 +743,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
               </p>
-              <Button className="w-full mb-3" size="sm">
+              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
                 <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
@@ -764,7 +764,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6 text-sm">
                 {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
               </p>
-              <Button className="w-full mb-3" size="sm">
+              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
                 <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
@@ -785,7 +785,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6 text-sm">
                 Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
               </p>
-              <Button className="w-full mb-3" size="sm">
+              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
                 <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
