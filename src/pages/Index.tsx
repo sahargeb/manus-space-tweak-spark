@@ -4,11 +4,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye } from "lucide-react";
+import VirtualGallery from "@/components/3d/VirtualGallery";
+import Image360Viewer from "@/components/3d/Image360Viewer";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
   const [tilesExpanded, setTilesExpanded] = useState(false);
+  const [showVirtualGallery, setShowVirtualGallery] = useState(false);
+  const [show360Viewer, setShow360Viewer] = useState(false);
+  const [current360Image, setCurrent360Image] = useState<{
+    url: string;
+    title: string;
+    description: string;
+  } | null>(null);
   
   const translations = {
     ar: {
@@ -759,9 +768,27 @@ const Index = () => {
                     <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                     {t.downloadCatalog}
                   </Button>
-                  <Button variant="outline" className="w-full" size="default">
-                    {t.viewCatalog}
-                  </Button>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Button variant="outline" className="flex-1" size="default">
+                      {t.viewCatalog}
+                    </Button>
+                    <Button 
+                      onClick={() => {
+                        setCurrent360Image({
+                          url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
+                          title: language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware',
+                          description: language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware'
+                        });
+                        setShow360Viewer(true);
+                      }}
+                      variant="secondary" 
+                      className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
+                      size="default"
+                    >
+                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? '360°' : '360°'}
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -792,9 +819,27 @@ const Index = () => {
                     <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                     {t.downloadCatalog}
                   </Button>
-                  <Button variant="outline" className="w-full" size="default">
-                    {t.viewCatalog}
-                  </Button>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Button variant="outline" className="flex-1" size="default">
+                      {t.viewCatalog}
+                    </Button>
+                    <Button 
+                      onClick={() => {
+                        setCurrent360Image({
+                          url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
+                          title: language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle',
+                          description: language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة' : 'Discover luxury kitchen appliances by leading brands'
+                        });
+                        setShow360Viewer(true);
+                      }}
+                      variant="secondary" 
+                      className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
+                      size="default"
+                    >
+                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? '360°' : '360°'}
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -1003,6 +1048,168 @@ const Index = () => {
         </div>
       </section>
 
+      {/* 3D Virtual Experiences Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="container mx-auto px-4">
+          <div className={`mb-16 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              {language === 'ar' ? 'التجارب الافتراضية ثلاثية الأبعاد' : '3D Virtual Experiences'}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {language === 'ar' 
+                ? 'استكشف منتجاتنا ومعرضنا من خلال التجارب التفاعلية ثلاثية الأبعاد' 
+                : 'Explore our products and showroom through immersive 3D interactive experiences'}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            {/* Virtual Gallery */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <CardContent className="p-8 space-y-6">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Box className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">
+                  {language === 'ar' ? 'المعرض الافتراضي' : 'Virtual Gallery'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {language === 'ar' 
+                    ? 'جولة تفاعلية في معرضنا الافتراضي ثلاثي الأبعاد واستكشاف جميع الكاتلوجات' 
+                    : 'Take an interactive tour through our 3D virtual showroom and explore all catalogs'}
+                </p>
+                <Button 
+                  onClick={() => setShowVirtualGallery(true)}
+                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
+                >
+                  <Box className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                  {language === 'ar' ? 'دخول المعرض' : 'Enter Gallery'}
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* 360° Bathroom Experience */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <CardContent className="p-8 space-y-6">
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Eye className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">
+                  {language === 'ar' ? 'تجربة الحمام 360°' : 'Bathroom 360° Experience'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {language === 'ar' 
+                    ? 'استكشف تصاميم الحمامات الفاخرة بتقنية 360 درجة' 
+                    : 'Explore luxury bathroom designs in immersive 360° view'}
+                </p>
+                <Button 
+                  onClick={() => {
+                    setCurrent360Image({
+                      url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
+                      title: language === 'ar' ? 'حمام فاخر' : 'Luxury Bathroom',
+                      description: language === 'ar' ? 'تصميم حمام فاخر بأحدث التقنيات' : 'Luxury bathroom design with latest technology'
+                    });
+                    setShow360Viewer(true);
+                  }}
+                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
+                  variant="outline"
+                >
+                  <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                  {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* 360° Kitchen Experience */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <CardContent className="p-8 space-y-6">
+                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <View className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">
+                  {language === 'ar' ? 'تجربة المطبخ 360°' : 'Kitchen 360° Experience'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {language === 'ar' 
+                    ? 'اكتشف تصاميم المطابخ العصرية بتقنية الواقع الافتراضي' 
+                    : 'Discover modern kitchen designs in virtual reality technology'}
+                </p>
+                <Button 
+                  onClick={() => {
+                    setCurrent360Image({
+                      url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
+                      title: language === 'ar' ? 'مطبخ عصري' : 'Modern Kitchen',
+                      description: language === 'ar' ? 'تصميم مطبخ عصري بأجهزة متطورة' : 'Modern kitchen design with advanced appliances'
+                    });
+                    setShow360Viewer(true);
+                  }}
+                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
+                  variant="outline"
+                >
+                  <View className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                  {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Features */}
+          <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className={`bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+              <CardContent className="p-6">
+                <h4 className="font-bold text-lg mb-3">
+                  {language === 'ar' ? 'ميزات متقدمة' : 'Advanced Features'}
+                </h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    {language === 'ar' ? 'تفاعل ثلاثي الأبعاد مع المنتجات' : 'Interactive 3D product exploration'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    {language === 'ar' ? 'مشاهدة 360 درجة لجميع الكاتلوجات' : '360° viewing for all catalogs'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    {language === 'ar' ? 'جولات افتراضية في المعرض' : 'Virtual showroom tours'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    {language === 'ar' ? 'معلومات تفاعلية للمنتجات' : 'Interactive product information'}
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className={`bg-gradient-to-r from-accent/10 to-secondary/20 border-accent/20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+              <CardContent className="p-6">
+                <h4 className="font-bold text-lg mb-3">
+                  {language === 'ar' ? 'قريباً' : 'Coming Soon'}
+                </h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    {language === 'ar' ? 'الواقع المعزز (AR)' : 'Augmented Reality (AR)'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    {language === 'ar' ? 'جولات VR كاملة' : 'Full VR Tours'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    {language === 'ar' ? 'أداة التصميم التفاعلية' : 'Interactive Design Tool'}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    {language === 'ar' ? 'مشاهدة المنتجات في مساحتك' : 'View products in your space'}
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -1105,6 +1312,25 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* 3D Virtual Experiences */}
+      <VirtualGallery
+        isOpen={showVirtualGallery}
+        onClose={() => setShowVirtualGallery(false)}
+        language={language}
+      />
+
+      <Image360Viewer
+        isOpen={show360Viewer}
+        onClose={() => {
+          setShow360Viewer(false);
+          setCurrent360Image(null);
+        }}
+        imageUrl={current360Image?.url || ''}
+        title={current360Image?.title || ''}
+        description={current360Image?.description || ''}
+        language={language}
+      />
     </div>
   );
 };
