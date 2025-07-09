@@ -4,9 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart } from "lucide-react";
 import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
+import QRCodeVR from "@/components/QRCodeVR";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
@@ -593,10 +594,18 @@ const Index = () => {
             {t.heroDescription}
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-primary to-accent"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               {t.exploreProducts}
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               {t.contactUs}
             </Button>
           </div>
@@ -674,7 +683,13 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" size="sm">{t.learnMore}</Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    {t.learnMore}
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -721,7 +736,35 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
                   <p className="text-muted-foreground mb-4">{product.description}</p>
-                  <Button variant="outline" className="w-full">{t.viewDetails}</Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" className="w-full">{t.viewDetails}</Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl">
+                      <div className="space-y-4">
+                        <img 
+                          src={product.image} 
+                          alt={product.title}
+                          className="w-full h-64 object-cover rounded-lg"
+                        />
+                        <div>
+                          <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
+                          <Badge className="mb-3">{product.category}</Badge>
+                          <p className="text-muted-foreground mb-4">{product.description}</p>
+                          <div className="flex gap-3">
+                            <Button className="flex-1">
+                              <Phone className="w-4 h-4 mr-2" />
+                              {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
+                            </Button>
+                            <Button variant="outline" className="flex-1">
+                              <Heart className="w-4 h-4 mr-2" />
+                              {language === 'ar' ? 'إضافة للمفضلة' : 'Add to Favorites'}
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </CardContent>
               </Card>
             ))}
@@ -764,7 +807,19 @@ const Index = () => {
                   {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة من العلامات التجارية الرائدة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware from leading brands'}
                 </p>
                 <div className="space-y-3 pt-2">
-                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                  <Button 
+                    className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
+                    size="default"
+                    onClick={() => {
+                      // Create a dummy download for demo
+                      const link = document.createElement('a');
+                      link.href = 'data:text/plain;charset=utf-8,Bathroom Catalog - BAGNODESIGN';
+                      link.download = 'bathroom-catalog.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
                     <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                     {t.downloadCatalog}
                   </Button>
@@ -1206,6 +1261,196 @@ const Index = () => {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* AR Features Section */}
+      <section id="ar-features" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              {language === 'ar' ? 'تقنية الواقع المعزز' : 'Augmented Reality Features'}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {language === 'ar' 
+                ? 'اكتشف منتجاتنا بتقنية الواقع المعزز الحديثة وشاهد كيف ستبدو في منزلك'
+                : 'Discover our products with modern AR technology and see how they will look in your home'
+              }
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Eye className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">
+                {language === 'ar' ? 'معاينة ثلاثية الأبعاد' : '3D Preview'}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {language === 'ar' 
+                  ? 'شاهد المنتجات بزاوية 360 درجة بتقنية ثلاثية الأبعاد'
+                  : 'View products in 360 degrees with 3D technology'
+                }
+              </p>
+              <Button 
+                variant="outline"
+                onClick={() => {
+                  // Get first product image for demo
+                  const firstProduct = products.find(p => p.id === 1);
+                  if (firstProduct) {
+                    setCurrent360Image({
+                      url: firstProduct.image,
+                      title: firstProduct.title,
+                      description: firstProduct.description
+                    });
+                    setShow360Viewer(true);
+                  }
+                }}
+              >
+                {language === 'ar' ? 'جرب الآن' : 'Try Now'}
+              </Button>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Phone className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">
+                {language === 'ar' ? 'تجربة الجوال' : 'Mobile Experience'}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {language === 'ar' 
+                  ? 'استخدم QR Code لتجربة المنتجات على هاتفك الذكي'
+                  : 'Use QR Code to experience products on your smartphone'
+                }
+              </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline">
+                    {language === 'ar' ? 'احصل على QR' : 'Get QR Code'}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <QRCodeVR
+                    catalogId="demo"
+                    catalogTitle={language === 'ar' ? 'تجربة تفاعلية' : 'Interactive Experience'}
+                    vrUrl="/vr-tour/demo"
+                    language={language}
+                  />
+                </DialogContent>
+              </Dialog>
+            </Card>
+
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">
+                {language === 'ar' ? 'معرض افتراضي' : 'Virtual Gallery'}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {language === 'ar' 
+                  ? 'جولة كاملة في معرضنا من راحة منزلك'
+                  : 'Complete tour of our showroom from the comfort of your home'
+                }
+              </p>
+              <Button 
+                variant="outline"
+                onClick={() => setShowVirtualGallery(true)}
+              >
+                {language === 'ar' ? 'ادخل المعرض' : 'Enter Gallery'}
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* New Features Section */}
+      <section id="new-features" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              {language === 'ar' ? 'الميزات الجديدة' : 'New Features'}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {language === 'ar' 
+                ? 'اكتشف أحدث الإضافات والتحديثات في معرضنا الرقمي'
+                : 'Discover the latest additions and updates in our digital showroom'
+              }
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <Heart className="w-6 h-6 text-red-600" />
+              </div>
+              <h4 className="font-bold mb-2">
+                {language === 'ar' ? 'قائمة المفضلة' : 'Favorites List'}
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                {language === 'ar' 
+                  ? 'احفظ منتجاتك المفضلة للمراجعة لاحقاً'
+                  : 'Save your favorite products for later review'
+                }
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Download className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-bold mb-2">
+                {language === 'ar' ? 'تحميل الكاتلوجات' : 'Download Catalogs'}
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                {language === 'ar' 
+                  ? 'حمل الكاتلوجات بصيغة PDF عالية الجودة'
+                  : 'Download high-quality PDF catalogs'
+                }
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <Phone className="w-6 h-6 text-green-600" />
+              </div>
+              <h4 className="font-bold mb-2">
+                {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                {language === 'ar' 
+                  ? 'احصل على عرض سعر مخصص لمشروعك'
+                  : 'Get a custom quote for your project'
+                }
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-yellow-600" />
+              </div>
+              <h4 className="font-bold mb-2">
+                {language === 'ar' ? 'نظام التقييم' : 'Rating System'}
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                {language === 'ar' 
+                  ? 'شاهد تقييمات العملاء للمنتجات'
+                  : 'View customer ratings for products'
+                }
+              </p>
+            </Card>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button 
+              size="lg"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              {language === 'ar' ? 'استكشف جميع المنتجات' : 'Explore All Products'}
+            </Button>
           </div>
         </div>
       </section>
