@@ -540,7 +540,7 @@ const Index = () => {
   ];
 
   return (
-    <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`}>
+    <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Header */}
       <header className="bg-card shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -783,7 +783,7 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
+                {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي لدينا، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات، منتجاتنا عالية الجودة متينة ومبتكرة.' : 'Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.'}
               </p>
               <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
                 <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
@@ -804,9 +804,9 @@ const Index = () => {
                           className="w-full h-full object-cover hover-scale"
                         />
                       </div>
-                      <h4 className="font-semibold text-foreground mb-2">Tiles Small Format</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'بلاط صغير الحجم' : 'Tiles Small Format'}</h4>
                       <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="flex-1">
+                        <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                           {t.downloadCatalog}
                         </Button>
@@ -824,9 +824,9 @@ const Index = () => {
                         className="w-full h-full object-cover hover-scale"
                       />
                     </div>
-                    <h4 className="font-semibold text-foreground mb-2">Slabs</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'ألواح' : 'Slabs'}</h4>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                         <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
@@ -844,9 +844,9 @@ const Index = () => {
                         className="w-full h-full object-cover hover-scale"
                       />
                     </div>
-                    <h4 className="font-semibold text-foreground mb-2">Hokkaido</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'هوكايدو' : 'Hokkaido'}</h4>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                         <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
@@ -864,9 +864,9 @@ const Index = () => {
                         className="w-full h-full object-cover hover-scale"
                       />
                     </div>
-                    <h4 className="font-semibold text-foreground mb-2">Outdoor Tiles & Landscape Lighting</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'بلاط خارجي وإضاءة المناظر الطبيعية' : 'Outdoor Tiles & Landscape Lighting'}</h4>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                         <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                         {t.downloadCatalog}
                       </Button>
@@ -889,9 +889,9 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.
+                {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي لدينا، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات، منتجاتنا عالية الجودة متينة ومبتكرة.' : 'Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.'}
               </p>
-              <Button className="w-full mb-3" size="sm">
+              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
                 <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 {t.downloadCatalog}
               </Button>
