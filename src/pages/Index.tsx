@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState('ar');
@@ -730,209 +730,275 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
-                <img 
-                  src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
-                  alt="Bathroom sanitaryware & brassware"
-                  className="w-full h-full object-contain hover-scale"
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Bathroom sanitaryware & brassware</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية' : 'Explore our complete collection of bathroom sanitaryware and brassware'}
-              </p>
-              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
-            </Card>
-
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className="w-full h-80 mb-6 rounded-lg overflow-hidden bg-gray-50">
-                <img 
-                  src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
-                  alt="Kitchen LifeStyle"
-                  className="w-full h-full object-cover hover-scale"
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Kitchen LifeStyle</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ والمزيد.' : 'Discover our luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, kitchen taps and more.'}
-              </p>
-              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
-            </Card>
-
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
-                <img 
-                  src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
-                  alt="Outdoor Living 2024"
-                  className="w-full h-full object-cover hover-scale"
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي لدينا، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات، منتجاتنا عالية الجودة متينة ومبتكرة.' : 'Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.'}
-              </p>
-              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full mb-6" size="sm">
-                {t.viewCatalog}
-              </Button>
-              
-              {/* Sub-catalogs always visible */}
-              <div className="space-y-3">
-                <div className="grid grid-cols-1 gap-3">
-                    <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-                      <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                        <img 
-                          src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
-                          alt="Tiles Small Format SANIPEXGROUP"
-                          className="w-full h-full object-cover hover-scale"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'بلاط صغير الحجم' : 'Tiles Small Format'}</h4>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                          <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                          {t.downloadCatalog}
-                        </Button>
-                        <Button size="sm" className="flex-1">
-                          {t.viewCatalog}
-                        </Button>
-                      </div>
-                    </Card>
-                  
-                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
-                        alt="SLABS 2024 SANIPEXGROUP"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'ألواح' : 'Slabs'}</h4>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                        {t.downloadCatalog}
-                      </Button>
-                      <Button size="sm" className="flex-1">
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
-                  
-                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
-                        alt="HOKKAIDO Surfaces BAGNODESIGN"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'هوكايدو' : 'Hokkaido'}</h4>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                        {t.downloadCatalog}
-                      </Button>
-                      <Button size="sm" className="flex-1">
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
-                  
-                  <Card className={`p-4 hover:shadow-md transition-shadow bg-secondary/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-                    <div className="w-full h-32 mb-3 rounded-lg overflow-hidden bg-gray-50">
-                      <img 
-                        src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
-                        alt="Outdoor Tiles & Landscape Lighting 2024"
-                        className="w-full h-full object-cover hover-scale"
-                      />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-2">{language === 'ar' ? 'بلاط خارجي وإضاءة المناظر الطبيعية' : 'Outdoor Tiles & Landscape Lighting'}</h4>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                        <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                        {t.downloadCatalog}
-                      </Button>
-                      <Button size="sm" className="flex-1">
-                        {t.viewCatalog}
-                      </Button>
-                    </div>
-                  </Card>
+          {/* Main Catalogs Grid - Responsive and Balanced */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            
+            {/* Bathroom Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100 p-4">
+                  <img 
+                    src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
+                    alt="Bathroom sanitaryware & brassware"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-primary/10 text-primary border-primary/20">Premium</Badge>
                 </div>
               </div>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة من العلامات التجارية الرائدة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware from leading brands'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
 
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className="w-full h-96 mb-6 rounded-lg overflow-hidden bg-gray-50">
-                <img 
-                  src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" 
-                  alt="Outdoor Living 2024"
-                  className="w-full h-full object-cover hover-scale"
-                />
+            {/* Kitchen Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100 p-4">
+                  <img 
+                    src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
+                    alt="Kitchen LifeStyle"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
+                  />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-accent/10 text-accent border-accent/20">Luxury</Badge>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">Outdoor Living</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي لدينا، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات، منتجاتنا عالية الجودة متينة ومبتكرة.' : 'Discover Our outdoor range , furniture and fire pits to design-led furniture, lighting, and accessories, our high-quality products are as durable as they are innovative.'}
-              </p>
-              <Button className={`w-full mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ' : 'Discover luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, and kitchen taps'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
 
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className={`w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 ${language === 'ar' ? 'mr-auto' : 'mx-auto'}`}>
-                <FileText className="w-8 h-8 text-primary" />
+            {/* Outdoor Living Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-green-100 p-4">
+                  <img 
+                    src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
+                    alt="Outdoor Living 2024"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
+                  />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-green-500/10 text-green-600 border-green-500/20">Outdoor</Badge>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.accessoriesCatalog}</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'تصفح مجموعة الإكسسوارات والتجهيزات المنزلية' : 'Browse our collection of accessories and home fixtures'}
-              </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'الحياة الخارجية' : 'Outdoor Living'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات المبتكرة' : 'Discover our outdoor furniture range, from fire pits to designer furniture, lighting, and innovative accessories'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
 
-            <Card className={`p-8 hover:shadow-lg transition-shadow ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <div className={`w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 ${language === 'ar' ? 'mr-auto' : 'mx-auto'}`}>
-                <FileText className="w-8 h-8 text-primary" />
+            {/* Tiles & Surfaces Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 p-4">
+                  <img 
+                    src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" 
+                    alt="Tiles & Surfaces"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
+                  />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-purple-500/10 text-purple-600 border-purple-500/20">Surfaces</Badge>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3 uppercase">{t.lightingCatalog}</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                {language === 'ar' ? 'استكشف مجموعة حلول الإضاءة الحديثة والمبتكرة' : 'Explore our collection of modern and innovative lighting solutions'}
-              </p>
-              <Button className="w-full mb-3" size="sm">
-                <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                {t.downloadCatalog}
-              </Button>
-              <Button variant="outline" className="w-full" size="sm">
-                {t.viewCatalog}
-              </Button>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'البلاط والأسطح' : 'Tiles & Surfaces'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'مجموعة شاملة من البلاط والأسطح عالية الجودة للمساحات الداخلية والخارجية' : 'Comprehensive collection of premium tiles and surfaces for indoor and outdoor spaces'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
+          </div>
+
+          {/* Sub-Catalogs Section */}
+          <div className="mt-16">
+            <div className={`mb-8 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <h3 className="text-2xl font-bold text-foreground mb-2">
+                {language === 'ar' ? 'كاتلوجات متخصصة' : 'Specialized Catalogs'}
+              </h3>
+              <p className="text-muted-foreground">
+                {language === 'ar' ? 'استكشف مجموعاتنا المتخصصة لاحتياجات التصميم المحددة' : 'Explore our specialized collections for specific design needs'}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              
+              {/* Small Format Tiles */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img 
+                      src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
+                      alt="Tiles Small Format"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
+                    />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'بلاط صغير الحجم' : 'Small Format Tiles'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Slabs */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img 
+                      src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
+                      alt="Slabs"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
+                    />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'ألواح' : 'Slabs'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Hokkaido */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img 
+                      src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
+                      alt="Hokkaido Surfaces"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
+                    />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'هوكايدو' : 'Hokkaido'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Outdoor Tiles */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img 
+                      src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
+                      alt="Outdoor Tiles & Landscape Lighting"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
+                    />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'بلاط خارجي وإضاءة' : 'Outdoor Tiles & Lighting'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Digital Catalogs Placeholder */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-dashed border-2 border-muted-foreground/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="aspect-[4/3] bg-gradient-to-br from-muted/20 to-muted/40 p-3 flex items-center justify-center">
+                  <div className="text-center space-y-2">
+                    <Plus className="w-8 h-8 text-muted-foreground mx-auto" />
+                    <p className="text-xs text-muted-foreground">
+                      {language === 'ar' ? 'كاتلوجات رقمية قريباً' : 'Digital Catalogs Coming Soon'}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
