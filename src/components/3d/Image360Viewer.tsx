@@ -63,11 +63,54 @@ function Hotspot({ hotspot, onClick }: { hotspot: Hotspot; onClick: () => void }
 }
 
 function Image360Sphere({ imageUrl }: { imageUrl: string }) {
-  const texture = useTexture(imageUrl);
+  const [texture, setTexture] = useState<THREE.Texture | null>(null);
   
-  // Flip the texture for inside view
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.repeat.x = -1;
+  React.useEffect(() => {
+    if (!imageUrl) return;
+    
+    const loader = new THREE.TextureLoader();
+    loader.load(
+      imageUrl,
+      (loadedTexture) => {
+        // Flip the texture for inside view
+        loadedTexture.wrapS = THREE.RepeatWrapping;
+        loadedTexture.repeat.x = -1;
+        setTexture(loadedTexture);
+      },
+      undefined,
+      (error) => {
+        console.warn('Failed to load 360 image:', error);
+        // Create a fallback texture
+        const canvas = document.createElement('canvas');
+        canvas.width = 1024;
+        canvas.height = 512;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = '#2a2a2a';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#ffffff';
+          ctx.font = '48px Arial';
+          ctx.textAlign = 'center';
+          ctx.fillText('360° View', canvas.width / 2, canvas.height / 2);
+        }
+        const fallbackTexture = new THREE.CanvasTexture(canvas);
+        fallbackTexture.wrapS = THREE.RepeatWrapping;
+        fallbackTexture.repeat.x = -1;
+        setTexture(fallbackTexture);
+      }
+    );
+  }, [imageUrl]);
+  
+  if (!texture) {
+    return (
+      <Sphere args={[10, 64, 32]}>
+        <meshBasicMaterial
+          color="#2a2a2a"
+          side={THREE.BackSide}
+        />
+      </Sphere>
+    );
+  }
   
   return (
     <Sphere args={[10, 64, 32]}>
