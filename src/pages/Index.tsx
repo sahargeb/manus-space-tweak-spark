@@ -64,7 +64,7 @@ const Index = () => {
       designConsultationDesc: "خدمات استشارية متخصصة لتحقيق رؤيتك",
       learnMore: "اعرف المزيد",
       // Products
-      productsTitle: "معرض المنتجات",
+      productsTitle: "معرض صالة العرض",
       productsDescription: "استكشف مجموعتنا المتنوعة من التصاميم الفاخرة للحمامات والمطابخ",
       viewDetails: "عرض التفاصيل",
       // Contact
@@ -154,7 +154,7 @@ const Index = () => {
       designConsultationDesc: "Specialized consulting services to achieve your vision",
       learnMore: "Learn More",
       // Products
-      productsTitle: "Products Gallery",
+      productsTitle: "Our Show Room Gallery",
       productsDescription: "Explore our diverse collection of luxury bathroom and kitchen designs",
       viewDetails: "View Details",
       // Contact
