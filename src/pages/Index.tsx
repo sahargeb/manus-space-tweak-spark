@@ -1157,21 +1157,44 @@ const Index = () => {
                     ? 'استكشف تصاميم الحمامات الفاخرة بتقنية 360 درجة' 
                     : 'Explore luxury bathroom designs in immersive 360° view'}
                 </p>
-                <Button 
-                  onClick={() => {
-                    setCurrent360Image({
-                      url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
-                      title: language === 'ar' ? 'حمام فاخر' : 'Luxury Bathroom',
-                      description: language === 'ar' ? 'تصميم حمام فاخر بأحدث التقنيات' : 'Luxury bathroom design with latest technology'
-                    });
-                    setShow360Viewer(true);
-                  }}
-                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
-                  variant="outline"
-                >
-                  <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                  {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
+                      variant="outline"
+                    >
+                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                      {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-6xl h-[90vh] p-0 bg-black">
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <Button
+                        onClick={() => {}}
+                        variant="ghost"
+                        size="icon"
+                        className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
+                      >
+                        <X className="h-4 w-4" />
+                      </Button>
+                      <video
+                        controls
+                        autoPlay
+                        className="w-full h-full object-contain"
+                        poster="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png"
+                      >
+                        <source 
+                          src="https://drive.google.com/uc?export=download&id=13S6Y00q-116tjghuzaLimwhjw93CsOjN" 
+                          type="video/mp4" 
+                        />
+                        {language === 'ar' 
+                          ? 'المتصفح لا يدعم تشغيل الفيديو' 
+                          : 'Your browser does not support video playback'
+                        }
+                      </video>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </CardContent>
             </Card>
 
