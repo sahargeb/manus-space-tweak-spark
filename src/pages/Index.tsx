@@ -555,26 +555,9 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t.servicesTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t.servicesDescription}
-            </p>
-          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" size="sm" onClick={() => document.getElementById('products')?.scrollIntoView({
-                behavior: 'smooth'
-              })}>
-                    {t.learnMore}
-                  </Button>
-                </CardContent>
-              </Card>)}
-          </div>
+          
+          
         </div>
       </section>
 
