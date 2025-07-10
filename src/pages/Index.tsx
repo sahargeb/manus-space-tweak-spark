@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart, Menu, Home, User, ShoppingBag, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart, Menu, Home, User, ShoppingBag, MessageCircle, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
 import QRCodeVR from "@/components/QRCodeVR";
@@ -530,14 +531,18 @@ const Index = () => {
                       <Home className="w-4 h-4" />
                       {t.home}
                     </a>
-                    <a href="#about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <Link to="/about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <User className="w-4 h-4" />
                       {t.about}
-                    </a>
+                    </Link>
                     <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <ShoppingBag className="w-4 h-4" />
                       {t.products}
                     </a>
+                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <BookOpen className="w-4 h-4" />
+                      {language === 'ar' ? 'البروشيرز' : 'Brochures'}
+                    </Link>
                     <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <MessageCircle className="w-4 h-4" />
                       {t.contact}
