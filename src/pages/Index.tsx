@@ -520,17 +520,11 @@ const Index = () => {
             
             {/* 3-dot Menu */}
             <div className="relative">
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={() => setShowMenu(!showMenu)}
-                className="p-2"
-              >
+              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2">
                 <Menu className="w-6 h-6" />
               </Button>
               
-              {showMenu && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+              {showMenu && <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
                   <div className="py-2">
                     <a href="#home" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <Home className="w-4 h-4" />
@@ -549,20 +543,16 @@ const Index = () => {
                       {t.contact}
                     </a>
                   </div>
-                </div>
-              )}
+                </div>}
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section 
-        className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
-        style={{
-          backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
-        }}
-      >
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center" style={{
+      backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
+    }}>
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
@@ -628,25 +618,10 @@ const Index = () => {
       
 
       {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            
-            
-            
-            
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          
-          
-          
-        </div>
-      </section>
+      
 
       {/* Products Section */}
       <section id="products" className="py-20">
