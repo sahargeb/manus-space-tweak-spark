@@ -601,23 +601,23 @@ const Index = () => {
           
           <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
             <p>
-              BAGNODESIGN offers the complete solution for creating dream bathrooms. Our knowledgeable and talented team has drawn on their many years of experience to bring you the very best in design-led, contemporary and classic collections.
+              BAGNODESIGN offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
             </p>
             
             <p>
-              For three decades, BAGNODESIGN has expanded to service the Middle East, Africa, Europe, Asia and Oceania through Retail, Trade, Projects and Digital channels, combining the highest quality solutions with exceptional customer service. The company now encompasses flagship showrooms in key locations including Dubai, Abu Dhabi and London, alongside an established presence with partner retailers worldwide.
+              For three decades, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including Dubai, Abu Dhabi, and London, alongside an established presence with partner retailers worldwide.
             </p>
             
             <p>
-              Find the inspiration you need from an extensive range of sanitaryware, furniture, brassware, accessories, bath & shower components and spa solutions. Turning the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and where function meets the latest in artisanal thinking.
+              Find the inspiration you need from our extensive range of sanitaryware, furniture, brassware, accessories, bath and shower components, and spa solutions. Transforming the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest artisanal thinking.
             </p>
             
             <p>
-              From sculptural washbasins crafted from the finest materials in a wonderful array of colours; beautiful, functional furniture to suit any scheme; baths and showers that invite rejuvenation and stunning brassware and accessories in an enviable range of trendsetting finishes.
+              From sculptural washbasins crafted from the finest materials in a wonderful array of colors, to beautiful functional furniture to suit any scheme, baths and showers that invite rejuvenation, and stunning brassware and accessories in an enviable range of trendsetting finishes.
             </p>
             
             <p>
-              Backed by a reputable product portfolio and strategically located logistics centres, BAGNODESIGN is poised to deliver your next project, serving architects, designers, developers, retailers, and consumers across all sectors from large commercial to private residential projects.
+              Backed by a reputable product portfolio and strategically located logistics centers, BAGNODESIGN is positioned to deliver your next project, serving architects, designers, developers, retailers, and consumers across all sectors from large commercial to private residential projects.
             </p>
           </div>
         </div>
