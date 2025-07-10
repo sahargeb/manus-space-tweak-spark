@@ -705,10 +705,7 @@ const Index = () => {
                           <Badge className="mb-3">{product.category}</Badge>
                           <p className="text-muted-foreground mb-4">{product.description}</p>
                           <div className="flex gap-3">
-                            <Button className="flex-1">
-                              <Phone className="w-4 h-4 mr-2" />
-                              {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
-                            </Button>
+                            
                             <Button variant="outline" className="flex-1">
                               <Heart className="w-4 h-4 mr-2" />
                               {language === 'ar' ? 'إضافة للمفضلة' : 'Add to Favorites'}
