@@ -550,44 +550,44 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section style={{
-      backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
-    }} className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-8 my-0">
-        <div className="absolute inset-0 bg-black/10 my-[100px] py-[300px]"></div>
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
+      backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
+    }}>
+        <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
           <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
             {/* First Row */}
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-bounce">
-                <span className="drop-shadow-2xl text-white">SPA & WELLNESS</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">SPA & WELLNESS</span>
               </h3>
             </div>
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-pulse">
-                <span className="drop-shadow-2xl text-white">HOTEL AMENITIES</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">HOTEL AMENITIES</span>
               </h3>
             </div>
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-bounce">
-                <span className="drop-shadow-2xl text-white">KITCHEN LIFESTYLE</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">KITCHEN LIFESTYLE</span>
               </h3>
             </div>
             
             {/* Second Row */}
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-pulse">
-                <span className="drop-shadow-2xl text-white">TILES & SLABS</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">TILES & SLABS</span>
               </h3>
             </div>
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-bounce">
-                <span className="drop-shadow-2xl text-white">LIGHTING</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">LIGHTING</span>
               </h3>
             </div>
-            <div className="bg-black/70 backdrop-blur-lg p-4 rounded-xl text-center hover:bg-black/80 hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/20 group">
-              <h3 className="font-bold text-sm text-white tracking-wide animate-pulse">
-                <span className="drop-shadow-2xl text-white">OUTDOOR LIVING</span>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">OUTDOOR LIVING</span>
               </h3>
             </div>
           </div>
@@ -643,10 +643,25 @@ const Index = () => {
       
 
       {/* About Section */}
-      
+      <section id="about" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            
+            
+            
+            
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
-      
+      <section id="services" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          
+          
+          
+        </div>
+      </section>
 
       {/* Products Section */}
       <section id="products" className="py-20">
