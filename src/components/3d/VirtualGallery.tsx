@@ -216,8 +216,6 @@ function GalleryLighting() {
         position={[10, 10, 5]}
         intensity={1}
         castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
       />
       <pointLight position={[0, 5, 0]} intensity={0.5} />
       <pointLight position={[-5, 3, -2]} intensity={0.3} color="#ff6b35" />
