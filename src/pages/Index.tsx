@@ -1184,7 +1184,7 @@ const Index = () => {
                         poster="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png"
                       >
                         <source 
-                          src="https://drive.google.com/uc?export=download&id=13S6Y00q-116tjghuzaLimwhjw93CsOjN" 
+                          src="/videos/bathroom-360-experience.mp4" 
                           type="video/mp4" 
                         />
                         {language === 'ar' 
