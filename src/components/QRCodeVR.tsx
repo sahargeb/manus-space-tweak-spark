@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import QRCode from 'qrcode';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,10 +24,10 @@ export default function QRCodeVR({ catalogId, catalogTitle, vrUrl, language, onC
   const generateQRCode = async () => {
     if (canvasRef.current) {
       try {
-        // إنشاء رابط كامل للـ VR tour
-        const fullVRUrl = `${window.location.origin}/vr-tour/${catalogId}`;
+        // استخدام الرابط المحدد من المستخدم
+        const targetUrl = 'https://preview--ahmed-tweak-spark.lovable.app/';
         
-        await QRCode.toCanvas(canvasRef.current, fullVRUrl, {
+        await QRCode.toCanvas(canvasRef.current, targetUrl, {
           width: 300,
           margin: 2,
           color: {
@@ -37,7 +38,7 @@ export default function QRCodeVR({ catalogId, catalogTitle, vrUrl, language, onC
         });
 
         // حفظ البيانات للتنزيل
-        qrCodeRef.current = await QRCode.toDataURL(fullVRUrl, {
+        qrCodeRef.current = await QRCode.toDataURL(targetUrl, {
           width: 512,
           margin: 2,
           color: {
@@ -63,7 +64,7 @@ export default function QRCodeVR({ catalogId, catalogTitle, vrUrl, language, onC
   };
 
   const shareQR = async () => {
-    const fullVRUrl = `${window.location.origin}/vr-tour/${catalogId}`;
+    const targetUrl = 'https://preview--ahmed-tweak-spark.lovable.app/';
     
     if (navigator.share) {
       try {
@@ -72,14 +73,14 @@ export default function QRCodeVR({ catalogId, catalogTitle, vrUrl, language, onC
           text: language === 'ar' 
             ? `استكشف ${catalogTitle} بتقنية VR` 
             : `Explore ${catalogTitle} in VR`,
-          url: fullVRUrl
+          url: targetUrl
         });
       } catch (error) {
         // Fallback to clipboard
-        navigator.clipboard.writeText(fullVRUrl);
+        navigator.clipboard.writeText(targetUrl);
       }
     } else {
-      navigator.clipboard.writeText(fullVRUrl);
+      navigator.clipboard.writeText(targetUrl);
     }
   };
 
@@ -103,6 +104,9 @@ export default function QRCodeVR({ catalogId, catalogTitle, vrUrl, language, onC
             {language === 'ar' 
               ? 'امسح الرمز لبدء الجولة الافتراضية على هاتفك'
               : 'Scan to start VR tour on your device'}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            https://preview--ahmed-tweak-spark.lovable.app/
           </p>
         </div>
 
