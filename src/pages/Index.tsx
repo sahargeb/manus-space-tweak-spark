@@ -155,7 +155,7 @@ const Index = () => {
       designConsultationDesc: "Specialized consulting services to achieve your vision",
       learnMore: "Learn More",
       // Products
-      productsTitle: "Our Show Room Gallery",
+      productsTitle: "Our Showroom Gallery",
       productsDescription: "Explore our diverse collection of luxury bathroom and kitchen designs",
       viewDetails: "View Details",
       // Contact
@@ -692,7 +692,6 @@ const Index = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
-                  <p className="text-muted-foreground mb-4">{product.description}</p>
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="outline" className="w-full">{t.viewDetails}</Button>
