@@ -1088,15 +1088,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
+              <Link to="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity w-fit">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <span className="text-primary-foreground font-bold">B</span>
                 </div>
                 <span className="font-bold text-lg">BAGNODESIGN</span>
-              </div>
-              <p className="text-background/70">
-                {t.footerDescription}
-              </p>
+              </Link>
               <div className="flex gap-4 mt-4">
                 <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
                   Instagram
