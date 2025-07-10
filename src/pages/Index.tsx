@@ -1181,7 +1181,6 @@ const Index = () => {
                         controls
                         autoPlay
                         className="w-full h-full object-contain"
-                        poster="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png"
                       >
                         <source 
                           src="/videos/bathroom-360-experience.mp4" 
