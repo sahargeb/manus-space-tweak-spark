@@ -8,7 +8,6 @@ import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, D
 import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
 import QRCodeVR from "@/components/QRCodeVR";
-
 const Index = () => {
   const [language, setLanguage] = useState('ar');
   const [tilesExpanded, setTilesExpanded] = useState(false);
@@ -19,7 +18,6 @@ const Index = () => {
     title: string;
     description: string;
   } | null>(null);
-  
   const translations = {
     ar: {
       // Header
@@ -202,366 +200,318 @@ const Index = () => {
       equipment: "Equipment"
     }
   };
-
   const t = translations[language];
-
   const toggleLanguage = () => {
     setLanguage(language === 'ar' ? 'en' : 'ar');
   };
-  const products = [
-    {
-      id: 1,
-      title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom with Natural Marble",
-      category: t.bathrooms,
-      image: "/lovable-uploads/d1095dc8-3451-47b4-9277-ff12bfd87ef7.png",
-      description: language === 'ar' ? "تصميم حمام فاخر مع رخام طبيعي وإضاءة ذهبية مميزة" : "Luxury bathroom design with natural marble and distinctive golden lighting"
-    },
-    {
-      id: 2,
-      title: language === 'ar' ? "حمام عصري بتصميم أنيق" : "Modern Bathroom with Elegant Design",
-      category: t.bathrooms,
-      image: "/lovable-uploads/5be33a20-22b9-4b6a-aaf2-81f75f80886d.png",
-      description: language === 'ar' ? "حمام عصري بمغسلة سوداء وخامات متميزة" : "Modern bathroom with black sink and premium materials"
-    },
-    {
-      id: 3,
-      title: language === 'ar' ? "مطبخ فاخر متكامل" : "Complete Luxury Kitchen",
-      category: t.kitchens,
-      image: "/lovable-uploads/a51864f6-9637-4034-9692-ec6a0bc3d9e5.png",
-      description: language === 'ar' ? "مطبخ عصري مع جزيرة وإضاءة متطورة" : "Modern kitchen with island and advanced lighting"
-    },
-    {
-      id: 4,
-      title: language === 'ar' ? "معرض الأدوات الصحية" : "Sanitary Equipment Gallery",
-      category: t.sanitaryTools,
-      image: "/lovable-uploads/42d3c144-2a91-4e05-bc52-78e9260cbed9.png",
-      description: language === 'ar' ? "مجموعة متنوعة من الأدوات الصحية الحديثة" : "Diverse collection of modern sanitary equipment"
-    },
-    {
-      id: 5,
-      title: language === 'ar' ? "عينات الخامات الفاخرة" : "Luxury Materials Samples",
-      category: t.materials,
-      image: "/lovable-uploads/d5f6b3ae-a30b-44c2-94c6-dbdb34bd1de5.png",
-      description: language === 'ar' ? "مجموعة متنوعة من الرخام والخامات الطبيعية" : "Diverse collection of marble and natural materials"
-    },
-    {
-      id: 6,
-      title: language === 'ar' ? "حمام ذهبي فاخر" : "Luxury Golden Bathroom",
-      category: t.bathrooms,
-      image: "/lovable-uploads/4aa1af44-00df-43a4-92f8-7b9cf8fabbd4.png",
-      description: language === 'ar' ? "تصميم حمام فاخر بمغسلة ذهبية ورخام مميز" : "Luxury bathroom design with golden sink and distinctive marble"
-    },
-    {
-      id: 7,
-      title: language === 'ar' ? "حمام بتصميم معاصر" : "Contemporary Design Bathroom",
-      category: t.bathrooms,
-      image: "/lovable-uploads/8ca1f78e-9660-45af-b2b2-f94fc572a36b.png",
-      description: language === 'ar' ? "حمام عصري مع إضاءة مدمجة وتصميم أنيق" : "Modern bathroom with integrated lighting and elegant design"
-    },
-    {
-      id: 8,
-      title: language === 'ar' ? "حمام فاخر بالإضاءة الذهبية" : "Luxury Bathroom with Golden Lighting",
-      category: t.bathrooms,
-      image: "/lovable-uploads/4c2bacb3-43c7-441b-8188-489680b11a6e.png",
-      description: language === 'ar' ? "تصميم حمام مع إضاءة ذهبية ورخام كلاسيكي" : "Bathroom design with golden lighting and classic marble"
-    },
-    {
-      id: 9,
-      title: language === 'ar' ? "حمام أسود أنيق" : "Elegant Black Bathroom",
-      category: t.bathrooms,
-      image: "/lovable-uploads/92353d56-6084-49a5-a45a-0bc3636a2b27.png",
-      description: language === 'ar' ? "حمام عصري بحوض أسود وتصميم درامي" : "Modern bathroom with black basin and dramatic design"
-    },
-    {
-      id: 10,
-      title: language === 'ar' ? "معرض الإكسسوارات" : "Accessories Gallery",
-      category: t.accessories,
-      image: "/lovable-uploads/7fce98d9-2801-42b0-a8e6-a1f6c0d1ce3d.png",
-      description: language === 'ar' ? "مجموعة من الإكسسوارات والإضاءة المنزلية" : "Collection of accessories and home lighting"
-    },
-    {
-      id: 11,
-      title: language === 'ar' ? "وحدات الفنادق والمرافق" : "Hotel Amenities & Facilities",
-      category: t.equipment,
-      image: "/lovable-uploads/a6d3fab7-0404-4cf7-8cba-b0710166f428.png",
-      description: language === 'ar' ? "مجموعة شاملة من الأجهزة والمرافق الفندقية الحديثة" : "Comprehensive collection of modern hotel equipment and facilities"
-    },
-    {
-      id: 12,
-      title: language === 'ar' ? "مطبخ خارجي تحت الدرج" : "Outdoor Kitchen Under Stairs",
-      category: t.kitchens,
-      image: "/lovable-uploads/7114e5a3-0255-4299-b8ef-5d3f1516cf8d.png",
-      description: language === 'ar' ? "تصميم مطبخ خارجي أنيق مع شواية تحت الدرج" : "Elegant outdoor kitchen design with grill under stairs"
-    },
-    {
-      id: 13,
-      title: language === 'ar' ? "حمام رخامي فاخر بالإضاءة المعلقة" : "Luxury Marble Bathroom with Pendant Lighting",
-      category: t.bathrooms,
-      image: "/lovable-uploads/9c2848bb-6c0e-4d87-a7fe-e6f1aa1f8382.png",
-      description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة معلقة مميزة" : "Luxury bathroom with marble walls and distinctive pendant lighting"
-    },
-    {
-      id: 14,
-      title: language === 'ar' ? "عرض الصنابير والخامات" : "Faucets & Materials Display",
-      category: t.sanitaryTools,
-      image: "/lovable-uploads/886c01f4-7f8b-4e63-b86f-b8a13bea7e86.png",
-      description: language === 'ar' ? "معرض شامل للصنابير والخامات الحديثة" : "Comprehensive display of modern faucets and materials"
-    },
-    {
-      id: 15,
-      title: language === 'ar' ? "معرض إكسسوارات BAGNODESIGN" : "BAGNODESIGN Accessories Gallery",
-      category: t.accessories,
-      image: "/lovable-uploads/49a0f7ae-a195-41e7-806d-686296c1c4e0.png",
-      description: language === 'ar' ? "عرض مجموعة إكسسوارات BAGNODESIGN الحصرية" : "Display of exclusive BAGNODESIGN accessories collection"
-    },
-    {
-      id: 16,
-      title: language === 'ar' ? "حمام فاخر بالإضاءة المعلقة" : "Luxury Bathroom with Pendant Lighting",
-      category: t.bathrooms,
-      image: "/lovable-uploads/eb4032d8-d075-45e8-91cf-43a1856ab4b0.png",
-      description: language === 'ar' ? "تصميم حمام فاخر مع إضاءة معلقة وخامات طبيعية" : "Luxury bathroom design with pendant lighting and natural materials"
-    },
-    {
-      id: 17,
-      title: language === 'ar' ? "مساحة معيشة ومطبخ مفتوح" : "Open Living Space & Kitchen",
-      category: t.kitchens,
-      image: "/lovable-uploads/d2fc2469-c1ca-47b2-ad16-0112cf49ba97.png",
-      description: language === 'ar' ? "تصميم مفتوح يجمع بين المطبخ ومساحة المعيشة" : "Open design combining kitchen and living space"
-    },
-    {
-      id: 18,
-      title: language === 'ar' ? "حمام مدمج عصري" : "Modern Integrated Bathroom",
-      category: t.bathrooms,
-      image: "/lovable-uploads/eb1b5131-a9d5-47f7-83dc-57d577c1402b.png",
-      description: language === 'ar' ? "حمام مدمج بتصميم عصري وخامات فاخرة" : "Integrated bathroom with modern design and luxury materials"
-    },
-    {
-      id: 19,
-      title: language === 'ar' ? "حمام فاخر بالخشب والرخام" : "Luxury Bathroom with Wood & Marble",
-      category: t.bathrooms,
-      image: "/lovable-uploads/97f91dbc-cab8-4dfb-8c22-fb8ffd5de9e4.png",
-      description: language === 'ar' ? "حمام فاخر يجمع بين جمال الخشب وأناقة الرخام" : "Luxury bathroom combining the beauty of wood and elegance of marble"
-    },
-    {
-      id: 20,
-      title: language === 'ar' ? "حمام رخامي بالتشطيبات السوداء" : "Marble Bathroom with Black Finishes",
-      category: t.bathrooms,
-      image: "/lovable-uploads/6b99bf90-d463-41b5-bc65-e39c7bd80812.png",
-      description: language === 'ar' ? "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة" : "Luxury bathroom with marble walls and elegant black finishes"
-    },
-    {
-      id: 21,
-      title: language === 'ar' ? "عرض إكسسوارات TOKO المتنوعة" : "TOKO Diverse Accessories Display",
-      category: t.accessories,
-      image: "/lovable-uploads/a3e639b1-ed82-419c-addb-c6d957cc408f.png",
-      description: language === 'ar' ? "معرض شامل لإكسسوارات TOKO الحديثة والأنيقة" : "Comprehensive display of modern and elegant TOKO accessories"
-    },
-    {
-      id: 22,
-      title: language === 'ar' ? "حوض استحمام أسود مع صنبور ذهبي" : "Black Bathtub with Golden Faucet",
-      category: t.bathrooms,
-      image: "/lovable-uploads/9d48a0e5-4174-4bef-827a-fbb82ed4ed2b.png",
-      description: language === 'ar' ? "حوض استحمام أسود أنيق مع صنبور ذهبي وخلفية رخامية" : "Elegant black bathtub with golden faucet and marble background"
-    },
-    {
-      id: 23,
-      title: language === 'ar' ? "ركن جلوس مريح بتصميم عصري" : "Comfortable Seating Corner with Modern Design",
-      category: t.accessories,
-      image: "/lovable-uploads/1d5c0213-0e34-4497-8267-0cc62b87fa36.png",
-      description: language === 'ar' ? "ركن جلوس مريح مع أرفف عرض وإكسسوارات متنوعة" : "Comfortable seating corner with display shelves and diverse accessories"
-    },
-    {
-      id: 24,
-      title: language === 'ar' ? "حمام فاخر بإضاءة فنية مميزة" : "Luxury Bathroom with Artistic Lighting",
-      category: t.bathrooms,
-      image: "/lovable-uploads/4c3a6ea7-15b2-44d5-950f-3fb76416d621.png",
-      description: language === 'ar' ? "حمام فاخر بحوض أسود وإضاءة فنية مع مرآة مستديرة" : "Luxury bathroom with black tub and artistic lighting with round mirror"
-    },
-    {
-      id: 25,
-      title: language === 'ar' ? "مساحة عرض الأثاث والإكسسوارات" : "Furniture & Accessories Display Area",
-      category: t.accessories,
-      image: "/lovable-uploads/51d6f3ef-681b-4454-a28e-01550d21ed53.png",
-      description: language === 'ar' ? "مساحة أنيقة لعرض الأثاث والإكسسوارات المنزلية الحديثة" : "Elegant space for displaying modern furniture and home accessories"
-    },
-    {
-      id: 26,
-      title: language === 'ar' ? "حمام رخامي بمغسلة ذهبية" : "Marble Bathroom with Golden Sink",
-      category: t.bathrooms,
-      image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
-      description: language === 'ar' ? "حمام فاخر بجدران رخامية ومغسلة ذهبية مع إضاءة دافئة" : "Luxury bathroom with marble walls and golden sink with warm lighting"
-    },
-    {
-      id: 27,
-      title: language === 'ar' ? "حمام متكامل بتصميم عصري" : "Complete Modern Bathroom Design",
-      category: t.bathrooms,
-      image: "/lovable-uploads/166730c7-f1de-4786-bcbb-9d1fec86135f.png",
-      description: language === 'ar' ? "حمام متكامل بجدران رخامية ومغسلة حديثة مع مرآة مضاءة" : "Complete bathroom with marble walls and modern sink with illuminated mirror"
-    },
-    {
-      id: 28,
-      title: language === 'ar' ? "حمام أنيق بمغسلة خشبية" : "Elegant Bathroom with Wooden Sink",
-      category: t.bathrooms,
-      image: "/lovable-uploads/7e2f3003-1c14-426c-860b-052db8fbe8e9.png",
-      description: language === 'ar' ? "حمام أنيق بمغسلة خشبية وجدران رخامية مع إضاءة معلقة" : "Elegant bathroom with wooden sink and marble walls with pendant lighting"
-    },
-    {
-      id: 29,
-      title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
-      category: t.bathrooms,
-      image: "/lovable-uploads/88ba6ea8-56e8-4735-b149-6f8b131a54c7.png",
-      description: language === 'ar' ? "حمام فاخر يجمع بين الخامات الطبيعية المتنوعة والتصميم المعاصر" : "Luxury bathroom combining diverse natural materials with contemporary design"
-    },
-    {
-      id: 30,
-      title: language === 'ar' ? "مغسلة خشبية دائرية مع صنبور أسود" : "Round Wooden Sink with Black Faucet",
-      category: t.sanitaryTools,
-      image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
-      description: language === 'ar' ? "مغسلة دائرية من الخشب الطبيعي مع صنبور أسود أنيق" : "Round natural wood sink with elegant black faucet"
-    },
-    {
-      id: 31,
-      title: language === 'ar' ? "حمام رخامي فاخر بإضاءة دائرية مميزة" : "Luxury Marble Bathroom with Distinctive Circular Lighting",
-      category: t.bathrooms,
-      image: "/lovable-uploads/eeab58b6-6da9-4042-ada0-6c5bbe7fb15b.png",
-      description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة دائرية مبتكرة مع تشطيبات ذهبية" : "Luxury bathroom with marble walls and innovative circular lighting with golden finishes"
-    },
-    {
-      id: 32,
-      title: language === 'ar' ? "معرض أحواض المطابخ الحديثة" : "Modern Kitchen Sinks Gallery",
-      category: t.kitchens,
-      image: "/lovable-uploads/8aa8d6f3-5d60-48ba-ab5d-8de49bd466d1.png",
-      description: language === 'ar' ? "معرض شامل لأحواض المطابخ الحديثة مع تصاميم متنوعة وأنيقة" : "Comprehensive gallery of modern kitchen sinks with diverse and elegant designs"
-    },
-    {
-      id: 33,
-      title: language === 'ar' ? "مطبخ عصري متكامل بخامات فاخرة" : "Complete Modern Kitchen with Luxury Materials",
-      category: t.kitchens,
-      image: "/lovable-uploads/4f9aff47-86ee-4f7f-b99f-be11d60a7550.png",
-      description: language === 'ar' ? "مطبخ عصري مع رخام طبيعي وأجهزة متطورة وإضاءة مدمجة" : "Modern kitchen with natural marble, advanced appliances and integrated lighting"
-    },
-    {
-      id: 34,
-      title: language === 'ar' ? "معرض BAGNODESIGN الشامل" : "BAGNODESIGN Comprehensive Gallery",
-      category: t.accessories,
-      image: "/lovable-uploads/e0efc3d9-9b1d-444c-a750-559276b390d4.png",
-      description: language === 'ar' ? "معرض شامل يضم مختلف المنتجات والإكسسوارات من BAGNODESIGN" : "Comprehensive gallery featuring various products and accessories from BAGNODESIGN"
-    },
-    {
-      id: 35,
-      title: language === 'ar' ? "مرآة دائرية مع مغسلة رخامية أنيقة" : "Circular Mirror with Elegant Marble Sink",
-      category: t.bathrooms,
-      image: "/lovable-uploads/8cabac5c-f7d5-4125-94a5-a4231c15f166.png",
-      description: language === 'ar' ? "تصميم أنيق مع مرآة دائرية ومغسلة رخامية مع إضاءة دافئة" : "Elegant design with circular mirror and marble sink with warm lighting"
-    },
-    {
-      id: 36,
-      title: language === 'ar' ? "عرض أنظمة الدش المتطورة" : "Advanced Shower Systems Display",
-      category: t.sanitaryTools,
-      image: "/lovable-uploads/7b5dcc58-4387-4d05-8aeb-aa8c23d6ee14.png",
-      description: language === 'ar' ? "مجموعة متنوعة من أنظمة الدش بتشطيبات ذهبية وسوداء حديثة" : "Diverse collection of shower systems with modern golden and black finishes"
-    },
-    {
-      id: 37,
-      title: language === 'ar' ? "حمام رخامي فاخر بتشطيبات ذهبية" : "Luxury Marble Bathroom with Golden Finishes",
-      category: t.bathrooms,
-      image: "/lovable-uploads/afb1fa5f-d6cb-4987-a8cc-215960297b0b.png",
-      description: language === 'ar' ? "حمام فاخر بجدران رخامية طبيعية ومغسلة مع تشطيبات ذهبية مميزة" : "Luxury bathroom with natural marble walls and sink with distinctive golden finishes"
-    },
-    {
-      id: 38,
-      title: language === 'ar' ? "حمام مفتوح بحوض أسود أنيق" : "Open Bathroom with Elegant Black Bathtub",
-      category: t.bathrooms,
-      image: "/lovable-uploads/5d61b391-100f-4211-9905-c3587296fbd4.png",
-      description: language === 'ar' ? "تصميم حمام مفتوح مع حوض استحمام أسود وجدران رخامية وإضاءة معلقة" : "Open bathroom design with black bathtub, marble walls and pendant lighting"
-    },
-    {
-      id: 39,
-      title: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة" : "Luxury Open Living Space",
-      category: t.accessories,
-      image: "/lovable-uploads/f40e6481-7976-49a1-9622-51df5c3dae7d.png",
-      description: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة مع أثاث عصري وإضاءة مبتكرة" : "Luxury open living space with modern furniture and innovative lighting"
-    },
-    {
-      id: 40,
-      title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
-      category: t.bathrooms,
-      image: "/lovable-uploads/592b7bfd-7221-42d6-ba1f-f1a613c16f11.png",
-      description: language === 'ar' ? "حمام فاخر يجمع بين الرخام الطبيعي والخشب مع حوض استحمام أبيض أنيق" : "Luxury bathroom combining natural marble and wood with elegant white bathtub"
-    },
-    {
-      id: 41,
-      title: language === 'ar' ? "معرض الإضاءة والإكسسوارات المنزلية" : "Lighting & Home Accessories Gallery",
-      category: t.accessories,
-      image: "/lovable-uploads/1c906387-d21f-48cc-b8e1-a3f258918253.png",
-      description: language === 'ar' ? "معرض أنيق للإضاءة والإكسسوارات المنزلية مع تصاميم عصرية ومتنوعة" : "Elegant gallery of lighting and home accessories with modern and diverse designs"
-    },
-    {
-      id: 42,
-      title: language === 'ar' ? "معرض خلاطات المطابخ الحديثة" : "Modern Kitchen Mixers Gallery",
-      category: t.kitchens,
-      image: "/lovable-uploads/d04a5d33-5de0-4431-84c9-e6ca26caaac0.png",
-      description: language === 'ar' ? "معرض شامل لخلاطات المطابخ الحديثة مع مطبخ عرض متكامل" : "Comprehensive gallery of modern kitchen mixers with complete display kitchen"
-    },
-    {
-      id: 43,
-      title: language === 'ar' ? "عرض منتجات BAGNODESIGN و TOKO" : "BAGNODESIGN & TOKO Products Display",
-      category: t.sanitaryTools,
-      image: "/lovable-uploads/335c4e5f-0ccd-4f50-b186-3cc1eaf81e94.png",
-      description: language === 'ar' ? "عرض متخصص لمنتجات BAGNODESIGN و TOKO من الأدوات الصحية والإكسسوارات" : "Specialized display of BAGNODESIGN and TOKO sanitary products and accessories"
-    },
-    {
-      id: 44,
-      title: language === 'ar' ? "معرض الحمامات الفاخرة المتكامل" : "Complete Luxury Bathrooms Gallery",
-      category: t.bathrooms,
-      image: "/lovable-uploads/5fe0b360-3cdb-409d-9b71-5bd4d4270f11.png",
-      description: language === 'ar' ? "معرض متكامل للحمامات الفاخرة بجدران رخامية وتصاميم عصرية مبتكرة" : "Complete gallery of luxury bathrooms with marble walls and innovative modern designs"
-    }
-  ];
-
-  const stats = [
-    { icon: Award, number: "500+", label: t.completedProjects },
-    { icon: Clock, number: "15+", label: t.yearsExperience },
-    { icon: Users, number: "100%", label: t.customerSatisfaction },
-    { icon: Shield, number: "24/7", label: t.customerService }
-  ];
-
-  const services = [
-    {
-      title: t.bathroomDesign,
-      description: t.bathroomDesc
-    },
-    {
-      title: t.kitchenDesign,
-      description: t.kitchenDesc
-    },
-    {
-      title: t.sanitarySupply,
-      description: t.sanitaryDesc
-    },
-    {
-      title: t.lightingDesign,
-      description: t.lightingDesc
-    },
-    {
-      title: t.designConsultation,
-      description: t.designConsultationDesc
-    }
-  ];
-
-  return (
-    <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
+  const products = [{
+    id: 1,
+    title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom with Natural Marble",
+    category: t.bathrooms,
+    image: "/lovable-uploads/d1095dc8-3451-47b4-9277-ff12bfd87ef7.png",
+    description: language === 'ar' ? "تصميم حمام فاخر مع رخام طبيعي وإضاءة ذهبية مميزة" : "Luxury bathroom design with natural marble and distinctive golden lighting"
+  }, {
+    id: 2,
+    title: language === 'ar' ? "حمام عصري بتصميم أنيق" : "Modern Bathroom with Elegant Design",
+    category: t.bathrooms,
+    image: "/lovable-uploads/5be33a20-22b9-4b6a-aaf2-81f75f80886d.png",
+    description: language === 'ar' ? "حمام عصري بمغسلة سوداء وخامات متميزة" : "Modern bathroom with black sink and premium materials"
+  }, {
+    id: 3,
+    title: language === 'ar' ? "مطبخ فاخر متكامل" : "Complete Luxury Kitchen",
+    category: t.kitchens,
+    image: "/lovable-uploads/a51864f6-9637-4034-9692-ec6a0bc3d9e5.png",
+    description: language === 'ar' ? "مطبخ عصري مع جزيرة وإضاءة متطورة" : "Modern kitchen with island and advanced lighting"
+  }, {
+    id: 4,
+    title: language === 'ar' ? "معرض الأدوات الصحية" : "Sanitary Equipment Gallery",
+    category: t.sanitaryTools,
+    image: "/lovable-uploads/42d3c144-2a91-4e05-bc52-78e9260cbed9.png",
+    description: language === 'ar' ? "مجموعة متنوعة من الأدوات الصحية الحديثة" : "Diverse collection of modern sanitary equipment"
+  }, {
+    id: 5,
+    title: language === 'ar' ? "عينات الخامات الفاخرة" : "Luxury Materials Samples",
+    category: t.materials,
+    image: "/lovable-uploads/d5f6b3ae-a30b-44c2-94c6-dbdb34bd1de5.png",
+    description: language === 'ar' ? "مجموعة متنوعة من الرخام والخامات الطبيعية" : "Diverse collection of marble and natural materials"
+  }, {
+    id: 6,
+    title: language === 'ar' ? "حمام ذهبي فاخر" : "Luxury Golden Bathroom",
+    category: t.bathrooms,
+    image: "/lovable-uploads/4aa1af44-00df-43a4-92f8-7b9cf8fabbd4.png",
+    description: language === 'ar' ? "تصميم حمام فاخر بمغسلة ذهبية ورخام مميز" : "Luxury bathroom design with golden sink and distinctive marble"
+  }, {
+    id: 7,
+    title: language === 'ar' ? "حمام بتصميم معاصر" : "Contemporary Design Bathroom",
+    category: t.bathrooms,
+    image: "/lovable-uploads/8ca1f78e-9660-45af-b2b2-f94fc572a36b.png",
+    description: language === 'ar' ? "حمام عصري مع إضاءة مدمجة وتصميم أنيق" : "Modern bathroom with integrated lighting and elegant design"
+  }, {
+    id: 8,
+    title: language === 'ar' ? "حمام فاخر بالإضاءة الذهبية" : "Luxury Bathroom with Golden Lighting",
+    category: t.bathrooms,
+    image: "/lovable-uploads/4c2bacb3-43c7-441b-8188-489680b11a6e.png",
+    description: language === 'ar' ? "تصميم حمام مع إضاءة ذهبية ورخام كلاسيكي" : "Bathroom design with golden lighting and classic marble"
+  }, {
+    id: 9,
+    title: language === 'ar' ? "حمام أسود أنيق" : "Elegant Black Bathroom",
+    category: t.bathrooms,
+    image: "/lovable-uploads/92353d56-6084-49a5-a45a-0bc3636a2b27.png",
+    description: language === 'ar' ? "حمام عصري بحوض أسود وتصميم درامي" : "Modern bathroom with black basin and dramatic design"
+  }, {
+    id: 10,
+    title: language === 'ar' ? "معرض الإكسسوارات" : "Accessories Gallery",
+    category: t.accessories,
+    image: "/lovable-uploads/7fce98d9-2801-42b0-a8e6-a1f6c0d1ce3d.png",
+    description: language === 'ar' ? "مجموعة من الإكسسوارات والإضاءة المنزلية" : "Collection of accessories and home lighting"
+  }, {
+    id: 11,
+    title: language === 'ar' ? "وحدات الفنادق والمرافق" : "Hotel Amenities & Facilities",
+    category: t.equipment,
+    image: "/lovable-uploads/a6d3fab7-0404-4cf7-8cba-b0710166f428.png",
+    description: language === 'ar' ? "مجموعة شاملة من الأجهزة والمرافق الفندقية الحديثة" : "Comprehensive collection of modern hotel equipment and facilities"
+  }, {
+    id: 12,
+    title: language === 'ar' ? "مطبخ خارجي تحت الدرج" : "Outdoor Kitchen Under Stairs",
+    category: t.kitchens,
+    image: "/lovable-uploads/7114e5a3-0255-4299-b8ef-5d3f1516cf8d.png",
+    description: language === 'ar' ? "تصميم مطبخ خارجي أنيق مع شواية تحت الدرج" : "Elegant outdoor kitchen design with grill under stairs"
+  }, {
+    id: 13,
+    title: language === 'ar' ? "حمام رخامي فاخر بالإضاءة المعلقة" : "Luxury Marble Bathroom with Pendant Lighting",
+    category: t.bathrooms,
+    image: "/lovable-uploads/9c2848bb-6c0e-4d87-a7fe-e6f1aa1f8382.png",
+    description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة معلقة مميزة" : "Luxury bathroom with marble walls and distinctive pendant lighting"
+  }, {
+    id: 14,
+    title: language === 'ar' ? "عرض الصنابير والخامات" : "Faucets & Materials Display",
+    category: t.sanitaryTools,
+    image: "/lovable-uploads/886c01f4-7f8b-4e63-b86f-b8a13bea7e86.png",
+    description: language === 'ar' ? "معرض شامل للصنابير والخامات الحديثة" : "Comprehensive display of modern faucets and materials"
+  }, {
+    id: 15,
+    title: language === 'ar' ? "معرض إكسسوارات BAGNODESIGN" : "BAGNODESIGN Accessories Gallery",
+    category: t.accessories,
+    image: "/lovable-uploads/49a0f7ae-a195-41e7-806d-686296c1c4e0.png",
+    description: language === 'ar' ? "عرض مجموعة إكسسوارات BAGNODESIGN الحصرية" : "Display of exclusive BAGNODESIGN accessories collection"
+  }, {
+    id: 16,
+    title: language === 'ar' ? "حمام فاخر بالإضاءة المعلقة" : "Luxury Bathroom with Pendant Lighting",
+    category: t.bathrooms,
+    image: "/lovable-uploads/eb4032d8-d075-45e8-91cf-43a1856ab4b0.png",
+    description: language === 'ar' ? "تصميم حمام فاخر مع إضاءة معلقة وخامات طبيعية" : "Luxury bathroom design with pendant lighting and natural materials"
+  }, {
+    id: 17,
+    title: language === 'ar' ? "مساحة معيشة ومطبخ مفتوح" : "Open Living Space & Kitchen",
+    category: t.kitchens,
+    image: "/lovable-uploads/d2fc2469-c1ca-47b2-ad16-0112cf49ba97.png",
+    description: language === 'ar' ? "تصميم مفتوح يجمع بين المطبخ ومساحة المعيشة" : "Open design combining kitchen and living space"
+  }, {
+    id: 18,
+    title: language === 'ar' ? "حمام مدمج عصري" : "Modern Integrated Bathroom",
+    category: t.bathrooms,
+    image: "/lovable-uploads/eb1b5131-a9d5-47f7-83dc-57d577c1402b.png",
+    description: language === 'ar' ? "حمام مدمج بتصميم عصري وخامات فاخرة" : "Integrated bathroom with modern design and luxury materials"
+  }, {
+    id: 19,
+    title: language === 'ar' ? "حمام فاخر بالخشب والرخام" : "Luxury Bathroom with Wood & Marble",
+    category: t.bathrooms,
+    image: "/lovable-uploads/97f91dbc-cab8-4dfb-8c22-fb8ffd5de9e4.png",
+    description: language === 'ar' ? "حمام فاخر يجمع بين جمال الخشب وأناقة الرخام" : "Luxury bathroom combining the beauty of wood and elegance of marble"
+  }, {
+    id: 20,
+    title: language === 'ar' ? "حمام رخامي بالتشطيبات السوداء" : "Marble Bathroom with Black Finishes",
+    category: t.bathrooms,
+    image: "/lovable-uploads/6b99bf90-d463-41b5-bc65-e39c7bd80812.png",
+    description: language === 'ar' ? "حمام فاخر بجدران رخامية وتشطيبات سوداء أنيقة" : "Luxury bathroom with marble walls and elegant black finishes"
+  }, {
+    id: 21,
+    title: language === 'ar' ? "عرض إكسسوارات TOKO المتنوعة" : "TOKO Diverse Accessories Display",
+    category: t.accessories,
+    image: "/lovable-uploads/a3e639b1-ed82-419c-addb-c6d957cc408f.png",
+    description: language === 'ar' ? "معرض شامل لإكسسوارات TOKO الحديثة والأنيقة" : "Comprehensive display of modern and elegant TOKO accessories"
+  }, {
+    id: 22,
+    title: language === 'ar' ? "حوض استحمام أسود مع صنبور ذهبي" : "Black Bathtub with Golden Faucet",
+    category: t.bathrooms,
+    image: "/lovable-uploads/9d48a0e5-4174-4bef-827a-fbb82ed4ed2b.png",
+    description: language === 'ar' ? "حوض استحمام أسود أنيق مع صنبور ذهبي وخلفية رخامية" : "Elegant black bathtub with golden faucet and marble background"
+  }, {
+    id: 23,
+    title: language === 'ar' ? "ركن جلوس مريح بتصميم عصري" : "Comfortable Seating Corner with Modern Design",
+    category: t.accessories,
+    image: "/lovable-uploads/1d5c0213-0e34-4497-8267-0cc62b87fa36.png",
+    description: language === 'ar' ? "ركن جلوس مريح مع أرفف عرض وإكسسوارات متنوعة" : "Comfortable seating corner with display shelves and diverse accessories"
+  }, {
+    id: 24,
+    title: language === 'ar' ? "حمام فاخر بإضاءة فنية مميزة" : "Luxury Bathroom with Artistic Lighting",
+    category: t.bathrooms,
+    image: "/lovable-uploads/4c3a6ea7-15b2-44d5-950f-3fb76416d621.png",
+    description: language === 'ar' ? "حمام فاخر بحوض أسود وإضاءة فنية مع مرآة مستديرة" : "Luxury bathroom with black tub and artistic lighting with round mirror"
+  }, {
+    id: 25,
+    title: language === 'ar' ? "مساحة عرض الأثاث والإكسسوارات" : "Furniture & Accessories Display Area",
+    category: t.accessories,
+    image: "/lovable-uploads/51d6f3ef-681b-4454-a28e-01550d21ed53.png",
+    description: language === 'ar' ? "مساحة أنيقة لعرض الأثاث والإكسسوارات المنزلية الحديثة" : "Elegant space for displaying modern furniture and home accessories"
+  }, {
+    id: 26,
+    title: language === 'ar' ? "حمام رخامي بمغسلة ذهبية" : "Marble Bathroom with Golden Sink",
+    category: t.bathrooms,
+    image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
+    description: language === 'ar' ? "حمام فاخر بجدران رخامية ومغسلة ذهبية مع إضاءة دافئة" : "Luxury bathroom with marble walls and golden sink with warm lighting"
+  }, {
+    id: 27,
+    title: language === 'ar' ? "حمام متكامل بتصميم عصري" : "Complete Modern Bathroom Design",
+    category: t.bathrooms,
+    image: "/lovable-uploads/166730c7-f1de-4786-bcbb-9d1fec86135f.png",
+    description: language === 'ar' ? "حمام متكامل بجدران رخامية ومغسلة حديثة مع مرآة مضاءة" : "Complete bathroom with marble walls and modern sink with illuminated mirror"
+  }, {
+    id: 28,
+    title: language === 'ar' ? "حمام أنيق بمغسلة خشبية" : "Elegant Bathroom with Wooden Sink",
+    category: t.bathrooms,
+    image: "/lovable-uploads/7e2f3003-1c14-426c-860b-052db8fbe8e9.png",
+    description: language === 'ar' ? "حمام أنيق بمغسلة خشبية وجدران رخامية مع إضاءة معلقة" : "Elegant bathroom with wooden sink and marble walls with pendant lighting"
+  }, {
+    id: 29,
+    title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
+    category: t.bathrooms,
+    image: "/lovable-uploads/88ba6ea8-56e8-4735-b149-6f8b131a54c7.png",
+    description: language === 'ar' ? "حمام فاخر يجمع بين الخامات الطبيعية المتنوعة والتصميم المعاصر" : "Luxury bathroom combining diverse natural materials with contemporary design"
+  }, {
+    id: 30,
+    title: language === 'ar' ? "مغسلة خشبية دائرية مع صنبور أسود" : "Round Wooden Sink with Black Faucet",
+    category: t.sanitaryTools,
+    image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
+    description: language === 'ar' ? "مغسلة دائرية من الخشب الطبيعي مع صنبور أسود أنيق" : "Round natural wood sink with elegant black faucet"
+  }, {
+    id: 31,
+    title: language === 'ar' ? "حمام رخامي فاخر بإضاءة دائرية مميزة" : "Luxury Marble Bathroom with Distinctive Circular Lighting",
+    category: t.bathrooms,
+    image: "/lovable-uploads/eeab58b6-6da9-4042-ada0-6c5bbe7fb15b.png",
+    description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة دائرية مبتكرة مع تشطيبات ذهبية" : "Luxury bathroom with marble walls and innovative circular lighting with golden finishes"
+  }, {
+    id: 32,
+    title: language === 'ar' ? "معرض أحواض المطابخ الحديثة" : "Modern Kitchen Sinks Gallery",
+    category: t.kitchens,
+    image: "/lovable-uploads/8aa8d6f3-5d60-48ba-ab5d-8de49bd466d1.png",
+    description: language === 'ar' ? "معرض شامل لأحواض المطابخ الحديثة مع تصاميم متنوعة وأنيقة" : "Comprehensive gallery of modern kitchen sinks with diverse and elegant designs"
+  }, {
+    id: 33,
+    title: language === 'ar' ? "مطبخ عصري متكامل بخامات فاخرة" : "Complete Modern Kitchen with Luxury Materials",
+    category: t.kitchens,
+    image: "/lovable-uploads/4f9aff47-86ee-4f7f-b99f-be11d60a7550.png",
+    description: language === 'ar' ? "مطبخ عصري مع رخام طبيعي وأجهزة متطورة وإضاءة مدمجة" : "Modern kitchen with natural marble, advanced appliances and integrated lighting"
+  }, {
+    id: 34,
+    title: language === 'ar' ? "معرض BAGNODESIGN الشامل" : "BAGNODESIGN Comprehensive Gallery",
+    category: t.accessories,
+    image: "/lovable-uploads/e0efc3d9-9b1d-444c-a750-559276b390d4.png",
+    description: language === 'ar' ? "معرض شامل يضم مختلف المنتجات والإكسسوارات من BAGNODESIGN" : "Comprehensive gallery featuring various products and accessories from BAGNODESIGN"
+  }, {
+    id: 35,
+    title: language === 'ar' ? "مرآة دائرية مع مغسلة رخامية أنيقة" : "Circular Mirror with Elegant Marble Sink",
+    category: t.bathrooms,
+    image: "/lovable-uploads/8cabac5c-f7d5-4125-94a5-a4231c15f166.png",
+    description: language === 'ar' ? "تصميم أنيق مع مرآة دائرية ومغسلة رخامية مع إضاءة دافئة" : "Elegant design with circular mirror and marble sink with warm lighting"
+  }, {
+    id: 36,
+    title: language === 'ar' ? "عرض أنظمة الدش المتطورة" : "Advanced Shower Systems Display",
+    category: t.sanitaryTools,
+    image: "/lovable-uploads/7b5dcc58-4387-4d05-8aeb-aa8c23d6ee14.png",
+    description: language === 'ar' ? "مجموعة متنوعة من أنظمة الدش بتشطيبات ذهبية وسوداء حديثة" : "Diverse collection of shower systems with modern golden and black finishes"
+  }, {
+    id: 37,
+    title: language === 'ar' ? "حمام رخامي فاخر بتشطيبات ذهبية" : "Luxury Marble Bathroom with Golden Finishes",
+    category: t.bathrooms,
+    image: "/lovable-uploads/afb1fa5f-d6cb-4987-a8cc-215960297b0b.png",
+    description: language === 'ar' ? "حمام فاخر بجدران رخامية طبيعية ومغسلة مع تشطيبات ذهبية مميزة" : "Luxury bathroom with natural marble walls and sink with distinctive golden finishes"
+  }, {
+    id: 38,
+    title: language === 'ar' ? "حمام مفتوح بحوض أسود أنيق" : "Open Bathroom with Elegant Black Bathtub",
+    category: t.bathrooms,
+    image: "/lovable-uploads/5d61b391-100f-4211-9905-c3587296fbd4.png",
+    description: language === 'ar' ? "تصميم حمام مفتوح مع حوض استحمام أسود وجدران رخامية وإضاءة معلقة" : "Open bathroom design with black bathtub, marble walls and pendant lighting"
+  }, {
+    id: 39,
+    title: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة" : "Luxury Open Living Space",
+    category: t.accessories,
+    image: "/lovable-uploads/f40e6481-7976-49a1-9622-51df5c3dae7d.png",
+    description: language === 'ar' ? "مساحة معيشة فاخرة مفتوحة مع أثاث عصري وإضاءة مبتكرة" : "Luxury open living space with modern furniture and innovative lighting"
+  }, {
+    id: 40,
+    title: language === 'ar' ? "حمام فاخر بخامات طبيعية متنوعة" : "Luxury Bathroom with Diverse Natural Materials",
+    category: t.bathrooms,
+    image: "/lovable-uploads/592b7bfd-7221-42d6-ba1f-f1a613c16f11.png",
+    description: language === 'ar' ? "حمام فاخر يجمع بين الرخام الطبيعي والخشب مع حوض استحمام أبيض أنيق" : "Luxury bathroom combining natural marble and wood with elegant white bathtub"
+  }, {
+    id: 41,
+    title: language === 'ar' ? "معرض الإضاءة والإكسسوارات المنزلية" : "Lighting & Home Accessories Gallery",
+    category: t.accessories,
+    image: "/lovable-uploads/1c906387-d21f-48cc-b8e1-a3f258918253.png",
+    description: language === 'ar' ? "معرض أنيق للإضاءة والإكسسوارات المنزلية مع تصاميم عصرية ومتنوعة" : "Elegant gallery of lighting and home accessories with modern and diverse designs"
+  }, {
+    id: 42,
+    title: language === 'ar' ? "معرض خلاطات المطابخ الحديثة" : "Modern Kitchen Mixers Gallery",
+    category: t.kitchens,
+    image: "/lovable-uploads/d04a5d33-5de0-4431-84c9-e6ca26caaac0.png",
+    description: language === 'ar' ? "معرض شامل لخلاطات المطابخ الحديثة مع مطبخ عرض متكامل" : "Comprehensive gallery of modern kitchen mixers with complete display kitchen"
+  }, {
+    id: 43,
+    title: language === 'ar' ? "عرض منتجات BAGNODESIGN و TOKO" : "BAGNODESIGN & TOKO Products Display",
+    category: t.sanitaryTools,
+    image: "/lovable-uploads/335c4e5f-0ccd-4f50-b186-3cc1eaf81e94.png",
+    description: language === 'ar' ? "عرض متخصص لمنتجات BAGNODESIGN و TOKO من الأدوات الصحية والإكسسوارات" : "Specialized display of BAGNODESIGN and TOKO sanitary products and accessories"
+  }, {
+    id: 44,
+    title: language === 'ar' ? "معرض الحمامات الفاخرة المتكامل" : "Complete Luxury Bathrooms Gallery",
+    category: t.bathrooms,
+    image: "/lovable-uploads/5fe0b360-3cdb-409d-9b71-5bd4d4270f11.png",
+    description: language === 'ar' ? "معرض متكامل للحمامات الفاخرة بجدران رخامية وتصاميم عصرية مبتكرة" : "Complete gallery of luxury bathrooms with marble walls and innovative modern designs"
+  }];
+  const stats = [{
+    icon: Award,
+    number: "500+",
+    label: t.completedProjects
+  }, {
+    icon: Clock,
+    number: "15+",
+    label: t.yearsExperience
+  }, {
+    icon: Users,
+    number: "100%",
+    label: t.customerSatisfaction
+  }, {
+    icon: Shield,
+    number: "24/7",
+    label: t.customerService
+  }];
+  const services = [{
+    title: t.bathroomDesign,
+    description: t.bathroomDesc
+  }, {
+    title: t.kitchenDesign,
+    description: t.kitchenDesc
+  }, {
+    title: t.sanitarySupply,
+    description: t.sanitaryDesc
+  }, {
+    title: t.lightingDesign,
+    description: t.lightingDesc
+  }, {
+    title: t.designConsultation,
+    description: t.designConsultationDesc
+  }];
+  return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Header */}
       <header className="bg-card shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">B</span>
-              </div>
+              
               <div>
                 <h1 className="text-xl font-bold text-foreground">BAGNODESIGN</h1>
-                <p className="text-sm text-muted-foreground">معرض الحمامات والمطابخ الفاخرة</p>
+                
               </div>
             </div>
             
@@ -585,84 +535,19 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 bg-gradient-to-br from-background to-secondary/30">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6">
-            {t.heroTitle}
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t.heroDescription}
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-primary to-accent"
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              {t.exploreProducts}
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              {t.contactUs}
-            </Button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Stats Section */}
-      <section className="py-16 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* About Section */}
       <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-8">{t.aboutTitle}</h2>
-            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              {t.aboutDescription}
-            </p>
             
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Award className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">{t.highQuality}</h3>
-                <p className="text-sm text-muted-foreground">{t.highQualityDesc}</p>
-              </div>
-              
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">{t.professionalTeam}</h3>
-                <p className="text-sm text-muted-foreground">{t.professionalTeamDesc}</p>
-              </div>
-              
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Shield className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">{t.fullService}</h3>
-                <p className="text-sm text-muted-foreground">{t.fullServiceDesc}</p>
-              </div>
-              
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Star className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-bold text-foreground mb-2">{t.qualityGuarantee}</h3>
-                <p className="text-sm text-muted-foreground">{t.qualityGuaranteeDesc}</p>
-              </div>
-            </div>
+            
+            
+            
           </div>
         </div>
       </section>
@@ -678,21 +563,17 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+            {services.map((service, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button variant="outline" size="sm" onClick={() => document.getElementById('products')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                     {t.learnMore}
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -708,24 +589,15 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            {products.map(product => <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div className="relative overflow-hidden">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <img 
-                        src={product.image} 
-                        alt={product.title}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                      />
+                      <img src={product.image} alt={product.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
                     </DialogTrigger>
                     <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
                       <div className="relative">
-                        <img 
-                          src={product.image} 
-                          alt={product.title}
-                          className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
-                        />
+                        <img src={product.image} alt={product.title} className="w-full h-auto max-h-[90vh] object-contain rounded-lg" />
                       </div>
                     </DialogContent>
                   </Dialog>
@@ -742,11 +614,7 @@ const Index = () => {
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl">
                       <div className="space-y-4">
-                        <img 
-                          src={product.image} 
-                          alt={product.title}
-                          className="w-full h-64 object-cover rounded-lg"
-                        />
+                        <img src={product.image} alt={product.title} className="w-full h-64 object-cover rounded-lg" />
                         <div>
                           <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
                           <Badge className="mb-3">{product.category}</Badge>
@@ -766,8 +634,7 @@ const Index = () => {
                     </DialogContent>
                   </Dialog>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -789,11 +656,7 @@ const Index = () => {
             <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100 p-4">
-                  <img 
-                    src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" 
-                    alt="Bathroom sanitaryware & brassware"
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <img src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" alt="Bathroom sanitaryware & brassware" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-primary/10 text-primary border-primary/20">Premium</Badge>
@@ -807,19 +670,15 @@ const Index = () => {
                   {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة من العلامات التجارية الرائدة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware from leading brands'}
                 </p>
                 <div className="space-y-3 pt-2">
-                  <Button 
-                    className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
-                    size="default"
-                    onClick={() => {
-                      // Create a dummy download for demo
-                      const link = document.createElement('a');
-                      link.href = 'data:text/plain;charset=utf-8,Bathroom Catalog - BAGNODESIGN';
-                      link.download = 'bathroom-catalog.pdf';
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
-                  >
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default" onClick={() => {
+                  // Create a dummy download for demo
+                  const link = document.createElement('a');
+                  link.href = 'data:text/plain;charset=utf-8,Bathroom Catalog - BAGNODESIGN';
+                  link.download = 'bathroom-catalog.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}>
                     <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                     {t.downloadCatalog}
                   </Button>
@@ -827,19 +686,14 @@ const Index = () => {
                     <Button variant="outline" className="flex-1" size="default">
                       {t.viewCatalog}
                     </Button>
-                    <Button 
-                      onClick={() => {
-                        setCurrent360Image({
-                          url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
-                          title: language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware',
-                          description: language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware'
-                        });
-                        setShow360Viewer(true);
-                      }}
-                      variant="secondary" 
-                      className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
-                      size="default"
-                    >
+                    <Button onClick={() => {
+                    setCurrent360Image({
+                      url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
+                      title: language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware',
+                      description: language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware'
+                    });
+                    setShow360Viewer(true);
+                  }} variant="secondary" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
                       <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                       {language === 'ar' ? '360°' : '360°'}
                     </Button>
@@ -852,11 +706,7 @@ const Index = () => {
             <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100 p-4">
-                  <img 
-                    src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" 
-                    alt="Kitchen LifeStyle"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
-                  />
+                  <img src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" alt="Kitchen LifeStyle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                 </div>
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-accent/10 text-accent border-accent/20">Luxury</Badge>
@@ -878,19 +728,14 @@ const Index = () => {
                     <Button variant="outline" className="flex-1" size="default">
                       {t.viewCatalog}
                     </Button>
-                    <Button 
-                      onClick={() => {
-                        setCurrent360Image({
-                          url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
-                          title: language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle',
-                          description: language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة' : 'Discover luxury kitchen appliances by leading brands'
-                        });
-                        setShow360Viewer(true);
-                      }}
-                      variant="secondary" 
-                      className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} 
-                      size="default"
-                    >
+                    <Button onClick={() => {
+                    setCurrent360Image({
+                      url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
+                      title: language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle',
+                      description: language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة' : 'Discover luxury kitchen appliances by leading brands'
+                    });
+                    setShow360Viewer(true);
+                  }} variant="secondary" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
                       <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
                       {language === 'ar' ? '360°' : '360°'}
                     </Button>
@@ -903,11 +748,7 @@ const Index = () => {
             <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-green-100 p-4">
-                  <img 
-                    src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" 
-                    alt="Outdoor Living 2024"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
-                  />
+                  <img src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" alt="Outdoor Living 2024" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                 </div>
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-green-500/10 text-green-600 border-green-500/20">Outdoor</Badge>
@@ -936,11 +777,7 @@ const Index = () => {
             <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 p-4">
-                  <img 
-                    src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" 
-                    alt="Tiles & Surfaces"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
-                  />
+                  <img src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" alt="Tiles & Surfaces" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                 </div>
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-purple-500/10 text-purple-600 border-purple-500/20">Surfaces</Badge>
@@ -983,11 +820,7 @@ const Index = () => {
               <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
-                    <img 
-                      src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" 
-                      alt="Tiles Small Format"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
-                    />
+                    <img src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" alt="Tiles Small Format" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
                   </div>
                 </div>
                 <CardContent className="p-4 space-y-3">
@@ -1010,11 +843,7 @@ const Index = () => {
               <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
-                    <img 
-                      src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" 
-                      alt="Slabs"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
-                    />
+                    <img src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" alt="Slabs" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
                   </div>
                 </div>
                 <CardContent className="p-4 space-y-3">
@@ -1037,11 +866,7 @@ const Index = () => {
               <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
-                    <img 
-                      src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" 
-                      alt="Hokkaido Surfaces"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
-                    />
+                    <img src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" alt="Hokkaido Surfaces" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
                   </div>
                 </div>
                 <CardContent className="p-4 space-y-3">
@@ -1064,11 +889,7 @@ const Index = () => {
               <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
-                    <img 
-                      src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" 
-                      alt="Outdoor Tiles & Landscape Lighting"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded"
-                    />
+                    <img src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" alt="Outdoor Tiles & Landscape Lighting" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
                   </div>
                 </div>
                 <CardContent className="p-4 space-y-3">
@@ -1104,290 +925,10 @@ const Index = () => {
       </section>
 
       {/* 3D Virtual Experiences Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className={`mb-16 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              {language === 'ar' ? 'التجارب الافتراضية ثلاثية الأبعاد' : '3D Virtual Experiences'}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {language === 'ar' 
-                ? 'استكشف منتجاتنا ومعرضنا من خلال التجارب التفاعلية ثلاثية الأبعاد' 
-                : 'Explore our products and showroom through immersive 3D interactive experiences'}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            {/* Virtual Gallery */}
-            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <CardContent className="p-8 space-y-6">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Box className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">
-                  {language === 'ar' ? 'المعرض الافتراضي' : 'Virtual Gallery'}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {language === 'ar' 
-                    ? 'جولة تفاعلية في معرضنا الافتراضي ثلاثي الأبعاد واستكشاف جميع الكاتلوجات' 
-                    : 'Take an interactive tour through our 3D virtual showroom and explore all catalogs'}
-                </p>
-                <Button 
-                  onClick={() => setShowVirtualGallery(true)}
-                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
-                >
-                  <Box className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                  {language === 'ar' ? 'دخول المعرض' : 'Enter Gallery'}
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* 360° Bathroom Experience */}
-            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <CardContent className="p-8 space-y-6">
-                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Eye className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">
-                  {language === 'ar' ? 'تجربة الحمام 360°' : 'Bathroom 360° Experience'}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {language === 'ar' 
-                    ? 'استكشف تصاميم الحمامات الفاخرة بتقنية 360 درجة' 
-                    : 'Explore luxury bathroom designs in immersive 360° view'}
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
-                      variant="outline"
-                    >
-                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                      {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-6xl h-[90vh] p-0 bg-black">
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <Button
-                        onClick={() => {}}
-                        variant="ghost"
-                        size="icon"
-                        className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
-                      >
-                        <X className="h-4 w-4" />
-                      </Button>
-                      <video
-                        controls
-                        autoPlay
-                        className="w-full h-full object-contain"
-                      >
-                        <source 
-                          src="/videos/bathroom-360-experience.mp4" 
-                          type="video/mp4" 
-                        />
-                        {language === 'ar' 
-                          ? 'المتصفح لا يدعم تشغيل الفيديو' 
-                          : 'Your browser does not support video playback'
-                        }
-                      </video>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </CardContent>
-            </Card>
-
-            {/* 360° Kitchen Experience */}
-            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-              <CardContent className="p-8 space-y-6">
-                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <View className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">
-                  {language === 'ar' ? 'تجربة المطبخ 360°' : 'Kitchen 360° Experience'}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {language === 'ar' 
-                    ? 'اكتشف تصاميم المطابخ العصرية بتقنية الواقع الافتراضي' 
-                    : 'Discover modern kitchen designs in virtual reality technology'}
-                </p>
-                <Button 
-                  onClick={() => {
-                    setCurrent360Image({
-                      url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
-                      title: language === 'ar' ? 'مطبخ عصري' : 'Modern Kitchen',
-                      description: language === 'ar' ? 'تصميم مطبخ عصري بأجهزة متطورة' : 'Modern kitchen design with advanced appliances'
-                    });
-                    setShow360Viewer(true);
-                  }}
-                  className={`w-full group-hover:scale-105 transition-transform ${language === 'ar' ? 'flex-row-reverse' : ''}`}
-                  variant="outline"
-                >
-                  <View className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-                  {language === 'ar' ? 'تجربة 360°' : '360° Experience'}
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Additional Features */}
-          <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className={`bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
-              <CardContent className="p-6">
-                <h4 className="font-bold text-lg mb-3">
-                  {language === 'ar' ? 'ميزات متقدمة' : 'Advanced Features'}
-                </h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    {language === 'ar' ? 'تفاعل ثلاثي الأبعاد مع المنتجات' : 'Interactive 3D product exploration'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    {language === 'ar' ? 'مشاهدة 360 درجة لجميع الكاتلوجات' : '360° viewing for all catalogs'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    {language === 'ar' ? 'جولات افتراضية في المعرض' : 'Virtual showroom tours'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    {language === 'ar' ? 'معلومات تفاعلية للمنتجات' : 'Interactive product information'}
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className={`bg-gradient-to-r from-accent/10 to-secondary/20 border-accent/20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
-              <CardContent className="p-6">
-                <h4 className="font-bold text-lg mb-3">
-                  {language === 'ar' ? 'قريباً' : 'Coming Soon'}
-                </h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    {language === 'ar' ? 'الواقع المعزز (AR)' : 'Augmented Reality (AR)'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    {language === 'ar' ? 'جولات VR كاملة' : 'Full VR Tours'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    {language === 'ar' ? 'أداة التصميم التفاعلية' : 'Interactive Design Tool'}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    {language === 'ar' ? 'مشاهدة المنتجات في مساحتك' : 'View products in your space'}
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* AR Features Section */}
-      <section id="ar-features" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              {language === 'ar' ? 'تقنية الواقع المعزز' : 'Augmented Reality Features'}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {language === 'ar' 
-                ? 'اكتشف منتجاتنا بتقنية الواقع المعزز الحديثة وشاهد كيف ستبدو في منزلك'
-                : 'Discover our products with modern AR technology and see how they will look in your home'
-              }
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Eye className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">
-                {language === 'ar' ? 'معاينة ثلاثية الأبعاد' : '3D Preview'}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {language === 'ar' 
-                  ? 'شاهد المنتجات بزاوية 360 درجة بتقنية ثلاثية الأبعاد'
-                  : 'View products in 360 degrees with 3D technology'
-                }
-              </p>
-              <Button 
-                variant="outline"
-                onClick={() => {
-                  // Get first product image for demo
-                  const firstProduct = products.find(p => p.id === 1);
-                  if (firstProduct) {
-                    setCurrent360Image({
-                      url: firstProduct.image,
-                      title: firstProduct.title,
-                      description: firstProduct.description
-                    });
-                    setShow360Viewer(true);
-                  }
-                }}
-              >
-                {language === 'ar' ? 'جرب الآن' : 'Try Now'}
-              </Button>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">
-                {language === 'ar' ? 'تجربة الجوال' : 'Mobile Experience'}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {language === 'ar' 
-                  ? 'استخدم QR Code لتجربة المنتجات على هاتفك الذكي'
-                  : 'Use QR Code to experience products on your smartphone'
-                }
-              </p>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline">
-                    {language === 'ar' ? 'احصل على QR' : 'Get QR Code'}
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
-                  <QRCodeVR
-                    catalogId="demo"
-                    catalogTitle={language === 'ar' ? 'تجربة تفاعلية' : 'Interactive Experience'}
-                    vrUrl="/vr-tour/demo"
-                    language={language}
-                  />
-                </DialogContent>
-              </Dialog>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">
-                {language === 'ar' ? 'معرض افتراضي' : 'Virtual Gallery'}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {language === 'ar' 
-                  ? 'جولة كاملة في معرضنا من راحة منزلك'
-                  : 'Complete tour of our showroom from the comfort of your home'
-                }
-              </p>
-              <Button 
-                variant="outline"
-                onClick={() => setShowVirtualGallery(true)}
-              >
-                {language === 'ar' ? 'ادخل المعرض' : 'Enter Gallery'}
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* New Features Section */}
       <section id="new-features" className="py-20 bg-card">
@@ -1397,10 +938,7 @@ const Index = () => {
               {language === 'ar' ? 'الميزات الجديدة' : 'New Features'}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {language === 'ar' 
-                ? 'اكتشف أحدث الإضافات والتحديثات في معرضنا الرقمي'
-                : 'Discover the latest additions and updates in our digital showroom'
-              }
+              {language === 'ar' ? 'اكتشف أحدث الإضافات والتحديثات في معرضنا الرقمي' : 'Discover the latest additions and updates in our digital showroom'}
             </p>
           </div>
           
@@ -1413,10 +951,7 @@ const Index = () => {
                 {language === 'ar' ? 'قائمة المفضلة' : 'Favorites List'}
               </h4>
               <p className="text-sm text-muted-foreground">
-                {language === 'ar' 
-                  ? 'احفظ منتجاتك المفضلة للمراجعة لاحقاً'
-                  : 'Save your favorite products for later review'
-                }
+                {language === 'ar' ? 'احفظ منتجاتك المفضلة للمراجعة لاحقاً' : 'Save your favorite products for later review'}
               </p>
             </Card>
 
@@ -1428,10 +963,7 @@ const Index = () => {
                 {language === 'ar' ? 'تحميل الكاتلوجات' : 'Download Catalogs'}
               </h4>
               <p className="text-sm text-muted-foreground">
-                {language === 'ar' 
-                  ? 'حمل الكاتلوجات بصيغة PDF عالية الجودة'
-                  : 'Download high-quality PDF catalogs'
-                }
+                {language === 'ar' ? 'حمل الكاتلوجات بصيغة PDF عالية الجودة' : 'Download high-quality PDF catalogs'}
               </p>
             </Card>
 
@@ -1443,10 +975,7 @@ const Index = () => {
                 {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
               </h4>
               <p className="text-sm text-muted-foreground">
-                {language === 'ar' 
-                  ? 'احصل على عرض سعر مخصص لمشروعك'
-                  : 'Get a custom quote for your project'
-                }
+                {language === 'ar' ? 'احصل على عرض سعر مخصص لمشروعك' : 'Get a custom quote for your project'}
               </p>
             </Card>
 
@@ -1458,19 +987,15 @@ const Index = () => {
                 {language === 'ar' ? 'نظام التقييم' : 'Rating System'}
               </h4>
               <p className="text-sm text-muted-foreground">
-                {language === 'ar' 
-                  ? 'شاهد تقييمات العملاء للمنتجات'
-                  : 'View customer ratings for products'
-                }
+                {language === 'ar' ? 'شاهد تقييمات العملاء للمنتجات' : 'View customer ratings for products'}
               </p>
             </Card>
           </div>
           
           <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button size="lg" onClick={() => document.getElementById('products')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               {language === 'ar' ? 'استكشف جميع المنتجات' : 'Explore All Products'}
             </Button>
           </div>
@@ -1581,25 +1106,12 @@ const Index = () => {
       </footer>
 
       {/* 3D Virtual Experiences */}
-      <VirtualGallery
-        isOpen={showVirtualGallery}
-        onClose={() => setShowVirtualGallery(false)}
-        language={language}
-      />
+      <VirtualGallery isOpen={showVirtualGallery} onClose={() => setShowVirtualGallery(false)} language={language} />
 
-      <Image360Viewer
-        isOpen={show360Viewer}
-        onClose={() => {
-          setShow360Viewer(false);
-          setCurrent360Image(null);
-        }}
-        imageUrl={current360Image?.url || ''}
-        title={current360Image?.title || ''}
-        description={current360Image?.description || ''}
-        language={language}
-      />
-    </div>
-  );
+      <Image360Viewer isOpen={show360Viewer} onClose={() => {
+      setShow360Viewer(false);
+      setCurrent360Image(null);
+    }} imageUrl={current360Image?.url || ''} title={current360Image?.title || ''} description={current360Image?.description || ''} language={language} />
+    </div>;
 };
-
 export default Index;
