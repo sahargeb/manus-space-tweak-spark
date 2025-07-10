@@ -665,21 +665,11 @@ const Index = () => {
                     <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                     {t.downloadCatalog}
                   </Button>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 mx-0 px-0">
                     <Button variant="outline" className="flex-1" size="default">
                       {t.viewCatalog}
                     </Button>
-                    <Button onClick={() => {
-                    setCurrent360Image({
-                      url: '/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png',
-                      title: language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware',
-                      description: language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware'
-                    });
-                    setShow360Viewer(true);
-                  }} variant="secondary" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
-                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                      {language === 'ar' ? '360°' : '360°'}
-                    </Button>
+                    
                   </div>
                 </div>
               </CardContent>
@@ -711,17 +701,7 @@ const Index = () => {
                     <Button variant="outline" className="flex-1" size="default">
                       {t.viewCatalog}
                     </Button>
-                    <Button onClick={() => {
-                    setCurrent360Image({
-                      url: '/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png',
-                      title: language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle',
-                      description: language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة' : 'Discover luxury kitchen appliances by leading brands'
-                    });
-                    setShow360Viewer(true);
-                  }} variant="secondary" className={`flex-1 ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
-                      <Eye className={`w-4 h-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
-                      {language === 'ar' ? '360°' : '360°'}
-                    </Button>
+                    
                   </div>
                 </div>
               </CardContent>
