@@ -563,62 +563,87 @@ const Index = () => {
           backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
         }}
       >
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {/* First Row */}
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">SPA & WELLNESS</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SPA & WELLNESS</span>
+              </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">HOTEL AMENITIES</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">HOTEL AMENITIES</span>
+              </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">KITCHEN LIFESTYLE</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">KITCHEN LIFESTYLE</span>
+              </h3>
             </div>
             
             {/* Second Row */}
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">TILES & SLABS</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">TILES & SLABS</span>
+              </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">LIGHTING</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">LIGHTING</span>
+              </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
-              <h3 className="font-bold text-lg text-gray-800">OUTDOOR LIVING</h3>
+            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
+              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">OUTDOOR LIVING</span>
+              </h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* BAGNODESIGN'S STORY Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-8">BAGNODESIGN'S STORY</h2>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 tracking-tight">
+              BAGNODESIGN'S STORY
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
-            <p>
-              BAGNODESIGN offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
-            </p>
+          <div className="space-y-8 text-gray-700">
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed font-medium">
+                <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">BAGNODESIGN</span> offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
+              </p>
+            </div>
             
-            <p>
-              For three decades, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including Dubai, Abu Dhabi, and London, alongside an established presence with partner retailers worldwide.
-            </p>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed">
+                For <span className="font-bold text-purple-700">three decades</span>, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including <span className="font-semibold text-blue-700">Dubai, Abu Dhabi, and London</span>, alongside an established presence with partner retailers worldwide.
+              </p>
+            </div>
             
-            <p>
-              Find the inspiration you need from our extensive range of sanitaryware, furniture, brassware, accessories, bath and shower components, and spa solutions. Transforming the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest artisanal thinking.
-            </p>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed">
+                Find the inspiration you need from our extensive range of <span className="font-semibold text-emerald-700">sanitaryware, furniture, brassware, accessories, bath & shower components, and spa solutions</span>. Transforming the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest artisanal thinking.
+              </p>
+            </div>
             
-            <p>
-              From sculptural washbasins crafted from the finest materials in a wonderful array of colors, to beautiful functional furniture to suit any scheme, baths and showers that invite rejuvenation, and stunning brassware and accessories in an enviable range of trendsetting finishes.
-            </p>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed">
+                From sculptural washbasins crafted from the finest materials in a wonderful array of colors, to beautiful functional furniture to suit any scheme, baths and showers that invite rejuvenation, and stunning brassware and accessories in an enviable range of <span className="font-semibold text-orange-700">trendsetting finishes</span>.
+              </p>
+            </div>
             
-            <p>
-              Backed by a reputable product portfolio and strategically located logistics centers, BAGNODESIGN is positioned to deliver your next project, serving architects, designers, developers, retailers, and consumers across all sectors from large commercial to private residential projects.
-            </p>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed">
+                Backed by a reputable product portfolio and strategically located logistics centers, BAGNODESIGN is positioned to deliver your next project, serving <span className="font-semibold text-indigo-700">architects, designers, developers, retailers, and consumers</span> across all sectors from large commercial to private residential projects.
+              </p>
+            </div>
           </div>
         </div>
       </section>
