@@ -675,7 +675,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map(product => <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden -mt-2">
                   <Dialog>
                     <DialogTrigger asChild>
                       <img src={product.image} alt={product.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
@@ -690,8 +690,8 @@ const Index = () => {
                     <Badge variant="secondary">{product.category}</Badge>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
+                <CardContent className="p-8 pt-6">
+                  <h3 className="text-xl font-bold text-foreground mb-4">{product.title}</h3>
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="outline" className="w-full">{t.viewDetails}</Button>
