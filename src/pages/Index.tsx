@@ -558,46 +558,46 @@ const Index = () => {
 
       {/* Hero Section */}
       <section 
-        className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+        className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-20"
         style={{
           backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
         }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* First Row */}
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SPA & WELLNESS</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">SPA & WELLNESS</span>
               </h3>
             </div>
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">HOTEL AMENITIES</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent drop-shadow-lg">HOTEL AMENITIES</span>
               </h3>
             </div>
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">KITCHEN LIFESTYLE</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent drop-shadow-lg">KITCHEN LIFESTYLE</span>
               </h3>
             </div>
             
             {/* Second Row */}
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">TILES & SLABS</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">TILES & SLABS</span>
               </h3>
             </div>
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">LIGHTING</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent drop-shadow-lg">LIGHTING</span>
               </h3>
             </div>
-            <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-white/20 group">
-              <h3 className="font-bold text-xl text-gray-800 tracking-wide animate-pulse group-hover:animate-bounce">
-                <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">OUTDOOR LIVING</span>
+            <div className="bg-white/98 backdrop-blur-lg p-8 rounded-2xl text-center hover:bg-white hover:scale-105 transition-all duration-500 cursor-pointer shadow-2xl border-2 border-white/30 group">
+              <h3 className="font-bold text-xl text-gray-900 tracking-wide animate-pulse group-hover:animate-bounce">
+                <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent drop-shadow-lg">OUTDOOR LIVING</span>
               </h3>
             </div>
           </div>
