@@ -43,7 +43,7 @@ const Brochures = () => {
       id: 5,
       title: "Tiles & Surfaces",
       description: "مجموعة شاملة من البلاط والأسطح للمساحات الداخلية والخارجية",
-      image: "/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png",
+      image: "/lovable-uploads/3331d93d-f230-4d84-b871-3af492bb3be3.png",
       category: "Surfaces", 
       color: "purple"
     },
