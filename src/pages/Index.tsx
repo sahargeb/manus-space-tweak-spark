@@ -207,7 +207,7 @@ const Index = () => {
   };
   const products = [{
     id: 1,
-    title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom with Natural Marble",
+    title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom",
     category: t.bathrooms,
     image: "/lovable-uploads/d1095dc8-3451-47b4-9277-ff12bfd87ef7.png",
     description: language === 'ar' ? "تصميم حمام فاخر مع رخام طبيعي وإضاءة ذهبية مميزة" : "Luxury bathroom design with natural marble and distinctive golden lighting"
