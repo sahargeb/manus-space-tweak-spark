@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart, Menu, Home, User, ShoppingBag, MessageCircle } from "lucide-react";
 import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
 import QRCodeVR from "@/components/QRCodeVR";
@@ -13,6 +13,7 @@ const Index = () => {
   const [tilesExpanded, setTilesExpanded] = useState(false);
   const [showVirtualGallery, setShowVirtualGallery] = useState(false);
   const [show360Viewer, setShow360Viewer] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const [current360Image, setCurrent360Image] = useState<{
     url: string;
     title: string;
@@ -504,37 +505,123 @@ const Index = () => {
   }];
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Header */}
-      <header className="bg-card shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
+      <header className="bg-white shadow-sm border-b relative">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              
-              <div>
-                <h1 className="text-xl font-bold text-foreground">BAGNODESIGN</h1>
-                
-              </div>
+            {/* Language Toggle */}
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-xs">
+              {language === 'ar' ? 'EN' : 'AR'}
+            </Button>
+            
+            {/* Centered BAGNODESIGN Title */}
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <h1 className="text-2xl font-bold text-black tracking-wide">BAGNODESIGN</h1>
             </div>
             
-            <nav className="hidden md:flex gap-6">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">{t.home}</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">{t.about}</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">{t.services}</a>
-              <a href="#products" className="text-foreground hover:text-primary transition-colors">{t.products}</a>
-              <a href="#catalogs" className="text-foreground hover:text-primary transition-colors">{t.catalogs}</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">{t.contact}</a>
-            </nav>
-
-            <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" onClick={toggleLanguage}>
-                <span className="mr-2">{language === 'ar' ? 'English' : 'العربية'}</span>
+            {/* 3-dot Menu */}
+            <div className="relative">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={() => setShowMenu(!showMenu)}
+                className="p-2"
+              >
+                <Menu className="w-6 h-6" />
               </Button>
-              <Button onClick={() => window.location.href = 'tel:0226134401'}>{t.callUs}</Button>
+              
+              {showMenu && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+                  <div className="py-2">
+                    <a href="#home" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <Home className="w-4 h-4" />
+                      {t.home}
+                    </a>
+                    <a href="#about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <User className="w-4 h-4" />
+                      {t.about}
+                    </a>
+                    <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <ShoppingBag className="w-4 h-4" />
+                      {t.products}
+                    </a>
+                    <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <MessageCircle className="w-4 h-4" />
+                      {t.contact}
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
+      <section 
+        className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/lovable-uploads/ed3c1ddb-a2c1-4761-bb51-f56697ca9381.png')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="relative z-10 container mx-auto px-4">
+          {/* Category Boxes */}
+          <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+            {/* First Row */}
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">SPA & WELLNESS</h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">HOTEL AMENITIES</h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">KITCHEN LIFESTYLE</h3>
+            </div>
+            
+            {/* Second Row */}
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">TILES & SLABS</h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">LIGHTING</h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white transition-all duration-300 cursor-pointer">
+              <h3 className="font-bold text-lg text-gray-800">OUTDOOR LIVING</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BAGNODESIGN'S STORY Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-8">BAGNODESIGN'S STORY</h2>
+          </div>
+          
+          <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
+            <p>
+              BAGNODESIGN offers the complete solution for creating dream bathrooms. Our knowledgeable and talented team has drawn on their many years of experience to bring you the very best in design-led, contemporary and classic collections.
+            </p>
+            
+            <p>
+              For three decades, BAGNODESIGN has expanded to service the Middle East, Africa, Europe, Asia and Oceania through Retail, Trade, Projects and Digital channels, combining the highest quality solutions with exceptional customer service. The company now encompasses flagship showrooms in key locations including Dubai, Abu Dhabi and London, alongside an established presence with partner retailers worldwide.
+            </p>
+            
+            <p>
+              Find the inspiration you need from an extensive range of sanitaryware, furniture, brassware, accessories, bath & shower components and spa solutions. Turning the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and where function meets the latest in artisanal thinking.
+            </p>
+            
+            <p>
+              From sculptural washbasins crafted from the finest materials in a wonderful array of colours; beautiful, functional furniture to suit any scheme; baths and showers that invite rejuvenation and stunning brassware and accessories in an enviable range of trendsetting finishes.
+            </p>
+            
+            <p>
+              Backed by a reputable product portfolio and strategically located logistics centres, BAGNODESIGN is poised to deliver your next project, serving architects, designers, developers, retailers, and consumers across all sectors from large commercial to private residential projects.
+            </p>
+          </div>
+        </div>
+      </section>
       
 
       {/* Stats Section */}
