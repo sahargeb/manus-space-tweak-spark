@@ -550,13 +550,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-24" style={{
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
       backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mt-auto">
+          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
             {/* First Row */}
             <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
