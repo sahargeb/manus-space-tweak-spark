@@ -648,25 +648,10 @@ const Index = () => {
       
 
       {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            
-            
-            
-            
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          
-          
-          
-        </div>
-      </section>
+      
 
       {/* Products Section */}
       <section id="products" className="py-20">
