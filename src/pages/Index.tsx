@@ -4,8 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart, Menu, Home, User, ShoppingBag, MessageCircle, BookOpen } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Star, Award, Users, Clock, Shield, X, Instagram, Download, FileText, ChevronDown, ChevronUp, Plus, Box, View, Eye, Heart, Menu, Home, User, ShoppingBag, MessageCircle } from "lucide-react";
 import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
 import QRCodeVR from "@/components/QRCodeVR";
@@ -531,18 +530,14 @@ const Index = () => {
                       <Home className="w-4 h-4" />
                       {t.home}
                     </a>
-                    <Link to="/about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <a href="#about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <User className="w-4 h-4" />
                       {t.about}
-                    </Link>
+                    </a>
                     <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <ShoppingBag className="w-4 h-4" />
                       {t.products}
                     </a>
-                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                      <BookOpen className="w-4 h-4" />
-                      {language === 'ar' ? 'البروشيرز' : 'Brochures'}
-                    </Link>
                     <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <MessageCircle className="w-4 h-4" />
                       {t.contact}
@@ -555,13 +550,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-24" style={{
       backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mt-auto">
             {/* First Row */}
             <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
@@ -648,10 +643,25 @@ const Index = () => {
       
 
       {/* About Section */}
-      
+      <section id="about" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            
+            
+            
+            
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
-      
+      <section id="services" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          
+          
+          
+        </div>
+      </section>
 
       {/* Products Section */}
       <section id="products" className="py-20">
@@ -1088,12 +1098,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <Link to="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity w-fit">
+              <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <span className="text-primary-foreground font-bold">B</span>
                 </div>
                 <span className="font-bold text-lg">BAGNODESIGN</span>
-              </Link>
+              </div>
+              <p className="text-background/70">
+                {t.footerDescription}
+              </p>
               <div className="flex gap-4 mt-4">
                 <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
                   Instagram
