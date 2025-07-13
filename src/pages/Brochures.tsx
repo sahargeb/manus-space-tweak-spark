@@ -41,7 +41,7 @@ const Brochures = () => {
       category: "Materials",
       color: "purple",
       downloadLink: "https://drive.google.com/uc?export=download&id=1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO",
-      viewLink: "https://drive.google.com/file/d/1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO/view?usp=sharing"
+      viewLink: "https://drive.google.com/file/d/1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO/view"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const Brochures = () => {
       category: "Lighting",
       color: "green",
       downloadLink: "https://drive.google.com/uc?export=download&id=1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx",
-      viewLink: "https://drive.google.com/file/d/1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx/view?usp=sharing"
+      viewLink: "https://drive.google.com/file/d/1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx/view"
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ const Brochures = () => {
       category: "Tiles",
       color: "gray",
       downloadLink: "https://drive.google.com/uc?export=download&id=1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4",
-      viewLink: "https://drive.google.com/file/d/1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4/view?usp=sharing"
+      viewLink: "https://drive.google.com/file/d/1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4/view"
     },
     {
       id: 7,
@@ -79,7 +79,7 @@ const Brochures = () => {
       category: "Premium",
       color: "blue",
       downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
-      viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view?usp=sharing"
+      viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view"
     }
   ];
 
