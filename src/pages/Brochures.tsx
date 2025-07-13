@@ -6,6 +6,16 @@ import { ArrowRight, Download, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Brochures = () => {
+  interface CatalogItem {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    category: string;
+    color: string;
+    downloadLink?: string;
+    viewLink?: string;
+  }
   const catalogData = [
     {
       id: 1,
@@ -148,12 +158,14 @@ const Brochures = () => {
                 
                 <div className="space-y-3 pt-2">
                   {catalog.downloadLink ? (
-                    <a href={catalog.downloadLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full flex-row-reverse" size="default">
-                        <Download className="w-4 h-4 ml-2" />
-                        تحميل الكاتلوج
-                      </Button>
-                    </a>
+                    <Button 
+                      className="w-full flex-row-reverse" 
+                      size="default"
+                      onClick={() => window.open(catalog.downloadLink, '_blank')}
+                    >
+                      <Download className="w-4 h-4 ml-2" />
+                      تحميل الكاتلوج
+                    </Button>
                   ) : (
                     <Button className="w-full flex-row-reverse" size="default" disabled>
                       <Download className="w-4 h-4 ml-2" />
@@ -161,12 +173,15 @@ const Brochures = () => {
                     </Button>
                   )}
                   {catalog.viewLink ? (
-                    <a href={catalog.viewLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button variant="outline" className="w-full flex-row-reverse" size="default">
-                        <Eye className="w-4 h-4 ml-2" />
-                        عرض الكاتلوج
-                      </Button>
-                    </a>
+                    <Button 
+                      variant="outline" 
+                      className="w-full flex-row-reverse" 
+                      size="default"
+                      onClick={() => window.open(catalog.viewLink, '_blank')}
+                    >
+                      <Eye className="w-4 h-4 ml-2" />
+                      عرض الكاتلوج
+                    </Button>
                   ) : (
                     <Button variant="outline" className="w-full flex-row-reverse" size="default" disabled>
                       <Eye className="w-4 h-4 ml-2" />
