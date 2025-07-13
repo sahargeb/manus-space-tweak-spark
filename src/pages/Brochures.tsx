@@ -29,15 +29,19 @@ const Brochures = () => {
       description: "مجموعة متنوعة من البلاط والألواح عالية الجودة",
       image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png", 
       category: "Materials",
-      color: "purple"
+      color: "purple",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO",
+      viewLink: "https://drive.google.com/file/d/1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO/view"
     },
     {
       id: 4,
-      title: "Outdoor Living",
-      description: "أثاث وتصاميم خارجية لمساحات المعيشة الخارجية",
+      title: "Outdoor Lighting",
+      description: "حلول إضاءة خارجية متطورة للمساحات والحدائق",
       image: "/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png",
-      category: "Outdoor",
-      color: "green"
+      category: "Lighting",
+      color: "green",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx",
+      viewLink: "https://drive.google.com/file/d/1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx/view"
     },
     {
       id: 5,
@@ -53,7 +57,19 @@ const Brochures = () => {
       description: "بلاط صغير الحجم للتصاميم التفصيلية والديكورات الفريدة",
       image: "/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png",
       category: "Tiles",
-      color: "gray"
+      color: "gray",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4",
+      viewLink: "https://drive.google.com/file/d/1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4/view"
+    },
+    {
+      id: 7,
+      title: "Hokkaido",
+      description: "مجموعة هوكايدو المميزة للتصاميم الداخلية الفاخرة",
+      image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
+      category: "Premium",
+      color: "blue",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
+      viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view"
     }
   ];
 
@@ -131,14 +147,32 @@ const Brochures = () => {
                 </p>
                 
                 <div className="space-y-3 pt-2">
-                  <Button className="w-full flex-row-reverse" size="default">
-                    <Download className="w-4 h-4 ml-2" />
-                    تحميل الكاتلوج
-                  </Button>
-                  <Button variant="outline" className="w-full flex-row-reverse" size="default">
-                    <Eye className="w-4 h-4 ml-2" />
-                    عرض الكاتلوج
-                  </Button>
+                  {catalog.downloadLink ? (
+                    <a href={catalog.downloadLink} target="_blank" rel="noopener noreferrer" className="w-full">
+                      <Button className="w-full flex-row-reverse" size="default">
+                        <Download className="w-4 h-4 ml-2" />
+                        تحميل الكاتلوج
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button className="w-full flex-row-reverse" size="default" disabled>
+                      <Download className="w-4 h-4 ml-2" />
+                      تحميل الكاتلوج
+                    </Button>
+                  )}
+                  {catalog.viewLink ? (
+                    <a href={catalog.viewLink} target="_blank" rel="noopener noreferrer" className="w-full">
+                      <Button variant="outline" className="w-full flex-row-reverse" size="default">
+                        <Eye className="w-4 h-4 ml-2" />
+                        عرض الكاتلوج
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button variant="outline" className="w-full flex-row-reverse" size="default" disabled>
+                      <Eye className="w-4 h-4 ml-2" />
+                      عرض الكاتلوج
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
