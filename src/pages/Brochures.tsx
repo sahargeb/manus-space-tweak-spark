@@ -161,7 +161,10 @@ const Brochures = () => {
                     <Button 
                       className="w-full flex-row-reverse" 
                       size="default"
-                      onClick={() => window.open(catalog.downloadLink, '_blank')}
+                      onClick={() => {
+                        console.log('Download clicked:', catalog.downloadLink);
+                        window.open(catalog.downloadLink, '_blank');
+                      }}
                     >
                       <Download className="w-4 h-4 ml-2" />
                       تحميل الكاتلوج
@@ -177,7 +180,10 @@ const Brochures = () => {
                       variant="outline" 
                       className="w-full flex-row-reverse" 
                       size="default"
-                      onClick={() => window.open(catalog.viewLink, '_blank')}
+                      onClick={() => {
+                        console.log('View clicked:', catalog.viewLink);
+                        window.open(catalog.viewLink, '_blank');
+                      }}
                     >
                       <Eye className="w-4 h-4 ml-2" />
                       عرض الكاتلوج
