@@ -1084,64 +1084,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <Link to="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity w-fit">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold">B</span>
-                </div>
-                <span className="font-bold text-lg">BAGNODESIGN</span>
-              </Link>
-              <div className="flex gap-4 mt-4">
-                <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
-                  Instagram
-                </a>
-                <a href="mailto:Info@bagnodesignmisr.com" className="text-background/70 hover:text-primary transition-colors">
-                  Email
-                </a>
-                <a href="tel:0226134401" className="text-background/70 hover:text-primary transition-colors">
-                  Phone
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">{t.ourServices}</h4>
-              <ul className="space-y-2 text-background/70">
-                <li>{t.bathroomDesignShort}</li>
-                <li>{t.kitchenDesignShort}</li>
-                <li>{t.sanitaryEquipment}</li>
-                <li>{t.lighting}</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">{t.quickLinks}</h4>
-              <ul className="space-y-2 text-background/70">
-                <li>{t.aboutCompany}</li>
-                <li>{t.products}</li>
-                <li>{t.gallery}</li>
-                <li>{t.contact}</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">{t.contactInfo}</h4>
-              <ul className="space-y-2 text-background/70">
-                <li><a href="tel:0226134401" className="hover:text-primary transition-colors">0226134401</a></li>
-                <li><a href="mailto:Info@bagnodesignmisr.com" className="hover:text-primary transition-colors">Info@bagnodesignmisr.com</a></li>
-                <li><a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">{language === 'ar' ? 'القاهرة، مصر' : 'Cairo, Egypt'}</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-            <p>&copy; 2024 BAGNODESIGN. {t.allRightsReserved}.</p>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* 3D Virtual Experiences */}
       <VirtualGallery isOpen={showVirtualGallery} onClose={() => setShowVirtualGallery(false)} language={language} />
