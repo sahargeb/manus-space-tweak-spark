@@ -960,16 +960,7 @@ const Index = () => {
               </Card>
 
               {/* Digital Catalogs Placeholder */}
-              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-dashed border-2 border-muted-foreground/30 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-                <div className="aspect-[4/3] bg-gradient-to-br from-muted/20 to-muted/40 p-3 flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <Plus className="w-8 h-8 text-muted-foreground mx-auto" />
-                    <p className="text-xs text-muted-foreground">
-                      {language === 'ar' ? 'كاتلوجات رقمية قريباً' : 'Digital Catalogs Coming Soon'}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              
             </div>
           </div>
         </div>
