@@ -982,66 +982,7 @@ const Index = () => {
       
 
       {/* New Features Section */}
-      <section id="new-features" className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              {language === 'ar' ? 'الميزات الجديدة' : 'New Features'}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {language === 'ar' ? 'اكتشف أحدث الإضافات والتحديثات في معرضنا الرقمي' : 'Discover the latest additions and updates in our digital showroom'}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-red-600" />
-              </div>
-              <h4 className="font-bold mb-2">
-                {language === 'ar' ? 'قائمة المفضلة' : 'Favorites List'}
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                {language === 'ar' ? 'احفظ منتجاتك المفضلة للمراجعة لاحقاً' : 'Save your favorite products for later review'}
-              </p>
-            </Card>
-
-            
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6 text-green-600" />
-              </div>
-              <h4 className="font-bold mb-2">
-                {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                {language === 'ar' ? 'احصل على عرض سعر مخصص لمشروعك' : 'Get a custom quote for your project'}
-              </p>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                <Star className="w-6 h-6 text-yellow-600" />
-              </div>
-              <h4 className="font-bold mb-2">
-                {language === 'ar' ? 'نظام التقييم' : 'Rating System'}
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                {language === 'ar' ? 'شاهد تقييمات العملاء للمنتجات' : 'View customer ratings for products'}
-              </p>
-            </Card>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button size="lg" onClick={() => document.getElementById('products')?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
-              {language === 'ar' ? 'استكشف جميع المنتجات' : 'Explore All Products'}
-            </Button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-secondary/30">
