@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,6 +17,7 @@ const Brochures = () => {
     downloadLink?: string;
     viewLink?: string;
   }
+  
   const catalogData = [
     {
       id: 1,
@@ -80,6 +82,36 @@ const Brochures = () => {
       color: "blue",
       downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
       viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view?usp=sharing"
+    },
+    {
+      id: 8,
+      title: "Hotel Amenities",
+      description: "مجموعة شاملة من وسائل الراحة والخدمات الفندقية المتطورة",
+      image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
+      category: "Hotels",
+      color: "blue",
+      downloadLink: "https://drive.google.com/uc?export=download&id=sample-hotel-amenities",
+      viewLink: "https://drive.google.com/file/d/sample-hotel-amenities/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "Luxury Lifestyle",
+      description: "تجربة حياة فاخرة مع تصاميم باجنو ديزاين الحصرية",
+      image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
+      category: "Luxury",
+      color: "purple",
+      downloadLink: "https://drive.google.com/uc?export=download&id=sample-luxury-lifestyle",
+      viewLink: "https://drive.google.com/file/d/sample-luxury-lifestyle/view?usp=sharing"
+    },
+    {
+      id: 10,
+      title: "Bathroom & Spa Brands 2025",
+      description: "أحدث ماركات الحمامات والسبا لعام 2025 من سانيبكس جروب",
+      image: "/lovable-uploads/6939ead1-fd0f-48e5-9337-59c386513e79.png",
+      category: "Spa",
+      color: "green",
+      downloadLink: "https://drive.google.com/uc?export=download&id=sample-bathroom-spa-2025",
+      viewLink: "https://drive.google.com/file/d/sample-bathroom-spa-2025/view?usp=sharing"
     }
   ];
 
@@ -91,6 +123,16 @@ const Brochures = () => {
       case 'gray': return 'bg-gray-500/10 text-gray-600 border-gray-500/20';
       default: return 'bg-primary/10 text-primary border-primary/20';
     }
+  };
+
+  const handleDownload = (downloadLink: string, title: string) => {
+    console.log(`Downloading: ${title} from ${downloadLink}`);
+    window.open(downloadLink, '_blank');
+  };
+
+  const handleView = (viewLink: string, title: string) => {
+    console.log(`Viewing: ${title} from ${viewLink}`);
+    window.open(viewLink, '_blank');
   };
 
   return (
@@ -159,18 +201,15 @@ const Brochures = () => {
                 <div className="space-y-3 pt-2">
                   {catalog.downloadLink ? (
                     <Button 
-                      className="w-full flex-row-reverse" 
+                      className="w-full flex-row-reverse hover:bg-primary/90 transition-colors" 
                       size="default"
-                      onClick={() => {
-                        console.log('Download clicked:', catalog.downloadLink);
-                        window.open(catalog.downloadLink, '_blank');
-                      }}
+                      onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}
                     >
                       <Download className="w-4 h-4 ml-2" />
                       تحميل الكاتلوج
                     </Button>
                   ) : (
-                    <Button className="w-full flex-row-reverse" size="default" disabled>
+                    <Button className="w-full flex-row-reverse opacity-50 cursor-not-allowed" size="default" disabled>
                       <Download className="w-4 h-4 ml-2" />
                       تحميل الكاتلوج
                     </Button>
@@ -178,18 +217,15 @@ const Brochures = () => {
                   {catalog.viewLink ? (
                     <Button 
                       variant="outline" 
-                      className="w-full flex-row-reverse" 
+                      className="w-full flex-row-reverse hover:bg-accent hover:text-accent-foreground transition-colors" 
                       size="default"
-                      onClick={() => {
-                        console.log('View clicked:', catalog.viewLink);
-                        window.open(catalog.viewLink, '_blank');
-                      }}
+                      onClick={() => handleView(catalog.viewLink!, catalog.title)}
                     >
                       <Eye className="w-4 h-4 ml-2" />
                       عرض الكاتلوج
                     </Button>
                   ) : (
-                    <Button variant="outline" className="w-full flex-row-reverse" size="default" disabled>
+                    <Button variant="outline" className="w-full flex-row-reverse opacity-50 cursor-not-allowed" size="default" disabled>
                       <Eye className="w-4 h-4 ml-2" />
                       عرض الكاتلوج
                     </Button>
