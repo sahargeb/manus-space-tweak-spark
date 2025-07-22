@@ -505,253 +505,95 @@ const Index = () => {
     description: t.designConsultationDesc
   }];
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      {/* Top Contact Bar */}
-      <div className="bg-gray-100 py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex justify-between items-center text-sm text-gray-600 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-            <div className={`flex items-center space-x-6 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-              <div className={`flex items-center space-x-2 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-                <MapPin className="h-4 w-4" />
-                <span>{language === 'ar' ? 'دبي، الإمارات العربية المتحدة' : 'Find us: Dubai, UAE'}</span>
-              </div>
-              <div className={`flex items-center space-x-2 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-                <Phone className="h-4 w-4" />
-                <span>+971 4 507 6000</span>
-              </div>
-            </div>
-            <div className={`flex items-center space-x-4 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-              <span className="hidden sm:block">
-                {language === 'ar' ? 'توصيل مجاني خلال 48 ساعة لأكثر من 500 درهم في جميع أنحاء الإمارات' : 'Free 48H delivery over AED 500 across UAE'}
-              </span>
-              <span className="hidden sm:block">
-                {language === 'ar' ? 'انقر واجمع في جميع أنحاء الإمارات' : 'Click & collect across UAE'}
-              </span>
-              <Button
-                variant="outline"
-                onClick={toggleLanguage}
-                size="sm"
-              >
-                {language === 'ar' ? 'English' : 'عربي'}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Main Header */}
-      <header className="bg-white shadow-sm border-b relative sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex justify-between items-center py-4 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-            <div className={`flex items-center space-x-4 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-              <h1 className="text-3xl font-bold text-gray-900">BAGNODESIGN</h1>
-              <span className="text-sm text-gray-500 hidden sm:block">
-                {language === 'ar' ? 'معرض الحمامات والمطابخ' : 'BATHROOM & KITCHEN GALLERY'}
-              </span>
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b relative">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            {/* Language Toggle */}
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-xs">
+              {language === 'ar' ? 'EN' : 'AR'}
+            </Button>
+            
+            {/* Centered BAGNODESIGN Title */}
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <h1 className="text-2xl font-bold text-black tracking-wide">BAGNODESIGN</h1>
             </div>
             
-            {/* Search Bar */}
-            <div className="hidden md:flex flex-1 max-w-md mx-8">
-              <div className="relative w-full">
-                <input
-                  type="text"
-                  placeholder={language === 'ar' ? 'البحث...' : 'Search'}
-                  className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${language === 'ar' ? 'text-right' : 'text-left'}`}
-                />
-                <button className={`absolute ${language === 'ar' ? 'left-3' : 'right-3'} top-1/2 transform -translate-y-1/2`}>
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            
-            <div className={`flex items-center space-x-6 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-              <div className="hidden md:block">
-                <Link to="/brochures" className={`flex items-center space-x-2 text-gray-600 hover:text-blue-600 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
-                  <BookOpen className="h-5 w-5" />
-                  <span>{language === 'ar' ? 'الكتالوجات' : 'Brochures'}</span>
-                </Link>
-              </div>
-              <div className="relative">
-                <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2">
-                  <Menu className="w-6 h-6" />
-                </Button>
-                
-                {showMenu && <div className={`absolute ${language === 'ar' ? 'left-0' : 'right-0'} top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50`}>
-                    <div className="py-2">
-                      <a href="#home" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                        <Home className="w-4 h-4" />
-                        {t.home}
-                      </a>
-                      <Link to="/about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                        <User className="w-4 h-4" />
-                        {t.about}
-                      </Link>
-                      <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                        <ShoppingBag className="w-4 h-4" />
-                        {t.products}
-                      </a>
-                      <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                        <BookOpen className="w-4 h-4" />
-                        {language === 'ar' ? 'البروشيرز' : 'Brochures'}
-                      </Link>
-                      <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                        <MessageCircle className="w-4 h-4" />
-                        {t.contact}
-                      </a>
-                    </div>
-                  </div>}
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Navigation Menu */}
-        <div className="bg-white border-t">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className={`flex items-center space-x-8 py-4 overflow-x-auto ${language === 'ar' ? 'space-x-reverse flex-row-reverse' : ''}`}>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الحمامات' : 'Bathroom'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'البلاط والألواح' : 'Tiles & Slabs'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'المطابخ' : 'Kitchen'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الخارجي' : 'Outdoor'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الإضاءة' : 'Lighting'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الضيافة' : 'Hospitality'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'نمط الحياة' : 'Lifestyle'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الهدايا' : 'Gifts'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'العلامات التجارية' : 'Brands'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'المشاريع' : 'Projects'}
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 font-medium whitespace-nowrap">
-                {language === 'ar' ? 'الإلهام' : 'Inspiration'}
-              </a>
-              <Button variant="destructive" size="sm" className={`${language === 'ar' ? 'mr-auto' : 'ml-auto'} whitespace-nowrap`}>
-                {language === 'ar' ? 'تخفيضات' : 'SALE'}
+            {/* 3-dot Menu */}
+            <div className="relative">
+              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2">
+                <Menu className="w-6 h-6" />
               </Button>
-            </nav>
+              
+              {showMenu && <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+                  <div className="py-2">
+                    <a href="#home" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <Home className="w-4 h-4" />
+                      {t.home}
+                    </a>
+                    <Link to="/about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <User className="w-4 h-4" />
+                      {t.about}
+                    </Link>
+                    <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <ShoppingBag className="w-4 h-4" />
+                      {t.products}
+                    </a>
+                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <BookOpen className="w-4 h-4" />
+                      {language === 'ar' ? 'البروشيرز' : 'Brochures'}
+                    </Link>
+                    <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <MessageCircle className="w-4 h-4" />
+                      {t.contact}
+                    </a>
+                  </div>
+                </div>}
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Promotional Banner */}
-      <div className="bg-blue-600 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-lg font-bold">
-              {language === 'ar' ? 'تخفيضات جزئية 25%-75%' : 'PART SALE 25%-75%'}
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Promotional Section */}
-      <section className="bg-gradient-to-br from-gray-200 via-gray-300 to-blue-200 relative min-h-[500px] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-10 left-10 text-orange-400 text-4xl animate-bounce">☀️</div>
-        <div className="absolute bottom-20 right-20 text-blue-300 text-2xl">✨</div>
-        <div className="absolute top-20 right-40 text-blue-300 text-2xl">✨</div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Text Content */}
-            <div className={`${language === 'ar' ? 'text-right' : 'text-left'} ${language === 'ar' ? 'lg:order-2' : ''}`}>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                {language === 'ar' ? 'تخفيضات جزئية صيفية' : 'Summer Part Sale'}
-              </h1>
-              
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl mb-6">
-                <div className="text-center mb-6">
-                  <h2 className="text-5xl md:text-7xl font-bold mb-2">
-                    <span className="text-yellow-600">
-                      {language === 'ar' ? 'تخفيضات جزئية' : 'PART SALE'}
-                    </span>
-                  </h2>
-                  <div className="flex items-center justify-center space-x-4">
-                    <div className="text-center">
-                      <span className="text-4xl md:text-6xl font-bold text-blue-600">
-                        25<span className="text-2xl">%</span>
-                      </span>
-                      <div className="text-sm text-blue-600 font-semibold">
-                        {language === 'ar' ? 'خصم' : 'OFF'}
-                      </div>
-                    </div>
-                    <span className="text-4xl md:text-6xl font-bold text-gray-400">-</span>
-                    <div className="text-center">
-                      <span className="text-4xl md:text-6xl font-bold text-blue-600">
-                        75<span className="text-2xl">%</span>
-                      </span>
-                      <div className="text-sm text-blue-600 font-semibold">
-                        {language === 'ar' ? 'خصم' : 'OFF'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
-                    {language === 'ar' ? 'متوفر أونلاين وفي صالات العرض' : 'AVAILABLE ONLINE & IN SHOWROOMS'}
-                  </Button>
-                  <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold">
-                    {language === 'ar' ? 'تسوق الآن' : 'SHOP NOW'}
-                  </Button>
-                </div>
-              </div>
+      {/* Hero Section */}
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
+      backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
+    }}>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative z-10 container mx-auto px-4">
+          {/* Category Boxes */}
+          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+            {/* First Row */}
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">SPA & WELLNESS</span>
+              </h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">HOTEL AMENITIES</span>
+              </h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">KITCHEN LIFESTYLE</span>
+              </h3>
             </div>
             
-            {/* Right Side - Category Grid */}
-            <div className={`${language === 'ar' ? 'lg:order-1' : ''}`}>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'السبا والعافية' : 'SPA & WELLNESS'}
-                  </h3>
-                </div>
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'مستلزمات الفنادق' : 'HOTEL AMENITIES'}
-                  </h3>
-                </div>
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'أسلوب الحياة للمطبخ' : 'KITCHEN LIFESTYLE'}
-                  </h3>
-                </div>
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'البلاط والألواح' : 'TILES & SLABS'}
-                  </h3>
-                </div>
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'الإضاءة' : 'LIGHTING'}
-                  </h3>
-                </div>
-                <div className="bg-white/90 backdrop-blur-lg p-4 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-300 cursor-pointer shadow-xl border border-gray-200">
-                  <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
-                    {language === 'ar' ? 'الحياة الخارجية' : 'OUTDOOR LIVING'}
-                  </h3>
-                </div>
-              </div>
+            {/* Second Row */}
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">TILES & SLABS</span>
+              </h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">LIGHTING</span>
+              </h3>
+            </div>
+            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+                <span className="drop-shadow-lg">OUTDOOR LIVING</span>
+              </h3>
             </div>
           </div>
         </div>
