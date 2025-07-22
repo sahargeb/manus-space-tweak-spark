@@ -757,46 +757,129 @@ const Index = () => {
         </div>
       </section>
 
-      {/* BAGNODESIGN'S STORY Section */}
+      {/* BAGNODESIGN'S STORY Section - Collapsible */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 tracking-tight">
-              BAGNODESIGN'S STORY
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="space-y-8 text-gray-700">
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed font-medium">
-                <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">BAGNODESIGN</span> offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
-              </p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
-                For <span className="font-bold text-purple-700">three decades</span>, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including <span className="font-semibold text-blue-700">Dubai, Abu Dhabi, and London</span>, alongside an established presence with partner retailers worldwide.
-              </p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
-                Find the inspiration you need from our extensive range of <span className="font-semibold text-emerald-700">sanitaryware, furniture, brassware, accessories, bath & shower components, and spa solutions</span>. Transforming the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest artisanal thinking.
-              </p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
-                From sculptural washbasins crafted from the finest materials in a wonderful array of colors, to beautiful functional furniture to suit any scheme, baths and showers that invite rejuvenation, and stunning brassware and accessories in an enviable range of <span className="font-semibold text-orange-700">trendsetting finishes</span>.
-              </p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
-                Backed by a reputable product portfolio and strategically located logistics centers, BAGNODESIGN is positioned to deliver your next project, serving <span className="font-semibold text-indigo-700">architects, designers, developers, retailers, and consumers</span> across all sectors from large commercial to private residential projects.
-              </p>
-            </div>
+            <Collapsible defaultOpen={false}>
+              <CollapsibleTrigger asChild>
+                <div className="cursor-pointer group hover:scale-105 transition-transform duration-300">
+                  <h2 className={`text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 tracking-tight ${language === 'ar' ? 'text-right' : 'text-left'} md:text-center`}>
+                    {language === 'ar' ? 'قصة BAGNODESIGN مصر' : "BAGNODESIGN'S STORY - EGYPT"}
+                  </h2>
+                  <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full group-hover:w-32 transition-all duration-300"></div>
+                  <div className="flex items-center justify-center mt-4">
+                    <ChevronDown className="h-6 w-6 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-sm text-gray-500 ml-2">
+                      {language === 'ar' ? 'انقر للمزيد' : 'Click to expand'}
+                    </span>
+                  </div>
+                </div>
+              </CollapsibleTrigger>
+              
+              <CollapsibleContent className="space-y-8 text-gray-700 mt-12">
+                {/* Egypt Branch Opening Announcement */}
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-white shadow-2xl">
+                  <div className={`text-center ${language === 'ar' ? 'text-right' : 'text-left'} md:text-center`}>
+                    <h3 className="text-3xl font-bold mb-4">
+                      {language === 'ar' ? '🎉 الافتتاح الكبير - فرع مصر الجديد!' : '🎉 Grand Opening - New Egypt Branch!'}
+                    </h3>
+                    <p className="text-xl mb-6">
+                      {language === 'ar' 
+                        ? 'نفخر بافتتاح أحدث فروعنا في قلب القاهرة، مصر - مركز جديد للتميز في تصميم الحمامات والمطابخ'
+                        : 'Proudly opening our newest branch in the heart of Cairo, Egypt - A new center of excellence for bathroom and kitchen design'
+                      }
+                    </p>
+                    
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 mb-6">
+                      <h4 className="text-2xl font-bold text-yellow-300 mb-3">
+                        {language === 'ar' ? '🏆 عروض الافتتاح الحصرية' : '🏆 Exclusive Opening Offers'}
+                      </h4>
+                      <ul className={`space-y-2 text-lg ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                        <li>✨ {language === 'ar' ? 'خصم 30% على جميع مجموعات الحمامات الفاخرة' : '30% off all luxury bathroom collections'}</li>
+                        <li>🎁 {language === 'ar' ? 'تركيب مجاني للمشاريع التي تزيد عن 50,000 جنيه' : 'Free installation for projects over EGP 50,000'}</li>
+                        <li>🚚 {language === 'ar' ? 'توصيل مجاني في جميع أنحاء القاهرة الكبرى' : 'Free delivery throughout Greater Cairo'}</li>
+                        <li>💎 {language === 'ar' ? 'استشارة تصميم مجانية مع خبراء دوليين' : 'Free design consultation with international experts'}</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="text-center">
+                      <p className="text-lg font-semibold">
+                        {language === 'ar' ? 'العرض ساري حتى نهاية الشهر!' : 'Offer valid until end of month!'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* About Egypt Branch */}
+                <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                  <h4 className="text-2xl font-bold text-blue-600 mb-4">
+                    {language === 'ar' ? '🏢 فرع BAGNODESIGN مصر' : '🏢 BAGNODESIGN Egypt Branch'}
+                  </h4>
+                  <p className={`text-lg leading-relaxed ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    {language === 'ar'
+                      ? 'يقع فرعنا الجديد في موقع استراتيجي بقلب القاهرة، ويمتد على مساحة 2000 متر مربع من صالات العرض المتطورة. نقدم أحدث التصاميم الأوروبية والعالمية في عالم الحمامات والمطابخ الفاخرة، مع فريق من المصممين المصريين والدوليين ذوي الخبرة العالية.'
+                      : 'Located strategically in the heart of Cairo, our new branch spans 2,000 square meters of cutting-edge showroom space. We offer the latest European and international designs in luxury bathrooms and kitchens, with a team of highly experienced Egyptian and international designers.'
+                    }
+                  </p>
+                </div>
+                
+                <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                  <h4 className="text-2xl font-bold text-green-600 mb-4">
+                    {language === 'ar' ? '🌟 خدماتنا في مصر' : '🌟 Our Services in Egypt'}
+                  </h4>
+                  <div className={`grid md:grid-cols-2 gap-6 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div>
+                      <h5 className="font-semibold text-purple-600 mb-2">
+                        {language === 'ar' ? 'التصميم والاستشارة' : 'Design & Consultation'}
+                      </h5>
+                      <p className="text-gray-700">
+                        {language === 'ar'
+                          ? 'فريق من أمهر المصممين لتحويل رؤيتك إلى واقع مذهل'
+                          : 'Expert designers to transform your vision into stunning reality'
+                        }
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-orange-600 mb-2">
+                        {language === 'ar' ? 'التنفيذ والتركيب' : 'Implementation & Installation'}
+                      </h5>
+                      <p className="text-gray-700">
+                        {language === 'ar'
+                          ? 'تنفيذ مشاريع بأعلى معايير الجودة والدقة'
+                          : 'Project execution with the highest standards of quality and precision'
+                        }
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                  <h4 className="text-2xl font-bold text-indigo-600 mb-4">
+                    {language === 'ar' ? '📍 موقعنا ومعلومات الاتصال' : '📍 Location & Contact Information'}
+                  </h4>
+                  <div className={`space-y-3 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div className={`flex items-center ${language === 'ar' ? 'flex-row-reverse' : ''} space-x-3`}>
+                      <MapPin className="h-5 w-5 text-red-500" />
+                      <span>
+                        {language === 'ar' 
+                          ? 'القاهرة الجديدة - التجمع الخامس - شارع التسعين الشمالي'
+                          : 'New Cairo - Fifth Settlement - North 90th Street'
+                        }
+                      </span>
+                    </div>
+                    <div className={`flex items-center ${language === 'ar' ? 'flex-row-reverse' : ''} space-x-3`}>
+                      <Phone className="h-5 w-5 text-green-500" />
+                      <span>+20 2 27540000</span>
+                    </div>
+                    <div className={`flex items-center ${language === 'ar' ? 'flex-row-reverse' : ''} space-x-3`}>
+                      <Mail className="h-5 w-5 text-blue-500" />
+                      <span>egypt@bagnodesign.com</span>
+                    </div>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           </div>
         </div>
       </section>
