@@ -17,50 +17,14 @@ const Brochures = () => {
   }
   // Main catalogs
   const mainCatalogs = [{
-    id: 1,
-    title: "Kitchen LifeStyle",
-    description: "Comprehensive collection of luxury bathroom fixtures and faucets for premium bathrooms",
-    image: "/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png",
-    category: "Bathrooms",
+    id: 13,
+    title: "BAGNODESIGN MEA 2025 RETAIL PRICE LIST",
+    description: "Comprehensive retail price list for BAGNODESIGN products in the Middle East and Africa region for 2025",
+    image: "/lovable-uploads/8953b084-5a94-41d1-9203-72e89ceadde2.png",
+    category: "Pricing",
     color: "blue",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO",
-    viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
-  }, {
-    id: 4,
-    title: "Outdoor Lighting",
-    description: "Advanced outdoor lighting solutions for spaces and gardens",
-    image: "/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png",
-    category: "Lighting",
-    color: "green",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM",
-    viewLink: "https://drive.google.com/file/d/1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM/view?usp=sharing"
-  }, {
-    id: 5,
-    title: "Tiles & Surfaces",
-    description: "Comprehensive collection of tiles and surfaces for interior and exterior spaces",
-    image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
-    category: "Surfaces",
-    color: "purple",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5",
-    viewLink: "https://drive.google.com/file/d/1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5/view?usp=sharing"
-  }, {
-    id: 8,
-    title: "Hotel Amenities",
-    description: "Comprehensive collection of advanced hotel amenities and services",
-    image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
-    category: "Hotels",
-    color: "blue",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v",
-    viewLink: "https://drive.google.com/file/d/1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v/view?usp=sharing"
-  }, {
-    id: 9,
-    title: "Luxury Lifestyle",
-    description: "Exclusive luxury lifestyle experience with Bagno Design premium collections",
-    image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
-    category: "Luxury",
-    color: "purple",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP",
-    viewLink: "https://drive.google.com/file/d/1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP/view?usp=sharing"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD",
+    viewLink: "https://drive.google.com/file/d/1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD/view?usp=drive_link"
   }, {
     id: 10,
     title: "Bathroom & Spa Brands 2025",
@@ -71,23 +35,23 @@ const Brochures = () => {
     downloadLink: "https://drive.google.com/uc?export=download&id=16__y5Dz5XPXAxRNff5IGweScdyz1KCVB",
     viewLink: "https://drive.google.com/file/d/16__y5Dz5XPXAxRNff5IGweScdyz1KCVB/view?usp=sharing"
   }, {
-    id: 12,
-    title: "Outdoor Kitchens & BBQs",
-    description: "Complete collection of outdoor kitchen solutions and BBQ equipment for luxury outdoor living spaces",
-    image: "/lovable-uploads/ffa18a22-a607-4458-b323-58bb5ec9e1f3.png",
-    category: "Outdoor",
+    id: 4,
+    title: "Outdoor Lighting",
+    description: "Advanced outdoor lighting solutions for spaces and gardens",
+    image: "/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png",
+    category: "Lighting",
     color: "green",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe",
-    viewLink: "https://drive.google.com/file/d/1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe/view?usp=drive_link"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM",
+    viewLink: "https://drive.google.com/file/d/1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM/view?usp=sharing"
   }, {
-    id: 13,
-    title: "BAGNODESIGN MEA 2025 RETAIL PRICE LIST",
-    description: "Comprehensive retail price list for BAGNODESIGN products in the Middle East and Africa region for 2025",
-    image: "/lovable-uploads/8953b084-5a94-41d1-9203-72e89ceadde2.png",
-    category: "Pricing",
-    color: "blue",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD",
-    viewLink: "https://drive.google.com/file/d/1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD/view?usp=drive_link"
+    id: 9,
+    title: "Luxury Lifestyle",
+    description: "Exclusive luxury lifestyle experience with Bagno Design premium collections",
+    image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
+    category: "Luxury",
+    color: "purple",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP",
+    viewLink: "https://drive.google.com/file/d/1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP/view?usp=sharing"
   }, {
     id: 14,
     title: "LIGHTING PRICE GUIDE",
@@ -97,6 +61,42 @@ const Brochures = () => {
     color: "purple",
     downloadLink: "https://drive.google.com/uc?export=download&id=1DtP7DWEjDpdlWXbQ1N889WI0aUBABWS-",
     viewLink: "https://drive.google.com/file/d/1DtP7DWEjDpdlWXbQ1N889WI0aUBABWS-/view?usp=drive_link"
+  }, {
+    id: 12,
+    title: "Outdoor Kitchens & BBQs",
+    description: "Complete collection of outdoor kitchen solutions and BBQ equipment for luxury outdoor living spaces",
+    image: "/lovable-uploads/ffa18a22-a607-4458-b323-58bb5ec9e1f3.png",
+    category: "Outdoor",
+    color: "green",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe",
+    viewLink: "https://drive.google.com/file/d/1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe/view?usp=drive_link"
+  }, {
+    id: 8,
+    title: "Hotel Amenities",
+    description: "Comprehensive collection of advanced hotel amenities and services",
+    image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
+    category: "Hotels",
+    color: "blue",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v",
+    viewLink: "https://drive.google.com/file/d/1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v/view?usp=sharing"
+  }, {
+    id: 5,
+    title: "Tiles & Surfaces",
+    description: "Comprehensive collection of tiles and surfaces for interior and exterior spaces",
+    image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
+    category: "Surfaces",
+    color: "purple",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5",
+    viewLink: "https://drive.google.com/file/d/1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5/view?usp=sharing"
+  }, {
+    id: 1,
+    title: "Kitchen LifeStyle",
+    description: "Comprehensive collection of luxury bathroom fixtures and faucets for premium bathrooms",
+    image: "/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png",
+    category: "Bathrooms",
+    color: "blue",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO",
+    viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
   }];
 
   // Sub catalogs
