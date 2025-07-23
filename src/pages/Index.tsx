@@ -670,14 +670,11 @@ const Index = () => {
                 </div>
                 <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-2 line-clamp-2">{product.title}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{product.description}</p>
+                  
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="w-full mt-3 text-xs sm:text-sm">
-                        <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                        {t.viewDetails}
-                      </Button>
+                      
                     </DialogTrigger>
                     <DialogContent className="max-w-[95vw] sm:max-w-2xl">
                       <div className="space-y-4">
