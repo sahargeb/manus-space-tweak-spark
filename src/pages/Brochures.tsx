@@ -17,7 +17,7 @@ const Brochures = () => {
   }
   const catalogData = [{
     id: 1,
-    title: "Bathroom Sanitaryware & Brassware",
+    title: "Kitchen LifeStyle",
     description: "Comprehensive collection of luxury bathroom fixtures and faucets for premium bathrooms",
     image: "/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png",
     category: "Bathrooms",
