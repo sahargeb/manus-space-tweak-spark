@@ -26,7 +26,7 @@ const Brochures = () => {
     viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
   }, {
     id: 2,
-    title: "Bathroom Sanitaryware & Brassware",
+    title: "Kitchen LifeStyle",
     description: "Modern kitchen designs that combine elegance with practical functionality",
     image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
     category: "Kitchens",
