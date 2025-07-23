@@ -25,13 +25,6 @@ const Brochures = () => {
     downloadLink: "https://drive.google.com/uc?export=download&id=1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO",
     viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
   }, {
-    id: 2,
-    title: "Kitchen LifeStyle",
-    description: "Modern kitchen designs that combine elegance with practical functionality",
-    image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
-    category: "Kitchens",
-    color: "green"
-  }, {
     id: 3,
     title: "TILES & SLABS",
     description: "Diverse collection of high-quality tiles and premium slabs",
