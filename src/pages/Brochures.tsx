@@ -70,6 +70,33 @@ const Brochures = () => {
     color: "green",
     downloadLink: "https://drive.google.com/uc?export=download&id=16__y5Dz5XPXAxRNff5IGweScdyz1KCVB",
     viewLink: "https://drive.google.com/file/d/16__y5Dz5XPXAxRNff5IGweScdyz1KCVB/view?usp=sharing"
+  }, {
+    id: 12,
+    title: "Outdoor Kitchens & BBQs",
+    description: "Complete collection of outdoor kitchen solutions and BBQ equipment for luxury outdoor living spaces",
+    image: "/lovable-uploads/ffa18a22-a607-4458-b323-58bb5ec9e1f3.png",
+    category: "Outdoor",
+    color: "green",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe",
+    viewLink: "https://drive.google.com/file/d/1vmFd1wJC-JR1tX8jzy1hep_iCKDkdQpe/view?usp=drive_link"
+  }, {
+    id: 13,
+    title: "BAGNODESIGN MEA 2025 RETAIL PRICE LIST",
+    description: "Comprehensive retail price list for BAGNODESIGN products in the Middle East and Africa region for 2025",
+    image: "/lovable-uploads/8953b084-5a94-41d1-9203-72e89ceadde2.png",
+    category: "Pricing",
+    color: "blue",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD",
+    viewLink: "https://drive.google.com/file/d/1giLSFZsd6WfVI6nFgMucO4HlXGDHgkCD/view?usp=drive_link"
+  }, {
+    id: 14,
+    title: "LIGHTING PRICE GUIDE",
+    description: "Complete lighting solutions price guide featuring premium lighting fixtures and innovative designs",
+    image: "/lovable-uploads/f320eda3-39ed-4b08-a0a5-c5453d9a5d31.png",
+    category: "Lighting",
+    color: "purple",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1DtP7DWEjDpdlWXbQ1N889WI0aUBABWS-",
+    viewLink: "https://drive.google.com/file/d/1DtP7DWEjDpdlWXbQ1N889WI0aUBABWS-/view?usp=drive_link"
   }];
 
   // Sub catalogs
