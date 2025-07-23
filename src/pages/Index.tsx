@@ -508,7 +508,7 @@ const Index = () => {
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Hero Section */}
       <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4 sm:pb-6 md:pb-8" style={{
-      backgroundImage: `url('/lovable-uploads/ac24f121-7d2f-4ead-badc-04a334164720.png')`
+      backgroundImage: `url('/lovable-uploads/03159fbd-3b58-48fe-94b2-9e367a5243c9.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
         
