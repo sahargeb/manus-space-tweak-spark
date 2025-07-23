@@ -517,7 +517,7 @@ const Index = () => {
             
             {/* Centered BAGNODESIGN Title */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
-              <h1 className="text-2xl font-bold text-black tracking-wide">BAGNODESIGN</h1>
+              
             </div>
             
             {/* 3-dot Menu */}
@@ -557,7 +557,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
-      backgroundImage: `url('/lovable-uploads/ac24f121-7d2f-4ead-badc-04a334164720.png')`
+      backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 container mx-auto px-4">
@@ -769,12 +769,7 @@ const Index = () => {
 
           {/* Website Link */}
           <div className="text-center mt-12">
-            <a 
-              href="https://www.sanipexgroup.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary"
-            >
+            <a href="https://www.sanipexgroup.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary">
               www.sanipexgroup.com
             </a>
           </div>
