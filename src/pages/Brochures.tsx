@@ -15,7 +15,8 @@ const Brochures = () => {
     downloadLink?: string;
     viewLink?: string;
   }
-  const catalogData = [{
+  // Main catalogs
+  const mainCatalogs = [{
     id: 1,
     title: "Kitchen LifeStyle",
     description: "Comprehensive collection of luxury bathroom fixtures and faucets for premium bathrooms",
@@ -24,15 +25,6 @@ const Brochures = () => {
     color: "blue",
     downloadLink: "https://drive.google.com/uc?export=download&id=1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO",
     viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
-  }, {
-    id: 3,
-    title: "TILES & SLABS",
-    description: "Diverse collection of high-quality tiles and premium slabs",
-    image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
-    category: "Materials",
-    color: "purple",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO",
-    viewLink: "https://drive.google.com/file/d/1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO/view?usp=sharing"
   }, {
     id: 4,
     title: "Outdoor Lighting",
@@ -51,24 +43,6 @@ const Brochures = () => {
     color: "purple",
     downloadLink: "https://drive.google.com/uc?export=download&id=1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5",
     viewLink: "https://drive.google.com/file/d/1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5/view?usp=sharing"
-  }, {
-    id: 6,
-    title: "Small Format Tiles",
-    description: "Small format tiles for detailed designs and unique decorative elements",
-    image: "/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png",
-    category: "Tiles",
-    color: "gray",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4",
-    viewLink: "https://drive.google.com/file/d/1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4/view?usp=sharing"
-  }, {
-    id: 7,
-    title: "Hokkaido",
-    description: "Hokkaido distinctive collection for luxury interior designs",
-    image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
-    category: "Premium",
-    color: "blue",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
-    viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view?usp=sharing"
   }, {
     id: 8,
     title: "Hotel Amenities",
@@ -96,6 +70,36 @@ const Brochures = () => {
     color: "green",
     downloadLink: "https://drive.google.com/uc?export=download&id=16__y5Dz5XPXAxRNff5IGweScdyz1KCVB",
     viewLink: "https://drive.google.com/file/d/16__y5Dz5XPXAxRNff5IGweScdyz1KCVB/view?usp=sharing"
+  }];
+
+  // Sub catalogs
+  const subCatalogs = [{
+    id: 6,
+    title: "Small Format Tiles",
+    description: "Small format tiles for detailed designs and unique decorative elements",
+    image: "/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png",
+    category: "Tiles",
+    color: "gray",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4",
+    viewLink: "https://drive.google.com/file/d/1j_kCzc7eUC4hewxhndMW7ffubb_zCtG4/view?usp=sharing"
+  }, {
+    id: 3,
+    title: "TILES & SLABS",
+    description: "Diverse collection of high-quality tiles and premium slabs",
+    image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
+    category: "Materials",
+    color: "purple",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO",
+    viewLink: "https://drive.google.com/file/d/1e-u2LV1wWQAF9wisS4NmNzoCfQblLfKO/view?usp=sharing"
+  }, {
+    id: 7,
+    title: "Hokkaido",
+    description: "Hokkaido distinctive collection for luxury interior designs",
+    image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
+    category: "Premium",
+    color: "blue",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
+    viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view?usp=sharing"
   }];
   const getColorClasses = (color: string) => {
     switch (color) {
@@ -154,9 +158,9 @@ const Brochures = () => {
           </p>
         </div>
 
-        {/* Catalogs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {catalogData.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
+        {/* Main Catalogs Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {mainCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
                   <img src={catalog.image} alt={catalog.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
@@ -194,6 +198,53 @@ const Brochures = () => {
                 </div>
               </CardContent>
             </Card>)}
+        </div>
+
+        {/* Sub Catalogs Section */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            SubCatalogs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {subCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
+                    <img src={catalog.image} alt={catalog.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <Badge className={getColorClasses(catalog.color)}>
+                      {catalog.category}
+                    </Badge>
+                  </div>
+                </div>
+                
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-foreground leading-tight">
+                    {catalog.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                    {catalog.description}
+                  </p>
+                  
+                  <div className="space-y-3 pt-2">
+                    {catalog.downloadLink ? <Button className="w-full hover:bg-primary/90 transition-colors" size="default" onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}>
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Catalog
+                      </Button> : <Button className="w-full opacity-50 cursor-not-allowed" size="default" disabled>
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Catalog
+                      </Button>}
+                    {catalog.viewLink ? <Button variant="outline" className="w-full hover:bg-accent hover:text-accent-foreground transition-colors" size="default" onClick={() => handleView(catalog.viewLink!, catalog.title)}>
+                        <Eye className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button> : <Button variant="outline" className="w-full opacity-50 cursor-not-allowed" size="default" disabled>
+                        <Eye className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>}
+                  </div>
+                </CardContent>
+              </Card>)}
+          </div>
         </div>
 
         {/* Call to Action */}
