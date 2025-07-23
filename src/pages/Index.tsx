@@ -507,44 +507,44 @@ const Index = () => {
   }];
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Hero Section */}
-      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4 sm:pb-6 md:pb-8" style={{
       backgroundImage: `url('/lovable-uploads/ac24f121-7d2f-4ead-badc-04a334164720.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
         
         {/* Header Buttons on Image */}
-        <div className="absolute top-0 left-0 right-0 z-20 p-4 md:p-6">
+        <div className="absolute top-0 left-0 right-0 z-20 p-3 sm:p-4 md:p-6">
           <div className="flex items-center justify-between">
             {/* Language Toggle - Responsive */}
-            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-sm md:text-lg px-3 py-2 md:px-6 md:py-3 bg-white/90 backdrop-blur-sm border-white/20 hover:bg-white/95">
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-xs sm:text-sm md:text-lg px-2 py-1 sm:px-3 sm:py-2 md:px-6 md:py-3 bg-white/90 backdrop-blur-sm border-white/20 hover:bg-white/95">
               {language === 'ar' ? 'EN' : 'AR'}
             </Button>
             
             {/* 3-dot Menu - Responsive */}
             <div className="relative">
-              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2 md:p-4 bg-white/90 backdrop-blur-sm hover:bg-white/95 rounded-lg">
-                <Menu className="w-6 h-6 md:w-8 md:h-8" />
+              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-1.5 sm:p-2 md:p-4 bg-white/90 backdrop-blur-sm hover:bg-white/95 rounded-lg">
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
               </Button>
               
-              {showMenu && <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+              {showMenu && <div className="absolute right-0 top-full mt-2 w-44 sm:w-48 bg-white rounded-lg shadow-lg border z-50">
                   <div className="py-2">
-                    <a href="#home" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <a href="#home" className="flex items-center gap-3 px-3 sm:px-4 py-2 text-sm sm:text-base text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <Home className="w-4 h-4" />
                       {t.home}
                     </a>
-                    <Link to="/about" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <Link to="/about" className="flex items-center gap-3 px-3 sm:px-4 py-2 text-sm sm:text-base text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <User className="w-4 h-4" />
                       {t.about}
                     </Link>
-                    <a href="#products" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <a href="#products" className="flex items-center gap-3 px-3 sm:px-4 py-2 text-sm sm:text-base text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <ShoppingBag className="w-4 h-4" />
                       {t.products}
                     </a>
-                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <Link to="/brochures" className="flex items-center gap-3 px-3 sm:px-4 py-2 text-sm sm:text-base text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <BookOpen className="w-4 h-4" />
                       {language === 'ar' ? 'البروشيرز' : 'Brochures'}
                     </Link>
-                    <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                    <a href="#contact" className="flex items-center gap-3 px-3 sm:px-4 py-2 text-sm sm:text-base text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <MessageCircle className="w-4 h-4" />
                       {t.contact}
                     </a>
@@ -553,39 +553,39 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10 container mx-auto px-3 sm:px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto">
             {/* First Row */}
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">SPA & WELLNESS</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">HOTEL AMENITIES</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group col-span-2 sm:col-span-1">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">KITCHEN LIFESTYLE</span>
               </h3>
             </div>
             
             {/* Second Row */}
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">TILES & SLABS</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">LIGHTING</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
-              <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group col-span-2 sm:col-span-1">
+              <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">OUTDOOR LIVING</span>
               </h3>
             </div>
@@ -594,38 +594,36 @@ const Index = () => {
       </section>
 
       {/* BAGNODESIGN'S STORY Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className={`text-center mb-16 ${language === 'ar' ? 'rtl' : 'ltr'}`}>
-            <h2 className="text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 tracking-tight">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-3 sm:px-4 max-w-5xl">
+          <div className={`text-center mb-8 sm:mb-12 md:mb-16 ${language === 'ar' ? 'rtl' : 'ltr'}`}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-4 sm:mb-6 tracking-tight">
               {language === 'ar' ? 'قصة BAGNODESIGN' : "BAGNODESIGN'S STORY"}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="space-y-8 text-gray-700">
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed font-medium">
-                <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">BAGNODESIGN</span> offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
+          <div className="space-y-4 sm:space-y-6 md:space-y-8 text-gray-700">
+            <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+                <span className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">BAGNODESIGN</span> offers complete solutions for creating dream bathrooms. Our knowledgeable and talented team draws on years of experience to bring you the finest in design-led, contemporary, and classic collections.
               </p>
             </div>
             
-            
-            
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
+            <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                 Find the inspiration you need from our extensive range of <span className="font-semibold text-emerald-700">sanitaryware, furniture, brassware, accessories, bath & shower components, and spa solutions</span>. Transforming the most personal spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest artisanal thinking.
               </p>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
+            <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                 From sculptural washbasins crafted from the finest materials in a wonderful array of colors, to beautiful functional furniture to suit any scheme, baths and showers that invite rejuvenation, and stunning brassware and accessories in an enviable range of <span className="font-semibold text-orange-700">trendsetting finishes</span>.
               </p>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
+            <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                 Backed by a reputable product portfolio and strategically located logistics centers, BAGNODESIGN is positioned to deliver your next project, serving <span className="font-semibold text-indigo-700">architects, designers, developers, retailers, and consumers</span> across all sectors from large commercial to private residential projects.
               </p>
             </div>
@@ -644,49 +642,53 @@ const Index = () => {
       
 
       {/* Products Section */}
-      <section id="products" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t.productsTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section id="products" className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">{t.productsTitle}</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
               {t.productsDescription}
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {products.map(product => <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div className="relative overflow-hidden">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <img src={product.image} alt={product.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
+                      <img src={product.image} alt={product.title} className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+                    <DialogContent className="max-w-[95vw] sm:max-w-4xl w-full p-2 sm:p-0 bg-transparent border-none">
                       <div className="relative">
-                        <img src={product.image} alt={product.title} className="w-full h-auto max-h-[90vh] object-contain rounded-lg" />
+                        <img src={product.image} alt={product.title} className="w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain rounded-lg" />
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <div className="absolute top-4 right-4">
-                    <Badge variant="secondary">{product.category}</Badge>
+                  <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                    <Badge variant="secondary" className="text-xs sm:text-sm">{product.category}</Badge>
                   </div>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
+                  <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-2 line-clamp-2">{product.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{product.description}</p>
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      
+                      <Button variant="outline" size="sm" className="w-full mt-3 text-xs sm:text-sm">
+                        <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                        {t.viewDetails}
+                      </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-2xl">
+                    <DialogContent className="max-w-[95vw] sm:max-w-2xl">
                       <div className="space-y-4">
-                        <img src={product.image} alt={product.title} className="w-full h-64 object-cover rounded-lg" />
+                        <img src={product.image} alt={product.title} className="w-full h-48 sm:h-64 object-cover rounded-lg" />
                         <div>
-                          <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
-                          <Badge className="mb-3">{product.category}</Badge>
-                          <p className="text-muted-foreground mb-4">{product.description}</p>
-                          <div className="flex gap-3">
-                            
-                            <Button variant="outline" className="flex-1">
-                              <Heart className="w-4 h-4 mr-2" />
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{product.title}</h3>
+                          <Badge className="mb-3 text-xs sm:text-sm">{product.category}</Badge>
+                          <p className="text-sm sm:text-base text-muted-foreground mb-4">{product.description}</p>
+                          <div className="flex gap-2 sm:gap-3">
+                            <Button variant="outline" className="flex-1 text-xs sm:text-sm">
+                              <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                               {language === 'ar' ? 'إضافة للمفضلة' : 'Add to Favorites'}
                             </Button>
                           </div>
@@ -713,70 +715,82 @@ const Index = () => {
       
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section id="contact" className="py-12 sm:py-16 md:py-20 bg-secondary/30">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <Link to="/brochures">
-              <Button variant="outline" size="lg" className="mb-6 text-lg px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                <BookOpen className="w-5 h-5 mr-2" />
+              <Button variant="outline" size="lg" className="mb-4 sm:mb-6 text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
                 BROCHURES
               </Button>
             </Link>
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t.contactTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">{t.contactTitle}</h2>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
               {t.contactDescription}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
+            <div className="text-center p-3 sm:p-4 md:p-6">
               <button onClick={() => setShowContactInfo('phone')} className="block w-full">
-                <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <Phone className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
+                  {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
+                </span>
               </button>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-3 sm:p-4 md:p-6">
               <button onClick={() => setShowContactInfo('email')} className="block w-full">
-                <Mail className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <Mail className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
+                  {language === 'ar' ? 'راسلنا' : 'Email Us'}
+                </span>
               </button>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-3 sm:p-4 md:p-6">
               <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="block">
-                <MapPin className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
+                  {language === 'ar' ? 'زورنا' : 'Visit Us'}
+                </span>
               </a>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-3 sm:p-4 md:p-6">
               <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="block">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer">
-                  <Instagram className="w-6 h-6 text-white" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                 </div>
+                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
+                  Instagram
+                </span>
               </a>
             </div>
           </div>
 
           {/* Website Link */}
-          <div className="text-center mt-12">
-            <a href="https://www.sanipexgroup.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary">
+          <div className="text-center mt-8 sm:mt-10 md:mt-12">
+            <a href="https://www.sanipexgroup.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-300 text-sm sm:text-base md:text-lg font-medium underline decoration-primary break-all">
               www.sanipexgroup.com
             </a>
           </div>
 
           {/* Contact Info Display */}
-          {showContactInfo && <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-              <div className="bg-background rounded-lg p-8 max-w-md w-full mx-4 text-center relative">
-                <button onClick={() => setShowContactInfo('')} className="absolute top-4 right-4 text-muted-foreground hover:text-foreground">
-                  <X className="w-5 h-5" />
+          {showContactInfo && <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4">
+              <div className="bg-background rounded-lg p-4 sm:p-6 md:p-8 max-w-sm sm:max-w-md w-full mx-3 sm:mx-4 text-center relative">
+                <button onClick={() => setShowContactInfo('')} className="absolute top-3 sm:top-4 right-3 sm:right-4 text-muted-foreground hover:text-foreground">
+                  <X className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
                 
                 {showContactInfo === 'phone' && <div>
-                    <Phone className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <Phone className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-primary mx-auto mb-3 sm:mb-4" />
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                       {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
                     </h3>
-                    <p className="text-lg text-muted-foreground mb-6">0226134401</p>
-                    <Button asChild className="w-full">
+                    <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">0226134401</p>
+                    <Button asChild className="w-full text-sm sm:text-base">
                       <a href="tel:0226134401">
                         {language === 'ar' ? 'اتصال الآن' : 'Call Now'}
                       </a>
@@ -784,12 +798,12 @@ const Index = () => {
                   </div>}
                 
                 {showContactInfo === 'email' && <div>
-                    <Mail className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <Mail className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-primary mx-auto mb-3 sm:mb-4" />
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                       {language === 'ar' ? 'راسلنا' : 'Email Us'}
                     </h3>
-                    <p className="text-lg text-muted-foreground mb-6">Info@bagnodesignmisr.com</p>
-                    <Button asChild className="w-full">
+                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-4 sm:mb-6 break-all">Info@bagnodesignmisr.com</p>
+                    <Button asChild className="w-full text-sm sm:text-base">
                       <a href="mailto:Info@bagnodesignmisr.com">
                         {language === 'ar' ? 'إرسال إيميل' : 'Send Email'}
                       </a>

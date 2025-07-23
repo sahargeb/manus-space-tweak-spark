@@ -136,19 +136,19 @@ function CatalogFrame({ item, onClick, isSelected }: CatalogFrameProps) {
           pointerEvents: 'none'
         }}
       >
-        <Card className="w-64 bg-background/90 backdrop-blur-sm border-primary/20">
-          <CardContent className="p-3">
-            <div className="space-y-2">
-              <Badge variant="secondary">{item.category}</Badge>
-              <h4 className="font-semibold text-sm">{item.title}</h4>
-              <p className="text-xs text-muted-foreground">{item.description}</p>
-              <div className="flex gap-2">
-                <Button size="sm" className="flex-1 text-xs">
-                  <Eye className="w-3 h-3 mr-1" />
+        <Card className="w-48 sm:w-56 md:w-64 bg-background/90 backdrop-blur-sm border-primary/20">
+          <CardContent className="p-2 sm:p-3">
+            <div className="space-y-1 sm:space-y-2">
+              <Badge variant="secondary" className="text-xs">{item.category}</Badge>
+              <h4 className="font-semibold text-xs sm:text-sm">{item.title}</h4>
+              <p className="text-[10px] sm:text-xs text-muted-foreground line-clamp-2">{item.description}</p>
+              <div className="flex gap-1 sm:gap-2">
+                <Button size="sm" className="flex-1 text-[10px] sm:text-xs px-2 py-1">
+                  <Eye className="w-2 h-2 sm:w-3 sm:h-3 mr-1" />
                   View
                 </Button>
-                <Button variant="outline" size="sm" className="flex-1 text-xs">
-                  <Download className="w-3 h-3 mr-1" />
+                <Button variant="outline" size="sm" className="flex-1 text-[10px] sm:text-xs px-2 py-1">
+                  <Download className="w-2 h-2 sm:w-3 sm:h-3 mr-1" />
                   Download
                 </Button>
               </div>
@@ -245,20 +245,20 @@ export default function VirtualGallery({ isOpen, onClose, language }: VirtualGal
     <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm">
       <div className="relative w-full h-full">
         {/* Controls */}
-        <div className="absolute top-4 left-4 z-10 space-y-2">
-          <Card className="bg-background/90 backdrop-blur-sm">
-            <CardContent className="p-4">
-              <h3 className="font-bold mb-2">
+        <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-10 space-y-2">
+          <Card className="bg-background/90 backdrop-blur-sm max-w-xs sm:max-w-sm">
+            <CardContent className="p-2 sm:p-3 md:p-4">
+              <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base">
                 {language === 'ar' ? 'المعرض الافتراضي' : 'Virtual Gallery'}
               </h3>
-              <p className="text-sm text-muted-foreground mb-3">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
                 {language === 'ar' 
                   ? 'انقر واسحب للتنقل، اسحب العجلة للتكبير' 
                   : 'Click and drag to navigate, scroll to zoom'}
               </p>
-              <div className="flex gap-2">
-                <Button size="sm" onClick={resetCamera}>
-                  <RotateCcw className="w-4 h-4 mr-1" />
+              <div className="flex gap-1 sm:gap-2">
+                <Button size="sm" onClick={resetCamera} className="text-xs sm:text-sm px-2 sm:px-3">
+                  <RotateCcw className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {language === 'ar' ? 'إعادة تعيين' : 'Reset'}
                 </Button>
               </div>
@@ -271,9 +271,9 @@ export default function VirtualGallery({ isOpen, onClose, language }: VirtualGal
           onClick={onClose}
           variant="outline"
           size="sm"
-          className="absolute top-4 right-4 z-10 bg-background/90 backdrop-blur-sm"
+          className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-background/90 backdrop-blur-sm p-2 sm:p-3"
         >
-          <X className="w-4 h-4" />
+          <X className="w-3 h-3 sm:w-4 sm:h-4" />
         </Button>
 
         {/* 3D Canvas */}
@@ -310,10 +310,10 @@ export default function VirtualGallery({ isOpen, onClose, language }: VirtualGal
 
         {/* Loading fallback */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <Card className="bg-background/90 backdrop-blur-sm">
-            <CardContent className="p-6 text-center">
-              <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-              <p className="text-sm text-muted-foreground">
+          <Card className="bg-background/90 backdrop-blur-sm mx-4">
+            <CardContent className="p-4 sm:p-6 text-center">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 {language === 'ar' ? 'جاري تحميل المعرض...' : 'Loading gallery...'}
               </p>
             </CardContent>
