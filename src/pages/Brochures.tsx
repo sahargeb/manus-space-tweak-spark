@@ -134,13 +134,13 @@ const Brochures = () => {
             <Link to="/" className="flex items-center gap-2">
               <Button variant="ghost" size="sm">
                 <ArrowRight className="w-5 h-5" />
-                العودة
+                Back
               </Button>
             </Link>
             
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-foreground">الكاتلوجات والبروشيرز</h1>
-              <p className="text-sm text-muted-foreground">استعرض وحمل كاتلوجاتنا المتخصصة</p>
+              <h1 className="text-2xl font-bold text-foreground">Catalogs & Brochures</h1>
+              <p className="text-sm text-muted-foreground">Browse and download our specialized catalogs</p>
             </div>
             
             <div className="w-20"></div>
@@ -153,22 +153,22 @@ const Brochures = () => {
         {/* Introduction */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            كاتلوجات المنتجات
+            Product Catalogs
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            تصفح واستعرض كاتلوجاتنا الحصرية للحصول على معلومات تفصيلية 
-            عن منتجاتنا وخدماتنا المتخصصة في التصميم الداخلي
+            Browse and explore our exclusive catalogs to get detailed information 
+            about our products and specialized services in interior design
           </p>
         </div>
 
         {/* Catalogs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {catalogData.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-right">
+          {catalogData.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
                   <img src={catalog.image} alt={catalog.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                 </div>
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 left-4">
                   <Badge className={getColorClasses(catalog.color)}>
                     {catalog.category}
                   </Badge>
@@ -184,19 +184,19 @@ const Brochures = () => {
                 </p>
                 
                 <div className="space-y-3 pt-2">
-                  {catalog.downloadLink ? <Button className="w-full flex-row-reverse hover:bg-primary/90 transition-colors" size="default" onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}>
-                      <Download className="w-4 h-4 ml-2" />
-                      تحميل الكاتلوج
-                    </Button> : <Button className="w-full flex-row-reverse opacity-50 cursor-not-allowed" size="default" disabled>
-                      <Download className="w-4 h-4 ml-2" />
-                      تحميل الكاتلوج
+                  {catalog.downloadLink ? <Button className="w-full hover:bg-primary/90 transition-colors" size="default" onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}>
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Catalog
+                    </Button> : <Button className="w-full opacity-50 cursor-not-allowed" size="default" disabled>
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Catalog
                     </Button>}
-                  {catalog.viewLink ? <Button variant="outline" className="w-full flex-row-reverse hover:bg-accent hover:text-accent-foreground transition-colors" size="default" onClick={() => handleView(catalog.viewLink!, catalog.title)}>
-                      <Eye className="w-4 h-4 ml-2" />
-                      عرض الكاتلوج
-                    </Button> : <Button variant="outline" className="w-full flex-row-reverse opacity-50 cursor-not-allowed" size="default" disabled>
-                      <Eye className="w-4 h-4 ml-2" />
-                      عرض الكاتلوج
+                  {catalog.viewLink ? <Button variant="outline" className="w-full hover:bg-accent hover:text-accent-foreground transition-colors" size="default" onClick={() => handleView(catalog.viewLink!, catalog.title)}>
+                      <Eye className="w-4 h-4 mr-2" />
+                      View Catalog
+                    </Button> : <Button variant="outline" className="w-full opacity-50 cursor-not-allowed" size="default" disabled>
+                      <Eye className="w-4 h-4 mr-2" />
+                      View Catalog
                     </Button>}
                 </div>
               </CardContent>
@@ -207,7 +207,7 @@ const Brochures = () => {
         <div className="text-center mt-16 space-y-4">
           
           <p className="text-muted-foreground">
-            فريقنا المتخصص مستعد لمساعدتك في اختيار المنتجات المناسبة لمشروعك
+            Our specialized team is ready to help you choose the right products for your project
           </p>
           
         </div>
