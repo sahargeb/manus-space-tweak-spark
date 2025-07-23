@@ -731,27 +731,21 @@ const Index = () => {
             <div className="text-center p-3 sm:p-4 md:p-6">
               <button onClick={() => setShowContactInfo('phone')} className="block w-full">
                 <Phone className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
-                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
-                  {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
-                </span>
+                
               </button>
             </div>
             
             <div className="text-center p-3 sm:p-4 md:p-6">
               <button onClick={() => setShowContactInfo('email')} className="block w-full">
                 <Mail className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
-                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
-                  {language === 'ar' ? 'راسلنا' : 'Email Us'}
-                </span>
+                
               </button>
             </div>
             
             <div className="text-center p-3 sm:p-4 md:p-6">
               <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="block">
                 <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
-                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
-                  {language === 'ar' ? 'زورنا' : 'Visit Us'}
-                </span>
+                
               </a>
             </div>
 
@@ -760,9 +754,7 @@ const Index = () => {
                 <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer">
                   <Instagram className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                 </div>
-                <span className="block mt-2 text-xs sm:text-sm text-muted-foreground">
-                  Instagram
-                </span>
+                
               </a>
             </div>
           </div>
