@@ -987,29 +987,29 @@ const Index = () => {
           
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6">
-              <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">{t.phone}</h3>
-              <a href="tel:0226134401" className="text-muted-foreground hover:text-primary transition-colors">0226134401</a>
+              <a href="tel:0226134401" className="block">
+                <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+              </a>
             </div>
             
             <div className="text-center p-6">
-              <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">{t.email}</h3>
-              <a href="mailto:Info@bagnodesignmisr.com" className="text-muted-foreground hover:text-primary transition-colors">Info@bagnodesignmisr.com</a>
+              <a href="mailto:Info@bagnodesignmisr.com" className="block">
+                <Mail className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+              </a>
             </div>
             
             <div className="text-center p-6">
-              <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-bold text-foreground mb-2">{t.location}</h3>
-              <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{language === 'ar' ? 'القاهرة، جمهورية مصر العربية' : 'Cairo, Egypt'}</a>
+              <a href="https://maps.app.goo.gl/BJRtY19x8amtMckF8?g_st=ac" target="_blank" rel="noopener noreferrer" className="block">
+                <MapPin className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
+              </a>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300">
-                <Instagram className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-foreground mb-2">{language === 'ar' ? 'تابعنا' : 'Follow Us'}</h3>
-              <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@bagnodesignmisr</a>
+              <a href="https://www.instagram.com/bagnodesignmisr?igsh=NW8yM3V3Mm1yczVh" target="_blank" rel="noopener noreferrer" className="block">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Instagram className="w-6 h-6 text-white" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
