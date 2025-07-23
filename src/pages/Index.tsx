@@ -208,6 +208,12 @@ const Index = () => {
     setLanguage(language === 'ar' ? 'en' : 'ar');
   };
   const products = [{
+    id: 0,
+    title: language === 'ar' ? "مقر BAGNODESIGN الرئيسي" : "BAGNODESIGN Main Showroom",
+    category: language === 'ar' ? "المعرض الرئيسي" : "Main Showroom",
+    image: "/lovable-uploads/950fa16a-992c-4d30-bf67-0a0f88707089.png",
+    description: language === 'ar' ? "مقر شركة BAGNODESIGN للحمامات والمطابخ الفاخرة" : "BAGNODESIGN headquarters for luxury bathrooms and kitchens"
+  }, {
     id: 1,
     title: language === 'ar' ? "حمام فاخر بالرخام الطبيعي" : "Luxury Bathroom",
     category: t.bathrooms,
@@ -664,7 +670,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map(product => <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div className="relative overflow-hidden">
                   <Dialog>
