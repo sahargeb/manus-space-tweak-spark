@@ -32,9 +32,7 @@ const ProductCatalogs = () => {
     description: "Modern kitchen designs that combine elegance with practical functionality",
     image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
     category: "Kitchens",
-    color: "green",
-    downloadLink: "https://example.com/download/kitchen",
-    viewLink: "https://example.com/view/kitchen"
+    color: "green"
   }, {
     id: 3,
     title: "TILES & SLABS",
@@ -84,56 +82,29 @@ const ProductCatalogs = () => {
     id: 8,
     title: "Hotel Amenities",
     description: "Comprehensive collection of advanced hotel amenities and services",
-    image: "/lovable-uploads/aa0fdce0-e4b0-42f4-ab29-2288b73266ca.png",
+    image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
     category: "Hotels",
     color: "blue",
-    downloadLink: "https://example.com/download/hotel-amenities",
-    viewLink: "https://example.com/view/hotel-amenities"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v",
+    viewLink: "https://drive.google.com/file/d/1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v/view?usp=sharing"
   }, {
     id: 9,
     title: "Luxury Lifestyle",
     description: "Exclusive luxury lifestyle experience with Bagno Design premium collections",
-    image: "/lovable-uploads/cb15b01a-60cb-4c98-a716-adc3a533ffe1.png",
+    image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
     category: "Luxury",
     color: "purple",
-    downloadLink: "https://example.com/download/luxury-lifestyle",
-    viewLink: "https://example.com/view/luxury-lifestyle"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP",
+    viewLink: "https://drive.google.com/file/d/1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP/view?usp=sharing"
   }, {
     id: 10,
     title: "Bathroom & Spa Brands 2025",
     description: "Latest bathroom and spa brands for 2025 from Sanipex Group",
-    image: "/lovable-uploads/7faacff0-c062-45be-a06c-6eeea8c452f4.png",
+    image: "/lovable-uploads/6939ead1-fd0f-48e5-9337-59c386513e79.png",
     category: "Spa",
     color: "green",
-    downloadLink: "https://example.com/download/bathroom-spa-2025",
-    viewLink: "https://example.com/view/bathroom-spa-2025"
-  }, {
-    id: 11,
-    title: "Surfaces BAGNODESIGN 2025",
-    description: "Latest surfaces collection from BAGNODESIGN for 2025",
-    image: "/lovable-uploads/c1515818-817a-4205-88ba-c92af98c3f54.png",
-    category: "Surfaces",
-    color: "purple",
-    downloadLink: "https://example.com/download/surfaces-bagnodesign-2025",
-    viewLink: "https://example.com/view/surfaces-bagnodesign-2025"
-  }, {
-    id: 12,
-    title: "Lighting Price Guide",
-    description: "Comprehensive lighting price guide from SANIPEXGROUP",
-    image: "/lovable-uploads/9aeb9520-2fde-4256-a34e-02e66cacb4c7.png",
-    category: "Lighting",
-    color: "green",
-    downloadLink: "https://example.com/download/lighting-price-guide",
-    viewLink: "https://example.com/view/lighting-price-guide"
-  }, {
-    id: 13,
-    title: "Outdoor Kitchens & BBQs",
-    description: "Outdoor kitchen and BBQ solutions from SANIPEXGROUP",
-    image: "/lovable-uploads/ebc86740-145f-4948-8f14-80f4872a5697.png",
-    category: "Outdoor",
-    color: "green",
-    downloadLink: "https://example.com/download/outdoor-kitchens-bbqs",
-    viewLink: "https://example.com/view/outdoor-kitchens-bbqs"
+    downloadLink: "https://drive.google.com/uc?export=download&id=16__y5Dz5XPXAxRNff5IGweScdyz1KCVB",
+    viewLink: "https://drive.google.com/file/d/16__y5Dz5XPXAxRNff5IGweScdyz1KCVB/view?usp=sharing"
   }];
 
   const getColorClasses = (color: string) => {
@@ -224,24 +195,47 @@ const ProductCatalogs = () => {
                   {catalog.description}
                 </p>
                 
-                <div className="flex gap-2 pt-2">
-                  <Button 
-                    className="flex-1 hover:bg-primary/90 transition-colors" 
-                    size="default" 
-                    onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 hover:bg-accent hover:text-accent-foreground transition-colors" 
-                    size="default" 
-                    onClick={() => handleView(catalog.viewLink!, catalog.title)}
-                  >
-                    <Eye className="w-4 h-4 mr-2" />
-                    View
-                  </Button>
+                <div className="space-y-3 pt-2">
+                  {catalog.downloadLink ? (
+                    <Button 
+                      className="w-full hover:bg-primary/90 transition-colors" 
+                      size="default" 
+                      onClick={() => handleDownload(catalog.downloadLink!, catalog.title)}
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Catalog
+                    </Button>
+                  ) : (
+                    <Button 
+                      className="w-full opacity-50 cursor-not-allowed" 
+                      size="default" 
+                      disabled
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Catalog
+                    </Button>
+                  )}
+                  {catalog.viewLink ? (
+                    <Button 
+                      variant="outline" 
+                      className="w-full hover:bg-accent hover:text-accent-foreground transition-colors" 
+                      size="default" 
+                      onClick={() => handleView(catalog.viewLink!, catalog.title)}
+                    >
+                      <Eye className="w-4 h-4 mr-2" />
+                      View Catalog
+                    </Button>
+                  ) : (
+                    <Button 
+                      variant="outline" 
+                      className="w-full opacity-50 cursor-not-allowed" 
+                      size="default" 
+                      disabled
+                    >
+                      <Eye className="w-4 h-4 mr-2" />
+                      View Catalog
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

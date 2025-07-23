@@ -540,7 +540,10 @@ const Index = () => {
                       <ShoppingBag className="w-4 h-4" />
                       {t.products}
                     </a>
-                    
+                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
+                      <BookOpen className="w-4 h-4" />
+                      {language === 'ar' ? 'البروشيرز' : 'Brochures'}
+                    </Link>
                     <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <MessageCircle className="w-4 h-4" />
                       {t.contact}
@@ -614,7 +617,11 @@ const Index = () => {
               </p>
             </div>
             
-            
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <p className="text-lg leading-relaxed">
+                For <span className="font-bold text-purple-700">three decades</span>, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including <span className="font-semibold text-blue-700">Dubai, Abu Dhabi, and London</span>, alongside an established presence with partner retailers worldwide.
+              </p>
+            </div>
             
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
               <p className="text-lg leading-relaxed">
@@ -704,6 +711,261 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Catalogs Section */}
+      <section id="catalogs" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className={`mb-16 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t.catalogsTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t.catalogsDescription}
+            </p>
+          </div>
+          
+          {/* Main Catalogs Grid - Responsive and Balanced */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            
+            {/* Bathroom Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100 p-4">
+                  <img src="/lovable-uploads/3e1561ad-88fc-4549-8a29-117ec509071b.png" alt="Bathroom sanitaryware & brassware" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-primary/10 text-primary border-primary/20">Premium</Badge>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'أدوات صحية ونحاسية للحمامات' : 'Bathroom Sanitaryware & Brassware'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'استكشف مجموعتنا الكاملة من أدوات الحمامات الصحية والنحاسية عالية الجودة من العلامات التجارية الرائدة' : 'Explore our complete collection of premium bathroom sanitaryware and brassware from leading brands'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default" onClick={() => {
+                  // Create a dummy download for demo
+                  const link = document.createElement('a');
+                  link.href = 'data:text/plain;charset=utf-8,Bathroom Catalog - BAGNODESIGN';
+                  link.download = 'bathroom-catalog.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}>
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <div className="grid grid-cols-2 gap-2 mx-0 px-0">
+                    <Button variant="outline" className="flex-1" size="default">
+                      {t.viewCatalog}
+                    </Button>
+                    
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Kitchen Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100 p-4">
+                  <img src="/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png" alt="Kitchen LifeStyle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-accent/10 text-accent border-accent/20">Luxury</Badge>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'أسلوب حياة المطبخ' : 'Kitchen LifeStyle'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'اكتشف أجهزة المطبخ الفاخرة من العلامات التجارية الرائدة، بما في ذلك الأفران والثلاجات ومبردات النبيذ والأحواض وصنابير المطبخ' : 'Discover luxury kitchen appliances by leading brands, including ovens, refrigerators, wine coolers, sinks, and kitchen taps'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Button variant="outline" className="flex-1" size="default">
+                      {t.viewCatalog}
+                    </Button>
+                    
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Outdoor Living Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-green-100 p-4">
+                  <img src="/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png" alt="Outdoor Living 2024" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-green-500/10 text-green-600 border-green-500/20">Outdoor</Badge>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'الحياة الخارجية' : 'Outdoor Living'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'اكتشف مجموعة الأثاث الخارجي، من المدافئ إلى الأثاث المصمم والإضاءة والإكسسوارات المبتكرة' : 'Discover our outdoor furniture range, from fire pits to designer furniture, lighting, and innovative accessories'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Tiles & Surfaces Catalog */}
+            <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <div className="relative overflow-hidden rounded-t-lg">
+                <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 p-4">
+                  <img src="/lovable-uploads/e72c357d-8f6e-4527-8d31-7e6824ca05bf.png" alt="Tiles & Surfaces" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-purple-500/10 text-purple-600 border-purple-500/20">Surfaces</Badge>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-tight">
+                  {language === 'ar' ? 'البلاط والأسطح' : 'Tiles & Surfaces'}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {language === 'ar' ? 'مجموعة شاملة من البلاط والأسطح عالية الجودة للمساحات الداخلية والخارجية' : 'Comprehensive collection of premium tiles and surfaces for indoor and outdoor spaces'}
+                </p>
+                <div className="space-y-3 pt-2">
+                  <Button className={`w-full ${language === 'ar' ? 'flex-row-reverse' : ''}`} size="default">
+                    <Download className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                    {t.downloadCatalog}
+                  </Button>
+                  <Button variant="outline" className="w-full" size="default">
+                    {t.viewCatalog}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Sub-Catalogs Section */}
+          <div className="mt-16">
+            <div className={`mb-8 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+              <h3 className="text-2xl font-bold text-foreground mb-2">
+                {language === 'ar' ? 'كاتلوجات متخصصة' : 'Specialized Catalogs'}
+              </h3>
+              <p className="text-muted-foreground">
+                {language === 'ar' ? 'استكشف مجموعاتنا المتخصصة لاحتياجات التصميم المحددة' : 'Explore our specialized collections for specific design needs'}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              
+              {/* Small Format Tiles */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img src="/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png" alt="Tiles Small Format" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'بلاط صغير الحجم' : 'Small Format Tiles'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Slabs */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img src="/lovable-uploads/bba40e6d-99ca-439a-ba78-e6be4a86e467.png" alt="Slabs" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'ألواح' : 'Slabs'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Hokkaido */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img src="/lovable-uploads/23b17f8b-be1f-4a09-a21b-8458bc4c711d.png" alt="Hokkaido Surfaces" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'هوكايدو' : 'Hokkaido'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Outdoor Tiles */}
+              <Card className={`group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                    <img src="/lovable-uploads/14d2fb65-2d50-4ef5-b5d0-b7f5e2d1b05d.png" alt="Outdoor Tiles & Landscape Lighting" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded" />
+                  </div>
+                </div>
+                <CardContent className="p-4 space-y-3">
+                  <h4 className="font-semibold text-foreground text-sm leading-tight">
+                    {language === 'ar' ? 'بلاط خارجي وإضاءة' : 'Outdoor Tiles & Lighting'}
+                  </h4>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className={`flex-1 text-xs ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                      <Download className={`w-3 h-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                      {language === 'ar' ? 'تحميل' : 'Download'}
+                    </Button>
+                    <Button size="sm" className="flex-1 text-xs">
+                      {language === 'ar' ? 'عرض' : 'View'}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Digital Catalogs Placeholder */}
+              
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 3D Virtual Experiences Section */}
       
@@ -726,13 +988,19 @@ const Index = () => {
           
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6">
-              <button onClick={() => setShowContactInfo('phone')} className="block w-full">
+              <button 
+                onClick={() => setShowContactInfo('phone')}
+                className="block w-full"
+              >
                 <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
               </button>
             </div>
             
             <div className="text-center p-6">
-              <button onClick={() => setShowContactInfo('email')} className="block w-full">
+              <button 
+                onClick={() => setShowContactInfo('email')}
+                className="block w-full"
+              >
                 <Mail className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
               </button>
             </div>
@@ -753,13 +1021,18 @@ const Index = () => {
           </div>
 
           {/* Contact Info Display */}
-          {showContactInfo && <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          {showContactInfo && (
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
               <div className="bg-background rounded-lg p-8 max-w-md w-full mx-4 text-center relative">
-                <button onClick={() => setShowContactInfo('')} className="absolute top-4 right-4 text-muted-foreground hover:text-foreground">
+                <button 
+                  onClick={() => setShowContactInfo('')}
+                  className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+                >
                   <X className="w-5 h-5" />
                 </button>
                 
-                {showContactInfo === 'phone' && <div>
+                {showContactInfo === 'phone' && (
+                  <div>
                     <Phone className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-4">
                       {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
@@ -770,9 +1043,11 @@ const Index = () => {
                         {language === 'ar' ? 'اتصال الآن' : 'Call Now'}
                       </a>
                     </Button>
-                  </div>}
+                  </div>
+                )}
                 
-                {showContactInfo === 'email' && <div>
+                {showContactInfo === 'email' && (
+                  <div>
                     <Mail className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-4">
                       {language === 'ar' ? 'راسلنا' : 'Email Us'}
@@ -783,9 +1058,11 @@ const Index = () => {
                         {language === 'ar' ? 'إرسال إيميل' : 'Send Email'}
                       </a>
                     </Button>
-                  </div>}
+                  </div>
+                )}
               </div>
-            </div>}
+            </div>
+          )}
         </div>
       </section>
 
