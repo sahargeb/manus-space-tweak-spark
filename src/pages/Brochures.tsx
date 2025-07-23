@@ -238,9 +238,7 @@ const Brochures = () => {
 
         {/* Sub Catalogs Section */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            SubCatalogs
-          </h2>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {subCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
                 <div className="relative overflow-hidden rounded-t-lg">
