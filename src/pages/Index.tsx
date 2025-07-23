@@ -540,10 +540,7 @@ const Index = () => {
                       <ShoppingBag className="w-4 h-4" />
                       {t.products}
                     </a>
-                    <Link to="/brochures" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
-                      <BookOpen className="w-4 h-4" />
-                      {language === 'ar' ? 'البروشيرز' : 'Brochures'}
-                    </Link>
+                    
                     <a href="#contact" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors" onClick={() => setShowMenu(false)}>
                       <MessageCircle className="w-4 h-4" />
                       {t.contact}
@@ -988,19 +985,13 @@ const Index = () => {
           
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6">
-              <button 
-                onClick={() => setShowContactInfo('phone')}
-                className="block w-full"
-              >
+              <button onClick={() => setShowContactInfo('phone')} className="block w-full">
                 <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
               </button>
             </div>
             
             <div className="text-center p-6">
-              <button 
-                onClick={() => setShowContactInfo('email')}
-                className="block w-full"
-              >
+              <button onClick={() => setShowContactInfo('email')} className="block w-full">
                 <Mail className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
               </button>
             </div>
@@ -1021,18 +1012,13 @@ const Index = () => {
           </div>
 
           {/* Contact Info Display */}
-          {showContactInfo && (
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          {showContactInfo && <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
               <div className="bg-background rounded-lg p-8 max-w-md w-full mx-4 text-center relative">
-                <button 
-                  onClick={() => setShowContactInfo('')}
-                  className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
-                >
+                <button onClick={() => setShowContactInfo('')} className="absolute top-4 right-4 text-muted-foreground hover:text-foreground">
                   <X className="w-5 h-5" />
                 </button>
                 
-                {showContactInfo === 'phone' && (
-                  <div>
+                {showContactInfo === 'phone' && <div>
                     <Phone className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-4">
                       {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
@@ -1043,11 +1029,9 @@ const Index = () => {
                         {language === 'ar' ? 'اتصال الآن' : 'Call Now'}
                       </a>
                     </Button>
-                  </div>
-                )}
+                  </div>}
                 
-                {showContactInfo === 'email' && (
-                  <div>
+                {showContactInfo === 'email' && <div>
                     <Mail className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-4">
                       {language === 'ar' ? 'راسلنا' : 'Email Us'}
@@ -1058,11 +1042,9 @@ const Index = () => {
                         {language === 'ar' ? 'إرسال إيميل' : 'Send Email'}
                       </a>
                     </Button>
-                  </div>
-                )}
+                  </div>}
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
