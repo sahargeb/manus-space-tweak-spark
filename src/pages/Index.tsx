@@ -798,6 +798,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Brochures Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <Link to="/brochures">
+              <Button variant="outline" size="lg" className="mb-6 text-lg px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <BookOpen className="w-5 h-5 mr-2" />
+                BROCHURES
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Link Section */}
+      <section className="py-4 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <a 
+              href="https://www.sanipexgroup.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary"
+            >
+              www.sanipexgroup.com
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       
 
