@@ -10,7 +10,7 @@ import VirtualGallery from "@/components/3d/VirtualGallery";
 import Image360Viewer from "@/components/3d/Image360Viewer";
 import QRCodeVR from "@/components/QRCodeVR";
 const Index = () => {
-  const [language, setLanguage] = useState('ar');
+  const [language, setLanguage] = useState('en');
   const [tilesExpanded, setTilesExpanded] = useState(false);
   const [showVirtualGallery, setShowVirtualGallery] = useState(false);
   const [show360Viewer, setShow360Viewer] = useState(false);
