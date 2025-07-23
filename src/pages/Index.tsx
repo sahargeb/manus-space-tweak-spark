@@ -610,11 +610,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <p className="text-lg leading-relaxed">
-                For <span className="font-bold text-purple-700">three decades</span>, BAGNODESIGN has expanded to serve the Middle East, Africa, Europe, Asia, and Oceania through retail, trade, projects, and digital channels. We combine the highest quality solutions with exceptional customer service. The company now features flagship showrooms in key locations including <span className="font-semibold text-blue-700">Dubai, Abu Dhabi, and London</span>, alongside an established presence with partner retailers worldwide.
-              </p>
-            </div>
+            
             
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
               <p className="text-lg leading-relaxed">
