@@ -727,13 +727,19 @@ const Index = () => {
       <section id="contact" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <Link to="/brochures">
+              <Button variant="outline" size="lg" className="mb-6 text-lg px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <BookOpen className="w-5 h-5 mr-2" />
+                BROCHURES
+              </Button>
+            </Link>
             <h2 className="text-4xl font-bold text-foreground mb-4">{t.contactTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.contactDescription}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-6">
               <button onClick={() => setShowContactInfo('phone')} className="block w-full">
                 <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
@@ -758,6 +764,19 @@ const Index = () => {
                   <Instagram className="w-6 h-6 text-white" />
                 </div>
               </a>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="bg-background rounded-lg border border-primary/20 p-4 hover:bg-primary/5 transition-colors duration-300">
+                <a 
+                  href="https://www.sanipexgroup.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors duration-300 text-sm font-medium block"
+                >
+                  www.sanipexgroup.com
+                </a>
+              </div>
             </div>
           </div>
 
@@ -798,35 +817,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Brochures Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <Link to="/brochures">
-              <Button variant="outline" size="lg" className="mb-6 text-lg px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                <BookOpen className="w-5 h-5 mr-2" />
-                BROCHURES
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Website Link Section */}
-      <section className="py-4 bg-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <a 
-              href="https://www.sanipexgroup.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary"
-            >
-              www.sanipexgroup.com
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       
