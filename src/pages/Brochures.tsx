@@ -100,6 +100,15 @@ const Brochures = () => {
     color: "blue",
     downloadLink: "https://drive.google.com/uc?export=download&id=1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI",
     viewLink: "https://drive.google.com/file/d/1pkix8V4fDqdcOXXDL1ssZsDAmDcaYVmI/view?usp=sharing"
+  }, {
+    id: 11,
+    title: "Outdoor & Landscape",
+    description: "Build breathtaking landscapes with our range of outdoor porcelain tiles and slabs. Whether you are designing elegant patios, pool areas, or requiring custom outdoor solutions, our collection has you covered.",
+    image: "/lovable-uploads/36bf498f-73e8-4ed3-baf5-e94f48cbde7d.png",
+    category: "Outdoor",
+    color: "green",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx",
+    viewLink: "https://drive.google.com/file/d/1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx/view?usp=drive_link"
   }];
   const getColorClasses = (color: string) => {
     switch (color) {
