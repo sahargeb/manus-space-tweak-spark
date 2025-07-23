@@ -507,7 +507,7 @@ const Index = () => {
   }];
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Hero Section */}
-      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4 sm:pb-6 md:pb-8" style={{
+      <section className="min-h-screen bg-contain sm:bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4 sm:pb-6 md:pb-8" style={{
       backgroundImage: `url('/lovable-uploads/03159fbd-3b58-48fe-94b2-9e367a5243c9.png')`
     }}>
         <div className="absolute inset-0 bg-black/10"></div>
@@ -567,24 +567,26 @@ const Index = () => {
                 <span className="drop-shadow-lg">HOTEL AMENITIES</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group col-span-2 sm:col-span-1">
+            
+            {/* Second Row */}
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">KITCHEN LIFESTYLE</span>
               </h3>
             </div>
-            
-            {/* Second Row */}
             <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">TILES & SLABS</span>
               </h3>
             </div>
+            
+            {/* Third Row */}
             <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">LIGHTING</span>
               </h3>
             </div>
-            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group col-span-2 sm:col-span-1">
+            <div className="bg-white/90 backdrop-blur-lg p-2 sm:p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-xs sm:text-sm text-gray-800 tracking-wide">
                 <span className="drop-shadow-lg">OUTDOOR LIVING</span>
               </h3>
