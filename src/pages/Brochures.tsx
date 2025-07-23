@@ -21,7 +21,9 @@ const Brochures = () => {
     description: "مجموعة شاملة من الأدوات الصحية والصنابير للحمامات الفاخرة",
     image: "/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png",
     category: "Bathrooms",
-    color: "blue"
+    color: "blue",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO",
+    viewLink: "https://drive.google.com/file/d/1fa_w2lJyvsECR_mOZVDkZHBuX1e6y5iO/view?usp=sharing"
   }, {
     id: 2,
     title: "Kitchen LifeStyle",
@@ -45,15 +47,17 @@ const Brochures = () => {
     image: "/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png",
     category: "Lighting",
     color: "green",
-    downloadLink: "https://drive.google.com/uc?export=download&id=1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx",
-    viewLink: "https://drive.google.com/file/d/1EH2HLYGCLZ2tqSUL1cMhcnDb7x94bGEx/view?usp=sharing"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM",
+    viewLink: "https://drive.google.com/file/d/1cpt5lNvGHAAxnTyHeGh7ZQky4xeL_GuM/view?usp=sharing"
   }, {
     id: 5,
     title: "Tiles & Surfaces",
     description: "مجموعة شاملة من البلاط والأسطح للمساحات الداخلية والخارجية",
     image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
     category: "Surfaces",
-    color: "purple"
+    color: "purple",
+    downloadLink: "https://drive.google.com/uc?export=download&id=1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5",
+    viewLink: "https://drive.google.com/file/d/1Ss8yi8Y3WrueV12H5IzsKBPoJPizHJd5/view?usp=sharing"
   }, {
     id: 6,
     title: "Small Format Tiles",
@@ -79,8 +83,8 @@ const Brochures = () => {
     image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
     category: "Hotels",
     color: "blue",
-    downloadLink: "https://drive.google.com/uc?export=download&id=sample-hotel-amenities",
-    viewLink: "https://drive.google.com/file/d/sample-hotel-amenities/view?usp=sharing"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v",
+    viewLink: "https://drive.google.com/file/d/1Os3ikexV41YRpt4yH61cbyrW-BtbCW9v/view?usp=sharing"
   }, {
     id: 9,
     title: "Luxury Lifestyle",
@@ -88,8 +92,8 @@ const Brochures = () => {
     image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
     category: "Luxury",
     color: "purple",
-    downloadLink: "https://drive.google.com/uc?export=download&id=sample-luxury-lifestyle",
-    viewLink: "https://drive.google.com/file/d/sample-luxury-lifestyle/view?usp=sharing"
+    downloadLink: "https://drive.google.com/uc?export=download&id=1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP",
+    viewLink: "https://drive.google.com/file/d/1ZhUk5iw4MkdIzzvX5UQRaxrY-HhNyyUP/view?usp=sharing"
   }, {
     id: 10,
     title: "Bathroom & Spa Brands 2025",
@@ -97,8 +101,8 @@ const Brochures = () => {
     image: "/lovable-uploads/6939ead1-fd0f-48e5-9337-59c386513e79.png",
     category: "Spa",
     color: "green",
-    downloadLink: "https://drive.google.com/uc?export=download&id=sample-bathroom-spa-2025",
-    viewLink: "https://drive.google.com/file/d/sample-bathroom-spa-2025/view?usp=sharing"
+    downloadLink: "https://drive.google.com/uc?export=download&id=16__y5Dz5XPXAxRNff5IGweScdyz1KCVB",
+    viewLink: "https://drive.google.com/file/d/16__y5Dz5XPXAxRNff5IGweScdyz1KCVB/view?usp=sharing"
   }];
   const getColorClasses = (color: string) => {
     switch (color) {
