@@ -515,13 +515,9 @@ const Index = () => {
               {language === 'ar' ? 'EN' : 'AR'}
             </Button>
             
-            {/* Centered BAGNODESIGN Logo */}
+            {/* Centered BAGNODESIGN Title */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
-              <img 
-                src="/lovable-uploads/0e17513c-e670-4743-90e6-73923923acfd.png" 
-                alt="BAGNODESIGN" 
-                className="h-12 w-auto object-contain"
-              />
+              <h1 className="text-2xl font-bold text-black tracking-wide">BAGNODESIGN</h1>
             </div>
             
             {/* 3-dot Menu */}
