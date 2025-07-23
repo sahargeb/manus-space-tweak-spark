@@ -506,24 +506,24 @@ const Index = () => {
     description: t.designConsultationDesc
   }];
   return <div className={`min-h-screen bg-background ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b relative">
-        <div className="container mx-auto px-4 py-6">
+      {/* Hero Section */}
+      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
+      backgroundImage: `url('/lovable-uploads/ac24f121-7d2f-4ead-badc-04a334164720.png')`
+    }}>
+        <div className="absolute inset-0 bg-black/10"></div>
+        
+        {/* Header Buttons on Image */}
+        <div className="absolute top-0 left-0 right-0 z-20 p-6">
           <div className="flex items-center justify-between">
-            {/* Language Toggle */}
-            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-xs">
+            {/* Language Toggle - Bigger */}
+            <Button variant="outline" size="lg" onClick={toggleLanguage} className="text-lg px-6 py-3 bg-white/90 backdrop-blur-sm border-white/20 hover:bg-white/95">
               {language === 'ar' ? 'EN' : 'AR'}
             </Button>
             
-            {/* Centered BAGNODESIGN Title */}
-            <div className="absolute left-1/2 transform -translate-x-1/2">
-              
-            </div>
-            
-            {/* 3-dot Menu */}
+            {/* 3-dot Menu - Bigger */}
             <div className="relative">
-              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2">
-                <Menu className="w-6 h-6" />
+              <Button variant="ghost" size="lg" onClick={() => setShowMenu(!showMenu)} className="p-4 bg-white/90 backdrop-blur-sm hover:bg-white/95 rounded-lg">
+                <Menu className="w-8 h-8" />
               </Button>
               
               {showMenu && <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
@@ -553,13 +553,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end justify-center pb-4" style={{
-      backgroundImage: `url('/lovable-uploads/4d44fe6e-92b6-444c-95e9-07eb7eb2cd30.png')`
-    }}>
-        <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
           <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
