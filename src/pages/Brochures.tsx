@@ -17,8 +17,8 @@ const Brochures = () => {
   }
   const catalogData = [{
     id: 1,
-    title: "Bathroom sanitaryware & brassware",
-    description: "مجموعة شاملة من الأدوات الصحية والصنابير للحمامات الفاخرة",
+    title: "Bathroom Sanitaryware & Brassware",
+    description: "Comprehensive collection of luxury bathroom fixtures and faucets for premium bathrooms",
     image: "/lovable-uploads/8de7e852-c2d4-4322-ac29-3e1854346e43.png",
     category: "Bathrooms",
     color: "blue",
@@ -27,14 +27,14 @@ const Brochures = () => {
   }, {
     id: 2,
     title: "Kitchen LifeStyle",
-    description: "تصاميم مطابخ عصرية تجمع بين الأناقة والوظائف العملية",
+    description: "Modern kitchen designs that combine elegance with practical functionality",
     image: "/lovable-uploads/8f4ea90d-110a-42bb-9a4c-d29fab5cd69a.png",
     category: "Kitchens",
     color: "green"
   }, {
     id: 3,
     title: "TILES & SLABS",
-    description: "مجموعة متنوعة من البلاط والألواح عالية الجودة",
+    description: "Diverse collection of high-quality tiles and premium slabs",
     image: "/lovable-uploads/9e14421b-af59-459f-b4a2-a5a20bba48fc.png",
     category: "Materials",
     color: "purple",
@@ -43,7 +43,7 @@ const Brochures = () => {
   }, {
     id: 4,
     title: "Outdoor Lighting",
-    description: "حلول إضاءة خارجية متطورة للمساحات والحدائق",
+    description: "Advanced outdoor lighting solutions for spaces and gardens",
     image: "/lovable-uploads/183de876-71b4-448d-a15e-10633d816508.png",
     category: "Lighting",
     color: "green",
@@ -52,7 +52,7 @@ const Brochures = () => {
   }, {
     id: 5,
     title: "Tiles & Surfaces",
-    description: "مجموعة شاملة من البلاط والأسطح للمساحات الداخلية والخارجية",
+    description: "Comprehensive collection of tiles and surfaces for interior and exterior spaces",
     image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
     category: "Surfaces",
     color: "purple",
@@ -61,7 +61,7 @@ const Brochures = () => {
   }, {
     id: 6,
     title: "Small Format Tiles",
-    description: "بلاط صغير الحجم للتصاميم التفصيلية والديكورات الفريدة",
+    description: "Small format tiles for detailed designs and unique decorative elements",
     image: "/lovable-uploads/a2126c93-c0af-4266-98af-d491626a5d3d.png",
     category: "Tiles",
     color: "gray",
@@ -70,7 +70,7 @@ const Brochures = () => {
   }, {
     id: 7,
     title: "Hokkaido",
-    description: "مجموعة هوكايدو المميزة للتصاميم الداخلية الفاخرة",
+    description: "Hokkaido distinctive collection for luxury interior designs",
     image: "/lovable-uploads/8e64104b-7941-4756-b2c8-9b2121983cd5.png",
     category: "Premium",
     color: "blue",
@@ -79,7 +79,7 @@ const Brochures = () => {
   }, {
     id: 8,
     title: "Hotel Amenities",
-    description: "مجموعة شاملة من وسائل الراحة والخدمات الفندقية المتطورة",
+    description: "Comprehensive collection of advanced hotel amenities and services",
     image: "/lovable-uploads/25d08403-9ecd-4938-8bf8-b4d51fb5b323.png",
     category: "Hotels",
     color: "blue",
@@ -88,7 +88,7 @@ const Brochures = () => {
   }, {
     id: 9,
     title: "Luxury Lifestyle",
-    description: "تجربة حياة فاخرة مع تصاميم باجنو ديزاين الحصرية",
+    description: "Exclusive luxury lifestyle experience with Bagno Design premium collections",
     image: "/lovable-uploads/a37b5d24-c094-4a1a-91f3-3a60e0ded97a.png",
     category: "Luxury",
     color: "purple",
@@ -97,7 +97,7 @@ const Brochures = () => {
   }, {
     id: 10,
     title: "Bathroom & Spa Brands 2025",
-    description: "أحدث ماركات الحمامات والسبا لعام 2025 من سانيبكس جروب",
+    description: "Latest bathroom and spa brands for 2025 from Sanipex Group",
     image: "/lovable-uploads/6939ead1-fd0f-48e5-9337-59c386513e79.png",
     category: "Spa",
     color: "green",
