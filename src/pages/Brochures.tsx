@@ -161,7 +161,7 @@ const Brochures = () => {
   };
   return <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
+      <header className="bg-white border-b sticky top-0 z-50" id="top">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2">
@@ -195,7 +195,7 @@ const Brochures = () => {
         </div>
 
         {/* Main Catalogs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {mainCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
@@ -239,7 +239,7 @@ const Brochures = () => {
         {/* Sub Catalogs Section */}
         <div className="mb-12">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {subCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">

@@ -513,17 +513,17 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/10"></div>
         
         {/* Header Buttons on Image */}
-        <div className="absolute top-0 left-0 right-0 z-20 p-6">
+        <div className="absolute top-0 left-0 right-0 z-20 p-4 md:p-6">
           <div className="flex items-center justify-between">
-            {/* Language Toggle - Bigger */}
-            <Button variant="outline" size="lg" onClick={toggleLanguage} className="text-lg px-6 py-3 bg-white/90 backdrop-blur-sm border-white/20 hover:bg-white/95">
+            {/* Language Toggle - Responsive */}
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-sm md:text-lg px-3 py-2 md:px-6 md:py-3 bg-white/90 backdrop-blur-sm border-white/20 hover:bg-white/95">
               {language === 'ar' ? 'EN' : 'AR'}
             </Button>
             
-            {/* 3-dot Menu - Bigger */}
+            {/* 3-dot Menu - Responsive */}
             <div className="relative">
-              <Button variant="ghost" size="lg" onClick={() => setShowMenu(!showMenu)} className="p-4 bg-white/90 backdrop-blur-sm hover:bg-white/95 rounded-lg">
-                <Menu className="w-8 h-8" />
+              <Button variant="ghost" size="sm" onClick={() => setShowMenu(!showMenu)} className="p-2 md:p-4 bg-white/90 backdrop-blur-sm hover:bg-white/95 rounded-lg">
+                <Menu className="w-6 h-6 md:w-8 md:h-8" />
               </Button>
               
               {showMenu && <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
@@ -555,7 +555,7 @@ const Index = () => {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Category Boxes */}
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto">
             {/* First Row */}
             <div className="bg-white/90 backdrop-blur-lg p-3 rounded-lg text-center hover:bg-white/95 hover:scale-105 transition-all duration-500 cursor-pointer shadow-xl border border-gray-200 group">
               <h3 className="font-semibold text-sm text-gray-800 tracking-wide">
