@@ -400,12 +400,6 @@ const Index = () => {
     image: "/lovable-uploads/eeab58b6-6da9-4042-ada0-6c5bbe7fb15b.png",
     description: language === 'ar' ? "حمام فاخر بجدران رخامية وإضاءة دائرية مبتكرة مع تشطيبات ذهبية" : "Luxury bathroom with marble walls and innovative circular lighting with golden finishes"
   }, {
-    id: 32,
-    title: language === 'ar' ? "معرض أحواض المطابخ الحديثة" : "Modern Kitchen Sinks Gallery",
-    category: t.kitchens,
-    image: "/lovable-uploads/8aa8d6f3-5d60-48ba-ab5d-8de49bd466d1.png",
-    description: language === 'ar' ? "معرض شامل لأحواض المطابخ الحديثة مع تصاميم متنوعة وأنيقة" : "Comprehensive gallery of modern kitchen sinks with diverse and elegant designs"
-  }, {
     id: 33,
     title: language === 'ar' ? "مطبخ عصري متكامل بخامات فاخرة" : "Complete Modern Kitchen with Luxury Materials",
     category: t.kitchens,
