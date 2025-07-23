@@ -682,10 +682,10 @@ const Index = () => {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
+                  
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" className="w-full">{t.viewDetails}</Button>
+                      
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl">
                       <div className="space-y-4">
