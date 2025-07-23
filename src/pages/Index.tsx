@@ -739,7 +739,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6">
               <button onClick={() => setShowContactInfo('phone')} className="block w-full">
                 <Phone className="w-12 h-12 text-primary mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer" />
@@ -765,19 +765,18 @@ const Index = () => {
                 </div>
               </a>
             </div>
+          </div>
 
-            <div className="text-center p-6">
-              <div className="bg-background rounded-lg border border-primary/20 p-4 hover:bg-primary/5 transition-colors duration-300">
-                <a 
-                  href="https://www.sanipexgroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 transition-colors duration-300 text-sm font-medium block"
-                >
-                  www.sanipexgroup.com
-                </a>
-              </div>
-            </div>
+          {/* Website Link */}
+          <div className="text-center mt-12">
+            <a 
+              href="https://www.sanipexgroup.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors duration-300 text-lg font-medium underline decoration-primary"
+            >
+              www.sanipexgroup.com
+            </a>
           </div>
 
           {/* Contact Info Display */}
