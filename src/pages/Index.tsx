@@ -602,9 +602,9 @@ const Index = () => {
       {/* BAGNODESIGN'S STORY Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-16">
+          <div className={`text-center mb-16 ${language === 'ar' ? 'rtl' : 'ltr'}`}>
             <h2 className="text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 tracking-tight">
-              BAGNODESIGN'S STORY
+              {language === 'ar' ? 'قصة BAGNODESIGN' : "BAGNODESIGN'S STORY"}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
           </div>
