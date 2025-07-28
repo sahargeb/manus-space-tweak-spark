@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bagnodesign.com/</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bagnodesign.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bagnodesign.com/?lang=ar"/>
+  </url>
+  <url>
+    <loc>https://bagnodesign.com/about</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bagnodesign.com/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bagnodesign.com/about?lang=ar"/>
+  </url>
+  <url>
+    <loc>https://bagnodesign.com/brochures</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bagnodesign.com/brochures?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bagnodesign.com/brochures?lang=ar"/>
+  </url>
+  <url>
+    <loc>https://bagnodesign.com/product-catalogs</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bagnodesign.com/product-catalogs?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bagnodesign.com/product-catalogs?lang=ar"/>
+  </url>
+</urlset>
