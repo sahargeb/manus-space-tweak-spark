@@ -176,7 +176,7 @@ const ProductCatalogs = () => {
                 <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
                   <img 
                     src={catalog.image} 
-                    alt={catalog.title} 
+                    alt={`كتالوج منتجات ${catalog.title} - مجموعة حصرية من باجنو ديزاين للتصميم الداخلي الفاخر`} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" 
                   />
                 </div>

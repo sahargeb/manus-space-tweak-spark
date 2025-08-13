@@ -658,11 +658,11 @@ const Index = () => {
                 <div className="relative overflow-hidden">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <img src={product.image} alt={product.title} className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
+                      <img src={product.image} alt={`${product.title} - ${product.category} فاخرة من باجنو ديزاين مصر`} className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
                     </DialogTrigger>
                     <DialogContent className="max-w-[95vw] sm:max-w-4xl w-full p-2 sm:p-0 bg-transparent border-none">
                       <div className="relative">
-                        <img src={product.image} alt={product.title} className="w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain rounded-lg" />
+                        <img src={product.image} alt={`عرض كامل لـ ${product.title} - تصميم فاخر من باجنو ديزاين`} className="w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain rounded-lg" />
                       </div>
                     </DialogContent>
                   </Dialog>
@@ -680,7 +680,7 @@ const Index = () => {
                     </DialogTrigger>
                     <DialogContent className="max-w-[95vw] sm:max-w-2xl">
                       <div className="space-y-4">
-                        <img src={product.image} alt={product.title} className="w-full h-48 sm:h-64 object-cover rounded-lg" />
+                        <img src={product.image} alt={`تفاصيل منتج ${product.title} - ${product.category} عالية الجودة`} className="w-full h-48 sm:h-64 object-cover rounded-lg" />
                         <div>
                           <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{product.title}</h3>
                           <Badge className="mb-3 text-xs sm:text-sm">{product.category}</Badge>

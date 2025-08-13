@@ -204,7 +204,7 @@ const Brochures = () => {
           {mainCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
               <div className="relative overflow-hidden rounded-t-lg">
                 <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-                  <img src={catalog.image} alt={catalog.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                  <img src={catalog.image} alt={`كتالوج ${catalog.title} - باجنو ديزاين مصر للحمامات والمطابخ الفاخرة`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                 </div>
                 <div className="absolute top-4 left-4">
                   <Badge className={getColorClasses(catalog.color)}>
@@ -248,7 +248,7 @@ const Brochures = () => {
             {subCatalogs.map(catalog => <Card key={catalog.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-                    <img src={catalog.image} alt={catalog.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                    <img src={catalog.image} alt={`كتالوج ${catalog.title} - تشكيلة منتجات باجنو ديزاين للديكور الداخلي`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg" />
                   </div>
                   <div className="absolute top-4 left-4">
                     <Badge className={getColorClasses(catalog.color)}>
